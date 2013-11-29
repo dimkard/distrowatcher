@@ -1,0 +1,61 @@
+Distro Watcher 
+--------------
+
+Description
+-----------
+The specific plasmoid displays the latest releases of Linux distributions and packages, as published in distrowatch.com. In order to retrieve the relative data, RSS feeds from distrowatch are being used. 
+
+The plasmoid consists of two distinct views; the first displaying Linux distributions, the second displaying packages. Switching between views can be accomplished using a KDE tab bar. By clicking to a distribution record, default browser opens distribution's homepage at distrowatch.com. By clicking to a package record, default browser opens package's homepage.
+
+Moreover, users can click to the button in the bottom-right corner of the plasmoid so as to navigate to the distributions' list; favorites can be selected by just clicking to the relative button. Clicking to a distribution record, they are navigated (using the predefault web browser) to the relative distrowatch page. After selecting favorites, as soon as a new release of a favorite distribution is available, a notification pop-up is displayed. Notifications can be disabled using the relative configuration option. 
+
+The plasmoid has been written in QML and JavaScript.
+
+Aleady translated to: Greek, Spanish and Russian. If you would like to contribute to translations, visit the relative transifex project at https://www.transifex.com/projects/p/distrowatcher/ .
+
+Notes
+-----
+- Display depends on distrowatch.com RSS feeds. If the relative RSS change, be unavailable, etc, plasmoid display will be broken.
+- Data fetching is performed every 15 minutes (default). Users can override the default value via "Distro Watcher Settings".
+- If no Internet connection is available, no data will be displayed. Instead, a notification screen is displayed. As soon as network connectivity is re-established and the next fetching point is reached, data display is restored.
+- Icons have been downloaded from:
+http://www.iconarchive.com/show/nuoveXT-icons-by-saki/Apps-tux-icon.html
+http://www.iconarchive.com/show/nuoveXT-icons-by-saki/Apps-package-icon.html
+Credits go to the artist.
+
+Dependencies
+-------------
+
+- KDE SC 4.10 or later
+- QT 4.8.x
+
+* In Kubuntu 13.04/13.10 the following packages were installed for a proper build to take place:
+
+- build-essential
+- cmake
+- kdelibs5-dev
+- kdebase-workspace-dev
+- libdbusmenu-qt-dev
+
+Just Display (only for testing)
+----------------------------
+$plasmoidviewer ~/$YOUR_PATH/distrowatcher_plasmoid/distrowatcher
+
+Installation
+-------------
+- Unzip the plasmoid
+- $ cd build
+- $ export QT_SELECT=4 && cmake -DQT_QMAKE_EXECUTABLE=/usr/bin/qmake-qt4 -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix` .. 
+- $ make
+- $ (sudo) make install
+- "Distro Watcher" widget is now available to add to desktop/panel.
+
+License
+--------
+Copyright (C) 2013 Dimitris Kardarakos <dimkard AT gmail DOT com>
+
+QML and JavaScript written has been based on QT Quick documentation, tutorials and examples found in https://qt-project.org. Icons used come (online) from distrowatch.com and Oxygen icon package. 
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
