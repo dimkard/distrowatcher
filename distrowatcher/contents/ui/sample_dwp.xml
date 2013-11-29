@@ -1,0 +1,76 @@
+<rss version="2.0">
+
+<channel>
+<title>DistroWatch.com: Packages</title>
+<link>http://distrowatch.com/</link>
+<description>Latest package releases</description>
+
+<image>
+<title>DistroWatch</title>
+<url>http://distrowatch.com/images/other/dw.png</url>
+<link>http://distrowatch.com/</link>
+</image>
+
+<item>
+<title>02/28 VirtualBox 4.2.8</title>
+<link>http://www.virtualbox.org/</link>
+<description>VirtualBox: a family of x86 virtualisation products for enterprise and home use</description>
+</item>
+
+<item>
+<title>02/28 linux 3.8.1</title>
+<link>http://www.kernel.org/</link>
+<description>Linux kernel: a UNIX clone written from scratch by Linus Torvalds</description>
+</item>
+
+<item>
+<title>02/28 firefox 19.0.1</title>
+<link>http://www.mozilla.org/products/firefox/</link>
+<description>Mozilla Firefox: a web browser for Windows, Linux and MacOS X</description>
+</item>
+
+<item>
+<title>02/27 lftp 4.4.4</title>
+<link>http://lftp.yar.ru/</link>
+<description>LFTP: a sophisticated FTP/HTTP client, file transfer program</description>
+</item>
+
+<item>
+<title>02/25 deluge 1.3.6</title>
+<link>http://deluge-torrent.org/</link>
+<description>Deluge: a lightweight, cross-platform BitTorrent client</description>
+</item>
+
+<item>
+<title>02/24 ruby 2.0.0-p0</title>
+<link>http://www.ruby-lang.org/en/</link>
+<description>Ruby: interpreted, dynamically typed, pure object-oriented scripting language</description>
+</item>
+
+<item>
+<title>02/23 MesaLib 9.1</title>
+<link>http://www.mesa3d.org/</link>
+<description>MesaLib: a 3D graphics library</description>
+</item>
+
+<item>
+<title>02/22 httpd 2.4.4</title>
+<link>http://httpd.apache.org/</link>
+<description>httpd: a high-performance HTTP server, Apache 2.x version series</description>
+</item>
+
+<item>
+<title>02/22 ruby 2.0.0-p0</title>
+<link>http://www.ruby-lang.org/en/</link>
+<description>Ruby: interpreted, dynamically typed, pure object-oriented scripting language</description>
+</item>
+
+<item>
+<title>02/22 file 5.13</title>
+<link>http://www.darwinsys.com/file/</link>
+<description>file: a program that attempts to classify files by their content</description>
+</item>
+
+</channel>
+</rss>
+ 

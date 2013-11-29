@@ -1,0 +1,54 @@
+Version 0.8
+------------
+- Visual improvements
+- Searching functionality added to favorite distributions list
+- Users can navigate to distrowatch from favorites screen
+- Translated to Russian (thanks to sorrymak)
+- Spanish translation updated
+
+Version 0.7
+------------
+- Favorites functionality has been added; users can click to the star button so as to select their favorites distributions.
+- As soon as a new release of a favorite distribution is available, a notification pop-up is displayed. 
+- Notifications can be disabled using the distrowatcher settings.
+- Transifex project created: https://www.transifex.com/projects/p/distrowatcher/
+Version 0.6
+------------
+- Scrolling functionality extension; users can use middle (wheel) mouse button, to scroll against package/distro records offering a no-click navigation experience,
+
+Version 0.5
+-------------
+- Scrolling bar added. So, the amount of displayable distros/packages has been expanded. Users can scroll down and view more distros and packages.
+
+Version 0.4.1
+-------------
+- Translation infrastructure implemented; script to collect messages (messages.sh) created, CMakeLists.txt updated to incorporate translation files.
+
+- Greek and Spanish translations added.
+
+- Plasmoid descriptor (comments) added, so as to inform users regarding the purpose of the plasmoid. 
+
+Version 0.4.0
+-------------
+- Better integration with KDE. Coloring and highlight follow the active KDE theme.
+- Distro Watcher becomes configurable. User is able to check the refresh interval (how often, in minutes, data should be fetched from distrowatch.com, in Distro Watcher Settings -> Settings -> Refresh every (minutes).
+- Issue with font size in packages section fixed. Both packages' and distributions' font size follows KDE 'Desktop' font size.
+
+Version 0.3.0
+-------------
+- User interface has been completely redesigned. Icons that induced UI clutter have been removed. Current interface is much more minimalistic than the previous one.
+- Navigation switch between packages and distributions screen is now accomplished via a KDE native tab bar/group.
+- Code has been cleaned. From a developer's viewpoint, it is a totally new application.
+- New background (white/transparent) has been added. In conjunction with resizing, icons' display has been improved.
+- "Explicit fetch" feature has been removed.
+- Text size and color are inherited from current theme.
+- Application's icon has been changed. I opted for Tux, since it's the common point of reference for all Linux distributions.
+
+Version 0.2.0
+-------------
+
+- Network unavailability management, displaying a new screen in case of network issue.
+- Coloring enhancements.
+- Geometry fixing.
+- Display effect on change of state.
+- Function i18n used for strings, enabling future translations.

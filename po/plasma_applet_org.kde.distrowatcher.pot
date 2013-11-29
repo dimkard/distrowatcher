@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
+"content=157314\n"
+"POT-Creation-Date: 2013-11-17 00:37+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: distrowatcher/contents/ui/DistroListModel.qml:61
+msgid "Distribution release"
+msgstr ""
+
+#: distrowatcher/contents/ui/DistroListModel.qml:61
+msgid "A new version of %1 is available!"
+msgstr ""
+
+#: distrowatcher/contents/ui/Distro.qml:27
+#: distrowatcher/contents/ui/LatestPackage.qml:27
+msgid "Title"
+msgstr ""
+
+#: distrowatcher/contents/ui/Distro.qml:28
+#: distrowatcher/contents/ui/FavoriteDistro.qml:30
+#: distrowatcher/contents/ui/LatestPackage.qml:28
+msgid "Link"
+msgstr ""
+
+#: distrowatcher/contents/ui/Distro.qml:29
+#: distrowatcher/contents/ui/LatestPackage.qml:29
+msgid "Date"
+msgstr ""
+
+#: distrowatcher/contents/ui/Distro.qml:30
+msgid "Distro"
+msgstr ""
+
+#: distrowatcher/contents/ui/Distro.qml:31
+#: distrowatcher/contents/ui/FavoriteDistro.qml:32
+msgid "Distro Short Name"
+msgstr ""
+
+#: distrowatcher/contents/ui/distrowatcher.qml:76
+msgid "Distributions"
+msgstr ""
+
+#: distrowatcher/contents/ui/distrowatcher.qml:82
+msgid "Packages"
+msgstr ""
+
+#: distrowatcher/contents/ui/distrowatcher.qml:139
+msgid "Data from distrowatch.com"
+msgstr ""
+
+#: distrowatcher/contents/ui/distrowatcher.qml:269
+msgid "Enter distribution name..."
+msgstr ""
+
+#: distrowatcher/contents/ui/distrowatcher.qml:290
+msgid "Return to latest distributions"
+msgstr ""
+
+#: distrowatcher/contents/ui/distrowatcher.qml:290
+msgid "Select your favorite distributions"
+msgstr ""
+
+#: distrowatcher/contents/ui/FavoriteDistro.qml:33
+msgid "Distro Name"
+msgstr ""
+
+#: distrowatcher/contents/ui/FavoriteDistro.qml:34
+msgid "Distro Latest Version"
+msgstr ""
+
+#: distrowatcher/contents/ui/LatestPackage.qml:30
+msgid "Package"
+msgstr ""
+
+#: distrowatcher/contents/ui/UnavailableScreen.qml:53
+msgid ""
+"Network issue. \n"
+"Please check your network connection. If you do not face any network "
+"problem, distrowatch.com may be unavailable or facing difficulties."
+msgstr ""
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:14
+#. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
+#: po/rc.cpp:3 rc.cpp:3
+msgid "Dialog"
+msgstr ""
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, groupGeneral)
+#: po/rc.cpp:6 rc.cpp:6
+msgid "General"
+msgstr ""
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:34
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_refreshevery)
+#: po/rc.cpp:9 rc.cpp:9
+msgid "Refresh data every X minutes"
+msgstr ""
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:47
+#. i18n: ectx: property (text), widget (QLabel, lblRefreshevery)
+#: po/rc.cpp:12 rc.cpp:12
+msgid "Refresh every (minutes):"
+msgstr ""
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:54
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
+#: po/rc.cpp:15 rc.cpp:15
+msgid ""
+"Display a notification in case of new release of a favorite distribution"
+msgstr ""
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:70
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: po/rc.cpp:18 rc.cpp:18
+msgid "Enable notifications:"
+msgstr ""
+
+#: po/rc.cpp:19 rc.cpp:19
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#: po/rc.cpp:20 rc.cpp:20
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""

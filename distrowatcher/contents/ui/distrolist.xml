@@ -1,0 +1,102 @@
+<distrolist>
+<item><distroname>Alpine</distroname><link>http://distrowatch.com/alpine</link><latestversion></latestversion><distroshortname>alpine</distroshortname></item>
+<item><distroname>Antergos</distroname><link>http://distrowatch.com/antergos</link><latestversion></latestversion><distroshortname>antergos</distroshortname></item>
+<item><distroname>antiX</distroname><link>http://distrowatch.com/antix</link><latestversion></latestversion><distroshortname>antix</distroshortname></item>
+<item><distroname>Arch</distroname><link>http://distrowatch.com/arch</link><latestversion></latestversion><distroshortname>arch</distroshortname></item>
+<item><distroname>ArchBang</distroname><link>http://distrowatch.com/archbang</link><latestversion></latestversion><distroshortname>archbang</distroshortname></item>
+<item><distroname>AV Linux</distroname><link>http://distrowatch.com/avlinux</link><latestversion></latestversion><distroshortname>avlinux</distroshortname></item>
+<item><distroname>BackBox</distroname><link>http://distrowatch.com/backbox</link><latestversion></latestversion><distroshortname>backbox</distroshortname></item>
+<item><distroname>Bodhi</distroname><link>http://distrowatch.com/bodhi</link><latestversion></latestversion><distroshortname>bodhi</distroshortname></item>
+<item><distroname>Bridge</distroname><link>http://distrowatch.com/bridge</link><latestversion></latestversion><distroshortname>bridge</distroshortname></item>
+<item><distroname>CentOS</distroname><link>http://distrowatch.com/centos</link><latestversion></latestversion><distroshortname>centos</distroshortname></item>
+<item><distroname>Chakra</distroname><link>http://distrowatch.com/chakra</link><latestversion></latestversion><distroshortname>chakra</distroshortname></item>
+<item><distroname>ClearOS</distroname><link>http://distrowatch.com/clearos</link><latestversion></latestversion><distroshortname>clearos</distroshortname></item>
+<item><distroname>Clonezilla</distroname><link>http://distrowatch.com/clonezilla</link><latestversion></latestversion><distroshortname>clonezilla</distroshortname></item>
+<item><distroname>CrunchBang</distroname><link>http://distrowatch.com/crunchbang</link><latestversion></latestversion><distroshortname>crunchbang</distroshortname></item>
+<item><distroname>Damn Small</distroname><link>http://distrowatch.com/damnsmall</link><latestversion></latestversion><distroshortname>damnsmall</distroshortname></item>
+<item><distroname>Debian</distroname><link>http://distrowatch.com/debian</link><latestversion></latestversion><distroshortname>debian</distroshortname></item>
+<item><distroname>Deepin</distroname><link>http://distrowatch.com/deepin</link><latestversion></latestversion><distroshortname>deepin</distroshortname></item>
+<item><distroname>DragonFly</distroname><link>http://distrowatch.com/dragonflybsd</link><latestversion></latestversion><distroshortname>dragonflybsd</distroshortname></item>
+<item><distroname>DreamStudio</distroname><link>http://distrowatch.com/dreamstudio</link><latestversion></latestversion><distroshortname>dreamstudio</distroshortname></item>
+<item><distroname>elementary</distroname><link>http://distrowatch.com/elementary</link><latestversion></latestversion><distroshortname>elementary</distroshortname></item>
+<item><distroname>Elive</distroname><link>http://distrowatch.com/elive</link><latestversion></latestversion><distroshortname>elive</distroshortname></item>
+<item><distroname>Fedora</distroname><link>http://distrowatch.com/fedora</link><latestversion></latestversion><distroshortname>fedora</distroshortname></item>
+<item><distroname>FreeBSD</distroname><link>http://distrowatch.com/freebsd</link><latestversion></latestversion><distroshortname>freebsd</distroshortname></item>
+<item><distroname>FreeNAS</distroname><link>http://distrowatch.com/freenas</link><latestversion></latestversion><distroshortname>freenas</distroshortname></item>
+<item><distroname>Frugalware</distroname><link>http://distrowatch.com/frugalware</link><latestversion></latestversion><distroshortname>frugalware</distroshortname></item>
+<item><distroname>Gentoo</distroname><link>http://distrowatch.com/gentoo</link><latestversion></latestversion><distroshortname>gentoo</distroshortname></item>
+<item><distroname>GhostBSD</distroname><link>http://distrowatch.com/ghostbsd</link><latestversion></latestversion><distroshortname>ghostbsd</distroshortname></item>
+<item><distroname>gNewSense</distroname><link>http://distrowatch.com/gnewsense</link><latestversion></latestversion><distroshortname>gnewsense</distroshortname></item>
+<item><distroname>Joli OS</distroname><link>http://distrowatch.com/jolios</link><latestversion></latestversion><distroshortname>jolios</distroshortname></item>
+<item><distroname>Kali</distroname><link>http://distrowatch.com/kali</link><latestversion></latestversion><distroshortname>kali</distroshortname></item>
+<item><distroname>KNOPPIX</distroname><link>http://distrowatch.com/knoppix</link><latestversion></latestversion><distroshortname>knoppix</distroshortname></item>
+<item><distroname>Korora</distroname><link>http://distrowatch.com/korora</link><latestversion></latestversion><distroshortname>korora</distroshortname></item>
+<item><distroname>Kubuntu</distroname><link>http://distrowatch.com/kubuntu</link><latestversion></latestversion><distroshortname>kubuntu</distroshortname></item>
+<item><distroname>Kwheezy</distroname><link>http://distrowatch.com/kwheezy</link><latestversion></latestversion><distroshortname>kwheezy</distroshortname></item>
+<item><distroname>Lite</distroname><link>http://distrowatch.com/lite</link><latestversion></latestversion><distroshortname>lite</distroshortname></item>
+<item><distroname>Lubuntu</distroname><link>http://distrowatch.com/lubuntu</link><latestversion></latestversion><distroshortname>lubuntu</distroshortname></item>
+<item><distroname>LXLE</distroname><link>http://distrowatch.com/lxle</link><latestversion></latestversion><distroshortname>lxle</distroshortname></item>
+<item><distroname>Macpup</distroname><link>http://distrowatch.com/macpup</link><latestversion></latestversion><distroshortname>macpup</distroshortname></item>
+<item><distroname>Mageia</distroname><link>http://distrowatch.com/mageia</link><latestversion></latestversion><distroshortname>mageia</distroshortname></item>
+<item><distroname>Mandriva</distroname><link>http://distrowatch.com/mandriva</link><latestversion></latestversion><distroshortname>mandriva</distroshortname></item>
+<item><distroname>Manjaro</distroname><link>http://distrowatch.com/manjaro</link><latestversion></latestversion><distroshortname>manjaro</distroshortname></item>
+<item><distroname>MEPIS</distroname><link>http://distrowatch.com/mepis</link><latestversion></latestversion><distroshortname>mepis</distroshortname></item>
+<item><distroname>Mint</distroname><link>http://distrowatch.com/mint</link><latestversion></latestversion><distroshortname>mint</distroshortname></item>
+<item><distroname>NetBSD</distroname><link>http://distrowatch.com/netbsd</link><latestversion></latestversion><distroshortname>netbsd</distroshortname></item>
+<item><distroname>Netrunner</distroname><link>http://distrowatch.com/netrunner</link><latestversion></latestversion><distroshortname>netrunner</distroshortname></item>
+<item><distroname>OpenBSD</distroname><link>http://distrowatch.com/openbsd</link><latestversion></latestversion><distroshortname>openbsd</distroshortname></item>
+<item><distroname>OpenELEC</distroname><link>http://distrowatch.com/openelec</link><latestversion></latestversion><distroshortname>openelec</distroshortname></item>
+<item><distroname>OpenMandriva</distroname><link>http://distrowatch.com/openmandriva</link><latestversion></latestversion><distroshortname>openmandriva</distroshortname></item>
+<item><distroname>openSUSE</distroname><link>http://distrowatch.com/suse</link><latestversion></latestversion><distroshortname>suse</distroshortname></item>
+<item><distroname>Oracle</distroname><link>http://distrowatch.com/oracle</link><latestversion></latestversion><distroshortname>oracle</distroshortname></item>
+<item><distroname>OS4</distroname><link>http://distrowatch.com/os4</link><latestversion></latestversion><distroshortname>os4</distroshortname></item>
+<item><distroname>Pardus</distroname><link>http://distrowatch.com/pardus</link><latestversion></latestversion><distroshortname>pardus</distroshortname></item>
+<item><distroname>Parsix</distroname><link>http://distrowatch.com/parsix</link><latestversion></latestversion><distroshortname>parsix</distroshortname></item>
+<item><distroname>Parted Magic</distroname><link>http://distrowatch.com/partedmagic</link><latestversion></latestversion><distroshortname>partedmagic</distroshortname></item>
+<item><distroname>PC-BSD</distroname><link>http://distrowatch.com/pcbsd</link><latestversion></latestversion><distroshortname>pcbsd</distroshortname></item>
+<item><distroname>PCLinuxOS</distroname><link>http://distrowatch.com/pclinuxos</link><latestversion></latestversion><distroshortname>pclinuxos</distroshortname></item>
+<item><distroname>Pear</distroname><link>http://distrowatch.com/pear</link><latestversion></latestversion><distroshortname>pear</distroshortname></item>
+<item><distroname>Peppermint</distroname><link>http://distrowatch.com/peppermint</link><latestversion></latestversion><distroshortname>peppermint</distroshortname></item>
+<item><distroname>Pinguy</distroname><link>http://distrowatch.com/pinguy</link><latestversion></latestversion><distroshortname>pinguy</distroshortname></item>
+<item><distroname>Point</distroname><link>http://distrowatch.com/point</link><latestversion></latestversion><distroshortname>point</distroshortname></item>
+<item><distroname>Porteus</distroname><link>http://distrowatch.com/porteus</link><latestversion></latestversion><distroshortname>porteus</distroshortname></item>
+<item><distroname>Puppy</distroname><link>http://distrowatch.com/puppy</link><latestversion></latestversion><distroshortname>puppy</distroshortname></item>
+<item><distroname>Red Hat</distroname><link>http://distrowatch.com/redhat</link><latestversion></latestversion><distroshortname>redhat</distroshortname></item>
+<item><distroname>ROSA</distroname><link>http://distrowatch.com/rosa</link><latestversion></latestversion><distroshortname>rosa</distroshortname></item>
+<item><distroname>Sabayon</distroname><link>http://distrowatch.com/sabayon</link><latestversion></latestversion><distroshortname>sabayon</distroshortname></item>
+<item><distroname>Salix</distroname><link>http://distrowatch.com/salix</link><latestversion></latestversion><distroshortname>salix</distroshortname></item>
+<item><distroname>Scientific</distroname><link>http://distrowatch.com/scientific</link><latestversion></latestversion><distroshortname>scientific</distroshortname></item>
+<item><distroname>Semplice</distroname><link>http://distrowatch.com/semplice</link><latestversion></latestversion><distroshortname>semplice</distroshortname></item>
+<item><distroname>siduction</distroname><link>http://distrowatch.com/siduction</link><latestversion></latestversion><distroshortname>siduction</distroshortname></item>
+<item><distroname>Simplicity</distroname><link>http://distrowatch.com/simplicity</link><latestversion></latestversion><distroshortname>simplicity</distroshortname></item>
+<item><distroname>Slackel</distroname><link>http://distrowatch.com/slackel</link><latestversion></latestversion><distroshortname>slackel</distroshortname></item>
+<item><distroname>Slackware</distroname><link>http://distrowatch.com/slackware</link><latestversion></latestversion><distroshortname>slackware</distroshortname></item>
+<item><distroname>Slax</distroname><link>http://distrowatch.com/slax</link><latestversion></latestversion><distroshortname>slax</distroshortname></item>
+<item><distroname>SliTaz</distroname><link>http://distrowatch.com/slitaz</link><latestversion></latestversion><distroshortname>slitaz</distroshortname></item>
+<item><distroname>Snowlinux</distroname><link>http://distrowatch.com/snowlinux</link><latestversion></latestversion><distroshortname>snowlinux</distroshortname></item>
+<item><distroname>Solaris</distroname><link>http://distrowatch.com/solaris</link><latestversion></latestversion><distroshortname>solaris</distroshortname></item>
+<item><distroname>SolydXK</distroname><link>http://distrowatch.com/solydxk</link><latestversion></latestversion><distroshortname>solydxk</distroshortname></item>
+<item><distroname>SparkyLinux</distroname><link>http://distrowatch.com/sparky</link><latestversion></latestversion><distroshortname>sparky</distroshortname></item>
+<item><distroname>Super OS</distroname><link>http://distrowatch.com/superos</link><latestversion></latestversion><distroshortname>superos</distroshortname></item>
+<item><distroname>SuperX</distroname><link>http://distrowatch.com/superx</link><latestversion></latestversion><distroshortname>superx</distroshortname></item>
+<item><distroname>SUSE</distroname><link>http://distrowatch.com/sle</link><latestversion></latestversion><distroshortname>sle</distroshortname></item>
+<item><distroname>SystemRescue</distroname><link>http://distrowatch.com/systemrescue</link><latestversion></latestversion><distroshortname>systemrescue</distroshortname></item>
+<item><distroname>Tails</distroname><link>http://distrowatch.com/tails</link><latestversion></latestversion><distroshortname>tails</distroshortname></item>
+<item><distroname>Tiny Core</distroname><link>http://distrowatch.com/tinycore</link><latestversion></latestversion><distroshortname>tinycore</distroshortname></item>
+<item><distroname>Trisquel</distroname><link>http://distrowatch.com/trisquel</link><latestversion></latestversion><distroshortname>trisquel</distroshortname></item>
+<item><distroname>UberStudent</distroname><link>http://distrowatch.com/uberstudent</link><latestversion></latestversion><distroshortname>uberstudent</distroshortname></item>
+<item><distroname>Ubuntu</distroname><link>http://distrowatch.com/ubuntu</link><latestversion></latestversion><distroshortname>ubuntu</distroshortname></item>
+<item><distroname>Ubuntu GNOME</distroname><link>http://distrowatch.com/ubuntugnome</link><latestversion></latestversion><distroshortname>ubuntugnome</distroshortname></item>
+<item><distroname>Ubuntu Studio</distroname><link>http://distrowatch.com/ubuntustudio</link><latestversion></latestversion><distroshortname>ubuntustudio</distroshortname></item>
+<item><distroname>UbuntuKylin</distroname><link>http://distrowatch.com/ubuntukylin</link><latestversion></latestversion><distroshortname>ubuntukylin</distroshortname></item>
+<item><distroname>Ultimate</distroname><link>http://distrowatch.com/ultimate</link><latestversion></latestversion><distroshortname>ultimate</distroshortname></item>
+<item><distroname>Unity</distroname><link>http://distrowatch.com/unity</link><latestversion></latestversion><distroshortname>unity</distroshortname></item>
+<item><distroname>Vector</distroname><link>http://distrowatch.com/vector</link><latestversion></latestversion><distroshortname>vector</distroshortname></item>
+<item><distroname>wattOS</distroname><link>http://distrowatch.com/wattos</link><latestversion></latestversion><distroshortname>wattos</distroshortname></item>
+<item><distroname>Wifislax</distroname><link>http://distrowatch.com/wifislax</link><latestversion></latestversion><distroshortname>wifislax</distroshortname></item>
+<item><distroname>Xubuntu</distroname><link>http://distrowatch.com/xubuntu</link><latestversion></latestversion><distroshortname>xubuntu</distroshortname></item>
+<item><distroname>Zentyal</distroname><link>http://distrowatch.com/zentyal</link><latestversion></latestversion><distroshortname>zentyal</distroshortname></item>
+<item><distroname>Zenwalk</distroname><link>http://distrowatch.com/zenwalk</link><latestversion></latestversion><distroshortname>zenwalk</distroshortname></item>
+<item><distroname>ZevenOS</distroname><link>http://distrowatch.com/zevenos</link><latestversion></latestversion><distroshortname>zevenos</distroshortname></item>
+<item><distroname>Zorin</distroname><link>http://distrowatch.com/zorin</link><latestversion></latestversion><distroshortname>zorin</distroshortname></item>
+</distrolist>

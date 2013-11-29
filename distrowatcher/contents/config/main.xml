@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="main"/>
+  <group name="General">
+    <entry name="refreshevery" type="Int">
+      <whatsthis>Refresh data every X minutes</whatsthis>
+      <tooltip>Refresh data every X minutes</tooltip>
+      <default>15</default>
+      <min>1</min>
+      <max>180</max>
+    </entry>
+    <entry name="enablenotifications" type="Bool">
+      <label>Enable notifications</label>
+      <default>true</default>
+    </entry>
+    </group>
+  <group name="Favorites">
+    <entry name="alpine_isfavorite" type="Bool"><label>Whether alpine is favorite</label><default>false</default></entry>
+    <entry name="antergos_isfavorite" type="Bool"><label>Whether antergos is favorite</label><default>false</default></entry>
+    <entry name="antix_isfavorite" type="Bool"><label>Whether antix is favorite</label><default>false</default></entry>
+    <entry name="arch_isfavorite" type="Bool"><label>Whether arch is favorite</label><default>false</default></entry>
+    <entry name="archbang_isfavorite" type="Bool"><label>Whether archbang is favorite</label><default>false</default></entry>
+    <entry name="avlinux_isfavorite" type="Bool"><label>Whether avlinux is favorite</label><default>false</default></entry>
+    <entry name="backbox_isfavorite" type="Bool"><label>Whether backbox is favorite</label><default>false</default></entry>
+    <entry name="bodhi_isfavorite" type="Bool"><label>Whether bodhi is favorite</label><default>false</default></entry>
+    <entry name="bridge_isfavorite" type="Bool"><label>Whether bridge is favorite</label><default>false</default></entry>
+    <entry name="centos_isfavorite" type="Bool"><label>Whether centos is favorite</label><default>false</default></entry>
+    <entry name="chakra_isfavorite" type="Bool"><label>Whether chakra is favorite</label><default>false</default></entry>
+    <entry name="clearos_isfavorite" type="Bool"><label>Whether clearos is favorite</label><default>false</default></entry>
+    <entry name="clonezilla_isfavorite" type="Bool"><label>Whether clonezilla is favorite</label><default>false</default></entry>
+    <entry name="crunchbang_isfavorite" type="Bool"><label>Whether crunchbang is favorite</label><default>false</default></entry>
+    <entry name="damnsmall_isfavorite" type="Bool"><label>Whether damnsmall is favorite</label><default>false</default></entry>
+    <entry name="debian_isfavorite" type="Bool"><label>Whether debian is favorite</label><default>false</default></entry>
+    <entry name="deepin_isfavorite" type="Bool"><label>Whether deepin is favorite</label><default>false</default></entry>
+    <entry name="dragonflybsd_isfavorite" type="Bool"><label>Whether dragonflybsd is favorite</label><default>false</default></entry>
+    <entry name="dreamstudio_isfavorite" type="Bool"><label>Whether dreamstudio is favorite</label><default>false</default></entry>
+    <entry name="elementary_isfavorite" type="Bool"><label>Whether elementary is favorite</label><default>false</default></entry>
+    <entry name="elive_isfavorite" type="Bool"><label>Whether elive is favorite</label><default>false</default></entry>
+    <entry name="fedora_isfavorite" type="Bool"><label>Whether fedora is favorite</label><default>false</default></entry>
+    <entry name="freebsd_isfavorite" type="Bool"><label>Whether freebsd is favorite</label><default>false</default></entry>
+    <entry name="freenas_isfavorite" type="Bool"><label>Whether freenas is favorite</label><default>false</default></entry>
+    <entry name="frugalware_isfavorite" type="Bool"><label>Whether frugalware is favorite</label><default>false</default></entry>
+    <entry name="gentoo_isfavorite" type="Bool"><label>Whether gentoo is favorite</label><default>false</default></entry>
+    <entry name="ghostbsd_isfavorite" type="Bool"><label>Whether ghostbsd is favorite</label><default>false</default></entry>
+    <entry name="gnewsense_isfavorite" type="Bool"><label>Whether gnewsense is favorite</label><default>false</default></entry>
+    <entry name="jolios_isfavorite" type="Bool"><label>Whether jolios is favorite</label><default>false</default></entry>
+    <entry name="kali_isfavorite" type="Bool"><label>Whether kali is favorite</label><default>false</default></entry>
+    <entry name="knoppix_isfavorite" type="Bool"><label>Whether knoppix is favorite</label><default>false</default></entry>
+    <entry name="korora_isfavorite" type="Bool"><label>Whether korora is favorite</label><default>false</default></entry>
+    <entry name="kubuntu_isfavorite" type="Bool"><label>Whether kubuntu is favorite</label><default>false</default></entry>
+    <entry name="kwheezy_isfavorite" type="Bool"><label>Whether kwheezy is favorite</label><default>false</default></entry>
+    <entry name="lite_isfavorite" type="Bool"><label>Whether lite is favorite</label><default>false</default></entry>
+    <entry name="lubuntu_isfavorite" type="Bool"><label>Whether lubuntu is favorite</label><default>false</default></entry>
+    <entry name="lxle_isfavorite" type="Bool"><label>Whether lxle is favorite</label><default>false</default></entry>
+    <entry name="macpup_isfavorite" type="Bool"><label>Whether macpup is favorite</label><default>false</default></entry>
+    <entry name="mageia_isfavorite" type="Bool"><label>Whether mageia is favorite</label><default>false</default></entry>
+    <entry name="mandriva_isfavorite" type="Bool"><label>Whether mandriva is favorite</label><default>false</default></entry>
+    <entry name="manjaro_isfavorite" type="Bool"><label>Whether manjaro is favorite</label><default>false</default></entry>
+    <entry name="mepis_isfavorite" type="Bool"><label>Whether mepis is favorite</label><default>false</default></entry>
+    <entry name="mint_isfavorite" type="Bool"><label>Whether mint is favorite</label><default>false</default></entry>
+    <entry name="netbsd_isfavorite" type="Bool"><label>Whether netbsd is favorite</label><default>false</default></entry>
+    <entry name="netrunner_isfavorite" type="Bool"><label>Whether netrunner is favorite</label><default>false</default></entry>
+    <entry name="openbsd_isfavorite" type="Bool"><label>Whether openbsd is favorite</label><default>false</default></entry>
+    <entry name="openelec_isfavorite" type="Bool"><label>Whether openelec is favorite</label><default>false</default></entry>
+    <entry name="openmandriva_isfavorite" type="Bool"><label>Whether openmandriva is favorite</label><default>false</default></entry>
+    <entry name="suse_isfavorite" type="Bool"><label>Whether suse is favorite</label><default>false</default></entry>
+    <entry name="oracle_isfavorite" type="Bool"><label>Whether oracle is favorite</label><default>false</default></entry>
+    <entry name="os4_isfavorite" type="Bool"><label>Whether os4 is favorite</label><default>false</default></entry>
+    <entry name="pardus_isfavorite" type="Bool"><label>Whether pardus is favorite</label><default>false</default></entry>
+    <entry name="parsix_isfavorite" type="Bool"><label>Whether parsix is favorite</label><default>false</default></entry>
+    <entry name="partedmagic_isfavorite" type="Bool"><label>Whether partedmagic is favorite</label><default>false</default></entry>
+    <entry name="pcbsd_isfavorite" type="Bool"><label>Whether pcbsd is favorite</label><default>false</default></entry>
+    <entry name="pclinuxos_isfavorite" type="Bool"><label>Whether pclinuxos is favorite</label><default>false</default></entry>
+    <entry name="pear_isfavorite" type="Bool"><label>Whether pear is favorite</label><default>false</default></entry>
+    <entry name="peppermint_isfavorite" type="Bool"><label>Whether peppermint is favorite</label><default>false</default></entry>
+    <entry name="pinguy_isfavorite" type="Bool"><label>Whether pinguy is favorite</label><default>false</default></entry>
+    <entry name="point_isfavorite" type="Bool"><label>Whether point is favorite</label><default>false</default></entry>
+    <entry name="porteus_isfavorite" type="Bool"><label>Whether porteus is favorite</label><default>false</default></entry>
+    <entry name="puppy_isfavorite" type="Bool"><label>Whether puppy is favorite</label><default>false</default></entry>
+    <entry name="redhat_isfavorite" type="Bool"><label>Whether redhat is favorite</label><default>false</default></entry>
+    <entry name="rosa_isfavorite" type="Bool"><label>Whether rosa is favorite</label><default>false</default></entry>
+    <entry name="sabayon_isfavorite" type="Bool"><label>Whether sabayon is favorite</label><default>false</default></entry>
+    <entry name="salix_isfavorite" type="Bool"><label>Whether salix is favorite</label><default>false</default></entry>
+    <entry name="scientific_isfavorite" type="Bool"><label>Whether scientific is favorite</label><default>false</default></entry>
+    <entry name="semplice_isfavorite" type="Bool"><label>Whether semplice is favorite</label><default>false</default></entry>
+    <entry name="siduction_isfavorite" type="Bool"><label>Whether siduction is favorite</label><default>false</default></entry>
+    <entry name="simplicity_isfavorite" type="Bool"><label>Whether simplicity is favorite</label><default>false</default></entry>
+    <entry name="slackel_isfavorite" type="Bool"><label>Whether slackel is favorite</label><default>false</default></entry>
+    <entry name="slackware_isfavorite" type="Bool"><label>Whether slackware is favorite</label><default>false</default></entry>
+    <entry name="slax_isfavorite" type="Bool"><label>Whether slax is favorite</label><default>false</default></entry>
+    <entry name="slitaz_isfavorite" type="Bool"><label>Whether slitaz is favorite</label><default>false</default></entry>
+    <entry name="snowlinux_isfavorite" type="Bool"><label>Whether snowlinux is favorite</label><default>false</default></entry>
+    <entry name="solaris_isfavorite" type="Bool"><label>Whether solaris is favorite</label><default>false</default></entry>
+    <entry name="solydxk_isfavorite" type="Bool"><label>Whether solydxk is favorite</label><default>false</default></entry>
+    <entry name="sparky_isfavorite" type="Bool"><label>Whether sparky is favorite</label><default>false</default></entry>
+    <entry name="superos_isfavorite" type="Bool"><label>Whether superos is favorite</label><default>false</default></entry>
+    <entry name="superx_isfavorite" type="Bool"><label>Whether superx is favorite</label><default>false</default></entry>
+    <entry name="sle_isfavorite" type="Bool"><label>Whether sle is favorite</label><default>false</default></entry>
+    <entry name="systemrescue_isfavorite" type="Bool"><label>Whether systemrescue is favorite</label><default>false</default></entry>
+    <entry name="tails_isfavorite" type="Bool"><label>Whether tails is favorite</label><default>false</default></entry>
+    <entry name="tinycore_isfavorite" type="Bool"><label>Whether tinycore is favorite</label><default>false</default></entry>
+    <entry name="trisquel_isfavorite" type="Bool"><label>Whether trisquel is favorite</label><default>false</default></entry>
+    <entry name="uberstudent_isfavorite" type="Bool"><label>Whether uberstudent is favorite</label><default>false</default></entry>
+    <entry name="ubuntu_isfavorite" type="Bool"><label>Whether ubuntu is favorite</label><default>false</default></entry>
+    <entry name="ubuntugnome_isfavorite" type="Bool"><label>Whether ubuntugnome is favorite</label><default>false</default></entry>
+    <entry name="ubuntustudio_isfavorite" type="Bool"><label>Whether ubuntustudio is favorite</label><default>false</default></entry>
+    <entry name="ubuntukylin_isfavorite" type="Bool"><label>Whether ubuntukylin is favorite</label><default>false</default></entry>
+    <entry name="ultimate_isfavorite" type="Bool"><label>Whether ultimate is favorite</label><default>false</default></entry>
+    <entry name="unity_isfavorite" type="Bool"><label>Whether unity is favorite</label><default>false</default></entry>
+    <entry name="vector_isfavorite" type="Bool"><label>Whether vector is favorite</label><default>false</default></entry>
+    <entry name="wattos_isfavorite" type="Bool"><label>Whether wattos is favorite</label><default>false</default></entry>
+    <entry name="wifislax_isfavorite" type="Bool"><label>Whether wifislax is favorite</label><default>false</default></entry>
+    <entry name="xubuntu_isfavorite" type="Bool"><label>Whether xubuntu is favorite</label><default>false</default></entry>
+    <entry name="zentyal_isfavorite" type="Bool"><label>Whether zentyal is favorite</label><default>false</default></entry>
+    <entry name="zenwalk_isfavorite" type="Bool"><label>Whether zenwalk is favorite</label><default>false</default></entry>
+    <entry name="zevenos_isfavorite" type="Bool"><label>Whether zevenos is favorite</label><default>false</default></entry>
+    <entry name="zorin_isfavorite" type="Bool"><label>Whether zorin is favorite</label><default>false</default></entry>
+    <entry name="alpine_latest" type="String"><label>Latest version of alpine</label></entry>
+    <entry name="antergos_latest" type="String"><label>Latest version of antergos</label></entry>
+    <entry name="antix_latest" type="String"><label>Latest version of antix</label></entry>
+    <entry name="arch_latest" type="String"><label>Latest version of arch</label></entry>
+    <entry name="archbang_latest" type="String"><label>Latest version of archbang</label></entry>
+    <entry name="avlinux_latest" type="String"><label>Latest version of avlinux</label></entry>
+    <entry name="backbox_latest" type="String"><label>Latest version of backbox</label></entry>
+    <entry name="bodhi_latest" type="String"><label>Latest version of bodhi</label></entry>
+    <entry name="bridge_latest" type="String"><label>Latest version of bridge</label></entry>
+    <entry name="centos_latest" type="String"><label>Latest version of centos</label></entry>
+    <entry name="chakra_latest" type="String"><label>Latest version of chakra</label></entry>
+    <entry name="clearos_latest" type="String"><label>Latest version of clearos</label></entry>
+    <entry name="clonezilla_latest" type="String"><label>Latest version of clonezilla</label></entry>
+    <entry name="crunchbang_latest" type="String"><label>Latest version of crunchbang</label></entry>
+    <entry name="damnsmall_latest" type="String"><label>Latest version of damnsmall</label></entry>
+    <entry name="debian_latest" type="String"><label>Latest version of debian</label></entry>
+    <entry name="deepin_latest" type="String"><label>Latest version of deepin</label></entry>
+    <entry name="dragonflybsd_latest" type="String"><label>Latest version of dragonflybsd</label></entry>
+    <entry name="dreamstudio_latest" type="String"><label>Latest version of dreamstudio</label></entry>
+    <entry name="elementary_latest" type="String"><label>Latest version of elementary</label></entry>
+    <entry name="elive_latest" type="String"><label>Latest version of elive</label></entry>
+    <entry name="fedora_latest" type="String"><label>Latest version of fedora</label></entry>
+    <entry name="freebsd_latest" type="String"><label>Latest version of freebsd</label></entry>
+    <entry name="freenas_latest" type="String"><label>Latest version of freenas</label></entry>
+    <entry name="frugalware_latest" type="String"><label>Latest version of frugalware</label></entry>
+    <entry name="gentoo_latest" type="String"><label>Latest version of gentoo</label></entry>
+    <entry name="ghostbsd_latest" type="String"><label>Latest version of ghostbsd</label></entry>
+    <entry name="gnewsense_latest" type="String"><label>Latest version of gnewsense</label></entry>
+    <entry name="jolios_latest" type="String"><label>Latest version of jolios</label></entry>
+    <entry name="kali_latest" type="String"><label>Latest version of kali</label></entry>
+    <entry name="knoppix_latest" type="String"><label>Latest version of knoppix</label></entry>
+    <entry name="korora_latest" type="String"><label>Latest version of korora</label></entry>
+    <entry name="kubuntu_latest" type="String"><label>Latest version of kubuntu</label></entry>
+    <entry name="kwheezy_latest" type="String"><label>Latest version of kwheezy</label></entry>
+    <entry name="lite_latest" type="String"><label>Latest version of lite</label></entry>
+    <entry name="lubuntu_latest" type="String"><label>Latest version of lubuntu</label></entry>
+    <entry name="lxle_latest" type="String"><label>Latest version of lxle</label></entry>
+    <entry name="macpup_latest" type="String"><label>Latest version of macpup</label></entry>
+    <entry name="mageia_latest" type="String"><label>Latest version of mageia</label></entry>
+    <entry name="mandriva_latest" type="String"><label>Latest version of mandriva</label></entry>
+    <entry name="manjaro_latest" type="String"><label>Latest version of manjaro</label></entry>
+    <entry name="mepis_latest" type="String"><label>Latest version of mepis</label></entry>
+    <entry name="mint_latest" type="String"><label>Latest version of mint</label></entry>
+    <entry name="name_latest" type="String"><label>Latest version of name</label></entry>
+    <entry name="netbsd_latest" type="String"><label>Latest version of netbsd</label></entry>
+    <entry name="netrunner_latest" type="String"><label>Latest version of netrunner</label></entry>
+    <entry name="openbsd_latest" type="String"><label>Latest version of openbsd</label></entry>
+    <entry name="openelec_latest" type="String"><label>Latest version of openelec</label></entry>
+    <entry name="openmandriva_latest" type="String"><label>Latest version of openmandriva</label></entry>
+    <entry name="suse_latest" type="String"><label>Latest version of suse</label></entry>
+    <entry name="oracle_latest" type="String"><label>Latest version of oracle</label></entry>
+    <entry name="os4_latest" type="String"><label>Latest version of os4</label></entry>
+    <entry name="pardus_latest" type="String"><label>Latest version of pardus</label></entry>
+    <entry name="parsix_latest" type="String"><label>Latest version of parsix</label></entry>
+    <entry name="partedmagic_latest" type="String"><label>Latest version of partedmagic</label></entry>
+    <entry name="pcbsd_latest" type="String"><label>Latest version of pcbsd</label></entry>
+    <entry name="pclinuxos_latest" type="String"><label>Latest version of pclinuxos</label></entry>
+    <entry name="pear_latest" type="String"><label>Latest version of pear</label></entry>
+    <entry name="peppermint_latest" type="String"><label>Latest version of peppermint</label></entry>
+    <entry name="pinguy_latest" type="String"><label>Latest version of pinguy</label></entry>
+    <entry name="point_latest" type="String"><label>Latest version of point</label></entry>
+    <entry name="porteus_latest" type="String"><label>Latest version of porteus</label></entry>
+    <entry name="puppy_latest" type="String"><label>Latest version of puppy</label></entry>
+    <entry name="redhat_latest" type="String"><label>Latest version of redhat</label></entry>
+    <entry name="rosa_latest" type="String"><label>Latest version of rosa</label></entry>
+    <entry name="sabayon_latest" type="String"><label>Latest version of sabayon</label></entry>
+    <entry name="salix_latest" type="String"><label>Latest version of salix</label></entry>
+    <entry name="scientific_latest" type="String"><label>Latest version of scientific</label></entry>
+    <entry name="semplice_latest" type="String"><label>Latest version of semplice</label></entry>
+    <entry name="siduction_latest" type="String"><label>Latest version of siduction</label></entry>
+    <entry name="simplicity_latest" type="String"><label>Latest version of simplicity</label></entry>
+    <entry name="slackel_latest" type="String"><label>Latest version of slackel</label></entry>
+    <entry name="slackware_latest" type="String"><label>Latest version of slackware</label></entry>
+    <entry name="slax_latest" type="String"><label>Latest version of slax</label></entry>
+    <entry name="slitaz_latest" type="String"><label>Latest version of slitaz</label></entry>
+    <entry name="snowlinux_latest" type="String"><label>Latest version of snowlinux</label></entry>
+    <entry name="solaris_latest" type="String"><label>Latest version of solaris</label></entry>
+    <entry name="solydxk_latest" type="String"><label>Latest version of solydxk</label></entry>
+    <entry name="sparky_latest" type="String"><label>Latest version of sparky</label></entry>
+    <entry name="superos_latest" type="String"><label>Latest version of superos</label></entry>
+    <entry name="superx_latest" type="String"><label>Latest version of superx</label></entry>
+    <entry name="sle_latest" type="String"><label>Latest version of sle</label></entry>
+    <entry name="systemrescue_latest" type="String"><label>Latest version of systemrescue</label></entry>
+    <entry name="tails_latest" type="String"><label>Latest version of tails</label></entry>
+    <entry name="tinycore_latest" type="String"><label>Latest version of tinycore</label></entry>
+    <entry name="trisquel_latest" type="String"><label>Latest version of trisquel</label></entry>
+    <entry name="uberstudent_latest" type="String"><label>Latest version of uberstudent</label></entry>
+    <entry name="ubuntu_latest" type="String"><label>Latest version of ubuntu</label></entry>
+    <entry name="ubuntugnome_latest" type="String"><label>Latest version of ubuntugnome</label></entry>
+    <entry name="ubuntustudio_latest" type="String"><label>Latest version of ubuntustudio</label></entry>
+    <entry name="ubuntukylin_latest" type="String"><label>Latest version of ubuntukylin</label></entry>
+    <entry name="ultimate_latest" type="String"><label>Latest version of ultimate</label></entry>
+    <entry name="unity_latest" type="String"><label>Latest version of unity</label></entry>
+    <entry name="vector_latest" type="String"><label>Latest version of vector</label></entry>
+    <entry name="wattos_latest" type="String"><label>Latest version of wattos</label></entry>
+    <entry name="wifislax_latest" type="String"><label>Latest version of wifislax</label></entry>
+    <entry name="xubuntu_latest" type="String"><label>Latest version of xubuntu</label></entry>
+    <entry name="zentyal_latest" type="String"><label>Latest version of zentyal</label></entry>
+    <entry name="zenwalk_latest" type="String"><label>Latest version of zenwalk</label></entry>
+    <entry name="zevenos_latest" type="String"><label>Latest version of zevenos</label></entry>
+    <entry name="zorin_latest" type="String"><label>Latest version of zorin</label></entry>    
+  </group>
+</kcfg>
