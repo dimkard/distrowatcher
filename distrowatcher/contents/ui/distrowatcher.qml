@@ -274,7 +274,7 @@
     PlasmaCore.ToolTip {
       id: favoriteTooltip
       target: favoritesIcon
-      mainText: (iconButton.checked) ? i18n("Return to latest distributions") : i18n("Select your favorite distributions")
+      mainText: (main.state == "showFavorites") ? i18n("Return to latest distributions") : i18n("Select your favorite distributions")
     }
     states: [ // favorites states
       State {
