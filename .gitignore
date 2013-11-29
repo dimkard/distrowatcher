@@ -1,5 +1,5 @@
-CMakeCache.txt
-CMakeFiles
-Makefile
-cmake_install.cmake
-install_manifest.txt
+gen.CMakeLists.txt
+kNewHostStuff.sh
+debianBuild.sh
+deb.CMakeLists.txt
+build/
