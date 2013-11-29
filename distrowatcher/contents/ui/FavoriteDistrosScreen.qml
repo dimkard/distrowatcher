@@ -56,7 +56,8 @@ PlasmaExtras.ScrollArea {
       model: distroListModel.distroModel // set distroModel as the target xml model
       delegate: FavoriteDistro {    //FavoriteDistro.qml created the layout, putting image and text in the position wanted
 	id: favoriteDistroItem
-	height: (distroView.height - (Style.numberOfFavoriteDistros - 1)*distroView.spacing)/Style.numberOfFavoriteDistros
+	height: theme.largeIconSize // avoid rendering issues
+	//(distroView.height - (Style.numberOfFavoriteDistros - 1)*distroView.spacing)/Style.numberOfFavoriteDistros
 	width: distroView.width //- scrollBar.width
 	//titleText: model.title
 	latestVersion: model.latestversion
