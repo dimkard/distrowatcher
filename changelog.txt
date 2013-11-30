@@ -1,3 +1,9 @@
+Version 0.8.1
+------------
+- Issue with misleading tooltip fixed
+- Favorites list rendering issue fixed
+- Russian translation updated 
+
 Version 0.8
 ------------
 - Visual improvements
