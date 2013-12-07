@@ -3,3 +3,5 @@ kNewHostStuff.sh
 debianBuild.sh
 deb.CMakeLists.txt
 build/
+*.deb
+*.plasmoid
