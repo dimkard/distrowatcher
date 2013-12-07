@@ -1,3 +1,8 @@
+Version 0.8.2
+------------
+- Issue witting into the text area fixed
+- Packaging translations issue fixed
+
 Version 0.8.1
 ------------
 - Issue with misleading tooltip fixed
