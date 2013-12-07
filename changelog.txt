@@ -1,6 +1,6 @@
 Version 0.8.2
 ------------
-- Issue witting into the text area fixed
+- Issue writing into the text area fixed
 - Packaging translations issue fixed
 
 Version 0.8.1
