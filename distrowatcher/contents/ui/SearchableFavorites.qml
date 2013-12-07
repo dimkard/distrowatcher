@@ -35,7 +35,7 @@ Item {
       top: parent.top
       left: parent.left
     }
-    height: theme.defaultFont.mSize.height*1.5
+    height: theme.defaultFont.mSize.height*1.8
     width: parent.width/2
     placeholderText: i18n("Enter distribution name...")
     onTextChanged: {
