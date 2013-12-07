@@ -24,11 +24,11 @@ import "./js/style.js" as Style
 
 Item {
   id: root
-  property string titleText: i18n("Title")
-  property string linkText: i18n("Link")
-  property string dateText: i18n("Date")
-  property string distroText: i18n("Distro")
-  property string distroShortText: i18n("Distro Short Name")
+  property string titleText
+  property string linkText
+  property string dateText
+  property string distroText
+  property string distroShortText
   property int itemIndex
   
   signal entered() //inform parent regarding interaction
@@ -45,7 +45,6 @@ Item {
     onClicked: { 
       //debug only // console.log("click" + root.linkText); 
       plasmoid.openUrl(root.linkText);
-      //Qt.openUrlExternally(root.linkText);
     }
     onEntered: root.entered();
     onExited: root.exited();

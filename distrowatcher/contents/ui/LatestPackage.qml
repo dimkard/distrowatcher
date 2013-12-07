@@ -24,10 +24,10 @@ import "./js/style.js" as Style
 
 Item {
   id: root
-  property string titleText: i18n("Title")
-  property string linkText: i18n("Link")
-  property string dateText: i18n("Date")
-  property string packageText: i18n("Package")
+  property string titleText
+  property string linkText
+  property string dateText
+  property string packageText
   property int itemIndex 
   
   signal entered() //inform parent regarding interaction

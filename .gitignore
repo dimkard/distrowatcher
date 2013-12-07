@@ -3,3 +3,4 @@ kNewHostStuff.sh
 debianBuild.sh
 deb.CMakeLists.txt
 build/
+distrowatcher.plasmoid

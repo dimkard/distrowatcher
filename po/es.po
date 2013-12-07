@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
 "content=157314\n"
-"POT-Creation-Date: 2013-11-29 20:21+0200\n"
+"POT-Creation-Date: 2013-12-07 13:55+0200\n"
 "PO-Revision-Date: 2013-11-17 01:36+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -21,97 +21,38 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/DistroListModel.qml:61
 #: distrowatcher/contents/ui/DistroListModel.qml:61
 msgid "Distribution release"
 msgstr "Lanzamiento de distribución"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/DistroListModel.qml:61
 #: distrowatcher/contents/ui/DistroListModel.qml:61
 msgid "A new version of %1 is available!"
 msgstr "Una nueva versión de % 1 está disponible!"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/Distro.qml:27
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/LatestPackage.qml:27
-#: distrowatcher/contents/ui/Distro.qml:27
-#: distrowatcher/contents/ui/LatestPackage.qml:27
-msgid "Title"
-msgstr "Título"
-
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/Distro.qml:28
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/FavoriteDistro.qml:29
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/LatestPackage.qml:28
-#: distrowatcher/contents/ui/Distro.qml:28
-#: distrowatcher/contents/ui/FavoriteDistro.qml:29
-#: distrowatcher/contents/ui/LatestPackage.qml:28
-msgid "Link"
-msgstr "Hipervínculo"
-
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/Distro.qml:29
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/LatestPackage.qml:29
-#: distrowatcher/contents/ui/Distro.qml:29
-#: distrowatcher/contents/ui/LatestPackage.qml:29
-msgid "Date"
-msgstr "Fecha"
-
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/Distro.qml:30
-#: distrowatcher/contents/ui/Distro.qml:30
-msgid "Distro"
-msgstr "Distribución"
-
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/Distro.qml:31
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/FavoriteDistro.qml:31
-#: distrowatcher/contents/ui/Distro.qml:31
-#: distrowatcher/contents/ui/FavoriteDistro.qml:31
-msgid "Distro Short Name"
-msgstr "Distribución (nombre abreviado)"
-
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/distrowatcher.qml:76
-#: distrowatcher/contents/ui/distrowatcher.qml:76
+#: distrowatcher/contents/ui/main.qml:76
 msgid "Distributions"
 msgstr "Distribuciones"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/distrowatcher.qml:82
-#: distrowatcher/contents/ui/distrowatcher.qml:82
+#: distrowatcher/contents/ui/main.qml:82
 msgid "Packages"
 msgstr "Paquetes"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/distrowatcher.qml:139
-#: distrowatcher/contents/ui/distrowatcher.qml:139
+#: distrowatcher/contents/ui/main.qml:139
 msgid "Data from distrowatch.com"
 msgstr "Datos desde distrowatch.com"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/distrowatcher.qml:254
-#: distrowatcher/contents/ui/distrowatcher.qml:254
+#: distrowatcher/contents/ui/main.qml:254
 msgid "Enter distribution name..."
 msgstr "Introduzca el nombre de la distribución..."
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/distrowatcher.qml:277
-#: distrowatcher/contents/ui/distrowatcher.qml:277
+#: distrowatcher/contents/ui/main.qml:277
 msgid "Return to latest distributions"
 msgstr "Volver a últimas distribuciones"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/distrowatcher.qml:277
-#: distrowatcher/contents/ui/distrowatcher.qml:277
+#: distrowatcher/contents/ui/main.qml:277
 msgid "Select your favorite distributions"
 msgstr "Seleccione sus distribuciones favoritas"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/FavoriteDistro.qml:32
-#: distrowatcher/contents/ui/FavoriteDistro.qml:32
-msgid "Distro Name"
-msgstr "Nombre de la distribución"
-
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/FavoriteDistro.qml:33
-#: distrowatcher/contents/ui/FavoriteDistro.qml:33
-msgid "Distro Latest Version"
-msgstr "última versión de la distribución"
-
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/LatestPackage.qml:30
-#: distrowatcher/contents/ui/LatestPackage.qml:30
-msgid "Package"
-msgstr "Paquete"
-
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/UnavailableScreen.qml:53
 #: distrowatcher/contents/ui/UnavailableScreen.qml:53
 msgid ""
 "Network issue. \n"
@@ -123,87 +64,75 @@ msgstr ""
 "red, es possible que distrowatch.com no sea accesible o encuentre "
 "difficultades."
 
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:14
-#. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
 #. i18n: file: distrowatcher/contents/ui/config.ui:14
 #. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:14
-#. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
-#. i18n: file: distrowatcher/contents/ui/config.ui:14
-#. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
-#: po/rc.cpp:3 po/rc.cpp:21 rc.cpp:3 rc.cpp:21
+#: po/rc.cpp:3 rc.cpp:3
 msgid "Dialog"
 msgstr "Cuadro de diálogo "
 
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupGeneral)
 #. i18n: file: distrowatcher/contents/ui/config.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, groupGeneral)
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupGeneral)
-#. i18n: file: distrowatcher/contents/ui/config.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupGeneral)
-#: po/rc.cpp:6 po/rc.cpp:24 rc.cpp:6 rc.cpp:24
+#: po/rc.cpp:6 rc.cpp:6
 msgid "General"
 msgstr "General"
 
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:34
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_refreshevery)
 #. i18n: file: distrowatcher/contents/ui/config.ui:34
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_refreshevery)
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:34
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_refreshevery)
-#. i18n: file: distrowatcher/contents/ui/config.ui:34
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_refreshevery)
-#: po/rc.cpp:9 po/rc.cpp:27 rc.cpp:9 rc.cpp:27
+#: po/rc.cpp:9 rc.cpp:9
 msgid "Refresh data every X minutes"
 msgstr "Actualización de los datos cada X minutos"
 
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:47
-#. i18n: ectx: property (text), widget (QLabel, lblRefreshevery)
 #. i18n: file: distrowatcher/contents/ui/config.ui:47
 #. i18n: ectx: property (text), widget (QLabel, lblRefreshevery)
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:47
-#. i18n: ectx: property (text), widget (QLabel, lblRefreshevery)
-#. i18n: file: distrowatcher/contents/ui/config.ui:47
-#. i18n: ectx: property (text), widget (QLabel, lblRefreshevery)
-#: po/rc.cpp:12 po/rc.cpp:30 rc.cpp:12 rc.cpp:30
+#: po/rc.cpp:12 rc.cpp:12
 msgid "Refresh every (minutes):"
 msgstr "Actualización cada (minutos):"
 
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:54
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
 #. i18n: file: distrowatcher/contents/ui/config.ui:54
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:54
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
-#. i18n: file: distrowatcher/contents/ui/config.ui:54
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
-#: po/rc.cpp:15 po/rc.cpp:33 rc.cpp:15 rc.cpp:33
+#: po/rc.cpp:15 rc.cpp:15
 msgid ""
 "Display a notification in case of new release of a favorite distribution"
 msgstr ""
 "Mostrar notificación en caso de nuevo lanzamiento de una distribución "
 "favorita "
 
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:70
-#. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: distrowatcher/contents/ui/config.ui:70
 #. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.8.0/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:70
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: distrowatcher/contents/ui/config.ui:70
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: po/rc.cpp:18 po/rc.cpp:36 rc.cpp:18 rc.cpp:36
+#: po/rc.cpp:18 rc.cpp:18
 msgid "Enable notifications:"
 msgstr "Activar notificaciones:"
 
-#: po/rc.cpp:37 rc.cpp:37
+#: po/rc.cpp:19 rc.cpp:19
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Dimitris Kardarakos"
 
-#: po/rc.cpp:38 rc.cpp:38
+#: po/rc.cpp:20 rc.cpp:20
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dimkard@gmail.com"
+
+#~ msgid "Title"
+#~ msgstr "Título"
+
+#~ msgid "Link"
+#~ msgstr "Hipervínculo"
+
+#~ msgid "Date"
+#~ msgstr "Fecha"
+
+#~ msgid "Distro"
+#~ msgstr "Distribución"
+
+#~ msgid "Distro Short Name"
+#~ msgstr "Distribución (nombre abreviado)"
+
+#~ msgid "Distro Name"
+#~ msgstr "Nombre de la distribución"
+
+#~ msgid "Distro Latest Version"
+#~ msgstr "última versión de la distribución"
+
+#~ msgid "Package"
+#~ msgstr "Paquete"
