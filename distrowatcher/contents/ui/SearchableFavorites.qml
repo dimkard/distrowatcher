@@ -47,8 +47,9 @@ Item {
     anchors {
       top: searchItem.bottom
       bottom: parent.bottom
-      left: parent.left
+      left: parent.left      
     }
+
     width: parent.width
   }
 }

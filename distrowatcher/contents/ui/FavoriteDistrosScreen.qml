@@ -27,7 +27,6 @@ import "./js/style.js" as Style
 PlasmaExtras.ScrollArea {
   id: distroScrollArea
   property int dataCount: distroView.model.count //controls visibility
-  height: parent.height
     
   function filter_distros (distroFilter) {  //call function to filter distros
     distroListModel.query_model(distroFilter);

@@ -1,3 +1,4 @@
+
 /*
 
     Copyright (C) 2013 Dimitris Kardarakos <dimkard@gmail.com>
@@ -116,16 +117,25 @@ Rectangle {
   }
     
   // Label informing where data come from
-  Text {
+  Rectangle
+  {
     id: aboutText
+    color: "transparent"
+    height: theme.smallMediumIconSize  // ensure that icon fits to the text size
+    width: main.width
     anchors {
       bottom: main.bottom
       horizontalCenter: main.horizontalCenter
     }
-    verticalAlignment: Text.AlignBottom
-    font.pointSize: theme.smallestFont.pointSize
-    color: theme.textColor
-    text: i18n("Data from distrowatch.com")
+    Text {
+      id: aboutTextLabel
+      anchors.fill: parent
+      verticalAlignment: Text.AlignBottom
+      horizontalAlignment: Text.AlignHCenter
+      font.pointSize: theme.smallestFont.pointSize
+      color: theme.textColor
+      text: i18n("Data from distrowatch.com")
+    }
   }
   
   Extras.MouseEventListener { 
@@ -219,7 +229,7 @@ Rectangle {
       left: parent.left	
       right: parent.right
       bottom: aboutText.top
-      margins: main.height*Style.marginScreenPercent
+      //margins: main.height*Style.marginScreenPercent //prevent loop
     }
   }
 
