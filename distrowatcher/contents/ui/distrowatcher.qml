@@ -240,18 +240,19 @@
 	margins: main.height*Style.marginScreenPercent
       }
 
-      PlasmaComponents.TextArea { 
+      PlasmaComponents.TextField { 
 	id: searchItem
-	verticalAlignment: TextEdit.AlignVCenter 
+	//verticalAlignment: TextEdit.AlignVCenter 
 	//wrapMode: TextEdit.NoWrap
-	interactive: false
+	//interactive: false
 	anchors{
 	  top: parent.top
 	  left: parent.left
 	}
-	height: theme.defaultFont.mSize.height*1.8
+	height: theme.defaultFont.mSize.height*1.6
 	width: parent.width/2
 	placeholderText: i18n("Enter distribution name...")
+	clearButtonShown: true
 	onTextChanged: {
 	  favoritesScreenItems.filter_distros(text);
 	}
