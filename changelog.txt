@@ -1,7 +1,6 @@
 Version 0.9
 ------------
 - Unnecessary translations removed
-- New hot stuff package includes russian language as well
 - Code cleaning
 
 Version 0.8.1
