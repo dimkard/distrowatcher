@@ -1,3 +1,9 @@
+Version 0.9
+------------
+- Unnecessary translations removed
+- Code cleaning
+- Text field replaced text area in favorites; clearing handle added.
+
 Version 0.8.2
 ------------
 - Issue writing into the text area fixed

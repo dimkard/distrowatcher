@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
 "content=157314\n"
-"POT-Creation-Date: 2013-12-07 18:08+0200\n"
+"POT-Creation-Date: 2013-12-08 13:33+0200\n"
 "PO-Revision-Date: 2013-11-23 11:59+0000\n"
 "Last-Translator: Артём Демаков <dearalcher@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/distrowatcher/"
@@ -29,66 +29,29 @@ msgstr "Релиз дистрибутива"
 msgid "A new version of %1 is available!"
 msgstr "Доступна новая версия %1!"
 
-#: distrowatcher/contents/ui/Distro.qml:27
-#: distrowatcher/contents/ui/LatestPackage.qml:27
-msgid "Title"
-msgstr "Заголовок"
-
-#: distrowatcher/contents/ui/Distro.qml:28
-#: distrowatcher/contents/ui/FavoriteDistro.qml:29
-#: distrowatcher/contents/ui/LatestPackage.qml:28
-msgid "Link"
-msgstr "Ссылка"
-
-#: distrowatcher/contents/ui/Distro.qml:29
-#: distrowatcher/contents/ui/LatestPackage.qml:29
-msgid "Date"
-msgstr "Дата"
-
-#: distrowatcher/contents/ui/Distro.qml:30
-msgid "Distro"
-msgstr "Дистрибутив"
-
-#: distrowatcher/contents/ui/Distro.qml:31
-#: distrowatcher/contents/ui/FavoriteDistro.qml:31
-msgid "Distro Short Name"
-msgstr "Краткое название дистрибутива"
-
-#: distrowatcher/contents/ui/distrowatcher.qml:76
+#: distrowatcher/contents/ui/main.qml:73
 msgid "Distributions"
 msgstr "Дистрибутивы"
 
-#: distrowatcher/contents/ui/distrowatcher.qml:82
+#: distrowatcher/contents/ui/main.qml:77
 msgid "Packages"
 msgstr "Пакеты"
 
-#: distrowatcher/contents/ui/distrowatcher.qml:139
+#: distrowatcher/contents/ui/main.qml:128
 msgid "Data from distrowatch.com"
 msgstr "Информация с distrowatch.com"
 
-#: distrowatcher/contents/ui/distrowatcher.qml:254
-msgid "Enter distribution name..."
-msgstr "Введите название дистрибутива..."
-
-#: distrowatcher/contents/ui/distrowatcher.qml:277
+#: distrowatcher/contents/ui/main.qml:229
 msgid "Return to latest distributions"
 msgstr "Возвратиться к последнему дистрибутиву"
 
-#: distrowatcher/contents/ui/distrowatcher.qml:277
+#: distrowatcher/contents/ui/main.qml:229
 msgid "Select your favorite distributions"
 msgstr "Выберите свой любимый дистрибутив"
 
-#: distrowatcher/contents/ui/FavoriteDistro.qml:32
-msgid "Distro Name"
-msgstr "Название дистрибутива"
-
-#: distrowatcher/contents/ui/FavoriteDistro.qml:33
-msgid "Distro Latest Version"
-msgstr "Последняя версия дистрибутива"
-
-#: distrowatcher/contents/ui/LatestPackage.qml:30
-msgid "Package"
-msgstr "Пакет"
+#: distrowatcher/contents/ui/SearchableFavorites.qml:38
+msgid "Enter distribution name..."
+msgstr "Введите название дистрибутива..."
 
 #: distrowatcher/contents/ui/UnavailableScreen.qml:53
 msgid ""
@@ -146,3 +109,27 @@ msgstr "Ваше имя"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Ваш email"
+
+#~ msgid "Title"
+#~ msgstr "Заголовок"
+
+#~ msgid "Link"
+#~ msgstr "Ссылка"
+
+#~ msgid "Date"
+#~ msgstr "Дата"
+
+#~ msgid "Distro"
+#~ msgstr "Дистрибутив"
+
+#~ msgid "Distro Short Name"
+#~ msgstr "Краткое название дистрибутива"
+
+#~ msgid "Distro Name"
+#~ msgstr "Название дистрибутива"
+
+#~ msgid "Distro Latest Version"
+#~ msgstr "Последняя версия дистрибутива"
+
+#~ msgid "Package"
+#~ msgstr "Пакет"

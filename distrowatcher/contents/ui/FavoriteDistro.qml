@@ -26,11 +26,10 @@ import "./js/globals.js" as Params
 
 Item {
   id: root
-  property string linkText: i18n("Link")
-  //property string distroText: i18n("Distro")
-  property string distroShortText: i18n("Distro Short Name")
-  property string distroName: i18n("Distro Name")
-  property string latestVersion: i18n("Distro Latest Version")
+  property string linkText
+  property string distroShortText
+  property string distroName
+  property string latestVersion
   property bool isFlicking 
   property int itemIndex
   
@@ -52,7 +51,6 @@ Item {
     onClicked: { 
       //debug only // console.log("click" + root.linkText); 
       plasmoid.openUrl(root.linkText);
-      //Qt.openUrlExternally(root.linkText);
     }
     onPositionChanged: root.positionChanged();
     hoverEnabled: true
@@ -92,40 +90,7 @@ Item {
       wrapMode: "WordWrap" 
       color: theme.textColor    
   }  
-    //--------------------
-    /*
-    Image {
-      id: star
-      visible: root.isCurrentItem || (plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix))
-      anchors {
-	verticalCenter : parent.verticalCenter 
-	rightMargin : root.width*Style.rightMarginPercent // icon distance from right
-	topMargin : root.height*Style.marginPercent // icon distance from top
-	right: parent.right
-      }
-      width: (root.width - root.width*Style.marginPercent)*Style.favIconWidthAsRowPercent
-      height: (root.height - root.height*Style.marginPercent)*Style.favIconHeightAsRowPercent
-      fillMode: Image.PreserveAspectFit
-      smooth: true
-      onStatusChanged: if (status == Image.Error) {
-			    // we set the icon to an empty image if we failed to find one
-			    source = ""
-      }
-      source: (plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix) == true) ? "./icons/favorite.png" : "./icons/non-favorite.png" ;
 
-      MouseArea {
-	id: starArea
-	anchors.fill: parent
-	onClicked: { 	  
-	  //console.log("Before set: " + distroShortText + isFavoritePostfix + ": " +  plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix)); //debug only
-	  var newFavStatus = (plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix) == true) ? false : true;
-	  plasmoid.writeConfig(root.distroShortText + root.isFavoritePostfix, newFavStatus);
-	  star.source = (newFavStatus == true) ? "./icons/favorite.png" : "./icons/non-favorite.png" 	  
-	  //console.log("After set: " + distroShortText + isFavoritePostfix + ": " + plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix));	//debug only 
-	}	
-      }
-      */
-      //----------------
   Extras.MouseEventListener { 
     id: favoritesIcon	
     visible: true
@@ -141,18 +106,11 @@ Item {
       }
     onPositionChanged: root.positionChanged();	
     onContainsMouseChanged: {
-      if(!isFlicking) {
-	if (containsMouse) {
+      if(!isFlicking)
+	if (containsMouse)
 	  state = "showButton";
-	  //starButton.opacity = 1; //display button
-	  //star.opacity = 0;
-	}
-	else {
+	else
 	  state =  "hideButton";
-	  //starButton.opacity = 0; // hide button
-	  //star.opacity = 1;
-	}
-      }
     }
     states: [ //button states
       State {
