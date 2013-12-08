@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
 "content=157314\n"
-"POT-Creation-Date: 2013-12-08 13:33+0200\n"
+"POT-Creation-Date: 2013-12-08 16:47+0200\n"
 "PO-Revision-Date: 2013-11-17 01:36+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -29,23 +29,23 @@ msgstr "Lanzamiento de distribución"
 msgid "A new version of %1 is available!"
 msgstr "Una nueva versión de % 1 está disponible!"
 
-#: distrowatcher/contents/ui/main.qml:73
+#: distrowatcher/contents/ui/main.qml:74
 msgid "Distributions"
 msgstr "Distribuciones"
 
-#: distrowatcher/contents/ui/main.qml:77
+#: distrowatcher/contents/ui/main.qml:78
 msgid "Packages"
 msgstr "Paquetes"
 
-#: distrowatcher/contents/ui/main.qml:128
+#: distrowatcher/contents/ui/main.qml:137
 msgid "Data from distrowatch.com"
 msgstr "Datos desde distrowatch.com"
 
-#: distrowatcher/contents/ui/main.qml:229
+#: distrowatcher/contents/ui/main.qml:239
 msgid "Return to latest distributions"
 msgstr "Volver a últimas distribuciones"
 
-#: distrowatcher/contents/ui/main.qml:229
+#: distrowatcher/contents/ui/main.qml:239
 msgid "Select your favorite distributions"
 msgstr "Seleccione sus distribuciones favoritas"
 
