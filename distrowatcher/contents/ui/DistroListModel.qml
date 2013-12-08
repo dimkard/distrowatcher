@@ -54,17 +54,36 @@ Item {
       for (var i=0; i< latest.count;i++) {
 	var distroshort = latest.get(i).distro_short;
 	var latestdistro = latest.get(i).distro;
+	var lastMatchInList = get_last_in_list(distroshort); //get the full distro name, in case that > 1 exist in the list
+	//console.log(lastMatchInList); //debug only: show the last in list of latest distros
 	//console.log("distroshort: "  + distroshort) ; //debug only: show distro name
-	if (plasmoid.readConfig(root.enableNotifications) == true && plasmoid.readConfig(distroshort + root.isFavoritePostfix) == true && (plasmoid.readConfig(distroshort + root.latestPostfix) != latestdistro)) {
+	if (plasmoid.readConfig(root.enableNotifications) == true && plasmoid.readConfig(distroshort + root.isFavoritePostfix) == true && (plasmoid.readConfig(distroshort + root.latestPostfix) != lastMatchInList)) {
 	  //console.log(i18n("A new version of %1 is available!",distroshort)) ; //here goes notification
-	  //Logic.sendNotification(i18n("Distribution release"), i18n("A new version of ") + distroshort + i18n(" is available!"))
 	  Logic.sendNotification(i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort))
-	  plasmoid.writeConfig(distroshort + root.latestPostfix, latestdistro);
+	  plasmoid.writeConfig(distroshort + root.latestPostfix, lastMatchInList);
 	  //console.log(plasmoid.readConfig(distroshort + root.latestPostfix, latestdistro)); //debug only: show that config has been changed
 	}
       }
-    }  
-  }  
+    }    
+  } 
+    
+  function matches_in_list(latestDistro) { // find number occurences of a distro in the list
+    var matches = 0;
+    for (var i=0; i< latest.count;i++) {
+      if (latest.get(i).distro_short == latestDistro)
+	matches++;  //to check multiples
+    }
+    return matches;
+  }
+  
+  function get_last_in_list(latestDistro)  { //get the distro name of the last occurence of a distro
+    var latestInList = "";
+    for (var i=0; i < latest.count;i++) {
+      if (latest.get(i).distro_short == latestDistro)
+	latestInList = latest.get(i).distro // so as to return the last found distro
+    }
+    return latestInList;
+  }
    
   Timer {
       interval: root.interval*60000
