@@ -20,35 +20,42 @@
 import QtQuick 1.1
 
 Item {
-    id: root
-    property alias latestPackageModel: latest_package
-    property string status: latest_package.status
-    property string source: "http://distrowatch.com/news/dwp.xml"
-    //property string source: "./dwp.xml" //Only for test
-    property int numOfItems: latest_package.count // count package items
-    property int interval
-    function reload_model() {
-      latest_package.reload();
-    }
+  id: root
+
+  property alias latestPackageModel: packageModel
+  property string status: packageModel.status
+  property string source: "http://distrowatch.com/news/dwp.xml"
+  //property string source: "./dwp.xml" //Only for test
+  property int numOfItems: packageModel.count // count package items
+  property int interval
+
+  function reloadModel() {
+    packageModel.reload();
+  }
+
+  XmlListModel {
+    id: packageModel
+
+    source: root.source
+    //query: "/rss/channel/item[position() <= 5]" --> in case you want to fetch a subset of records
+    query: "/rss/channel/item"
     
-    XmlListModel {
-        id: latest_package
-        source: root.source
-        //query: "/rss/channel/item[position() <= 5]" --> in case you want to fetch a subset of records
-        query: "/rss/channel/item"
-	XmlRole { name: "title"; query: "title/string()" }
-        XmlRole { name: "date"; query: "substring(title/string(),1,5)" }
-        XmlRole { name: "latest_package"; query: "substring(title/string(),7,string-length(title/string())-5)" }
-        XmlRole { name: "link"; query: "link/string()" }
-        XmlRole { name: "item_index"; query: "position()" } //--------item's position, for highlight ----
-    }
+    XmlRole { name: "title"; query: "title/string()" }
+    XmlRole { name: "date"; query: "substring(title/string(),1,5)" }
+    XmlRole { name: "packageName"; query: "substring(title/string(),7,string-length(title/string())-5)" }
+    XmlRole { name: "link"; query: "link/string()" }
+    XmlRole { name: "itemIndex"; query: "position()" } //--------item's position, for highlight ----
+  }
+
+  Timer {
+    id: repeatTimer
     
-    Timer {
-        interval: root.interval*60000
-        running: true
-        repeat: true
-        onTriggered: {
-	  latest_package.reload();
-        }
+    interval: root.interval*60000
+    running: true
+    repeat: true
+    
+    onTriggered: {
+      packageModel.reload();
     }
+  }
 }

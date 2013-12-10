@@ -28,8 +28,8 @@ PlasmaExtras.ScrollArea {
   id: distroScrollArea
   property int dataCount: distroView.model.count //controls visibility
     
-  function filter_distros (distroFilter) {  //call function to filter distros
-    distroListModel.query_model(distroFilter);
+  function filterDistros (distroFilter) {  //call function to filter distros
+    distroListModel.queryModel(distroFilter);
   }
   
   flickableItem: 
@@ -61,7 +61,7 @@ PlasmaExtras.ScrollArea {
 	//titleText: model.title
 	latestVersion: model.latestversion
 	distroName: model.distroname
-	distroShortText : model.distro_short
+	distroShortText : model.distroShortName
 	linkText: model.link
 //	color: (parseInt(model.index) % 2 == 0) ? "transparent" : theme.backgroundColor
 	//color: (parseInt(model.index) % 2 == 0) ? Qt.darker(theme.backgroundColor,1.05) : theme.backgroundColor // we opted for transparency

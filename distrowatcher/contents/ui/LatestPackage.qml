@@ -24,64 +24,72 @@ import "./js/style.js" as Style
 
 Item {
   id: root
+  
   property string titleText
   property string linkText
   property string dateText
   property string packageText
   property int itemIndex 
   
-  signal entered() //inform parent regarding interaction
-  signal exited() //inform parent regarding interaction
-  signal positionChanged() //inform parent regarding interaction
-  // Current KDE theme
+  signal entered()
+  signal exited()
+  signal positionChanged()
+
   PlasmaCore.Theme {
-      id: theme
+    id: theme
   }
  
   MouseArea {
-      id: packageRecordMouseArea
-      anchors.fill: parent
-      onClicked: plasmoid.openUrl(root.linkText);
-      onEntered: root.entered();
-      onExited: root.exited();
-      onPositionChanged: root.positionChanged();
-      hoverEnabled: true
+    id: packageRecordMouseArea
+    
+    anchors.fill: parent
+    hoverEnabled: true
+    
+    onClicked: plasmoid.openUrl(root.linkText);
+    onEntered: root.entered();
+    onExited: root.exited();
+    onPositionChanged: root.positionChanged();
   }
     
-    Text {
-      id: date
-      text: root.dateText
-      style: Text.Raised  //fix white-white issue
-      styleColor: "gray" //fix white-white issue
-      anchors {
-	leftMargin: parent.width*Style.marginInsideRowPercent
-	top: root.top
-	left: root.left
-	verticalCenter : parent.verticalCenter
-      }
-      verticalAlignment : Text.AlignVCenter
-      horizontalAlignment: Text.AlignLeft
-      font.bold: true
-      font.pointSize: theme.desktopFont.pointSize
-      wrapMode: "WordWrap"
-      color: theme.textColor
-  }    
-
+  Text {
+    id: date
+    
+    text: root.dateText
+    style: Text.Raised  //fix white-white issue
+    styleColor: "gray" //fix white-white issue
+    anchors {
+      leftMargin: parent.width*Style.marginInsideRowPercent
+      top: root.top
+      left: root.left
+      verticalCenter: parent.verticalCenter
+    }
+    verticalAlignment: Text.AlignVCenter
+    horizontalAlignment: Text.AlignLeft
+    font {
+      bold: true
+      pointSize: theme.desktopFont.pointSize
+    }
+    wrapMode: "WordWrap"
+    color: theme.textColor
+  }
 
   Text {
-      id: latest_package
-      text: root.packageText       
-      anchors {
-	leftMargin: parent.width*Style.marginInsideRowPercent
-	top: date.top
-	left: date.right
-	verticalCenter : parent.verticalCenter
-      }
-      verticalAlignment : Text.AlignVCenter
-      horizontalAlignment: Text.AlignLeft        
-      font.bold: false
-      font.pointSize: theme.desktopFont.pointSize
-      wrapMode: "WordWrap"
-      color: theme.textColor
+    id: packageModel
+    
+    text: root.packageText       
+    anchors {
+      leftMargin: parent.width*Style.marginInsideRowPercent
+      top: date.top
+      left: date.right
+      verticalCenter : parent.verticalCenter
+    }
+    verticalAlignment : Text.AlignVCenter
+    horizontalAlignment: Text.AlignLeft        
+    font {
+      bold: false
+      pointSize: theme.desktopFont.pointSize
+    }
+    wrapMode: "WordWrap"
+    color: theme.textColor
   }  
 }

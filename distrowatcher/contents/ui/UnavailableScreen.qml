@@ -22,18 +22,19 @@ import org.kde.plasma.components 0.1 as PlasmaComponents
 import org.kde.plasma.core 0.1 as PlasmaCore
 import "./js/style.js" as Style
 
-Column {
-  
+Column {  
   id: root
-    // Current KDE theme
+  
   PlasmaCore.Theme {
-      id: theme
+    id: theme
   }
+  
   Image {
     id: netowrkDisconnected
+
     anchors {
       horizontalCenter : root.horizontalCenter
-      topMargin : root.height*Style.marginPercent // icon distance from row edges
+      topMargin : root.height*Style.marginPercent
       left : root.left
     }
     fillMode : Image.PreserveAspectFit 
@@ -42,9 +43,10 @@ Column {
       
   Text {
     id: offlineText
+    
     anchors {
       horizontalCenter : root.horizontalCenter
-      topMargin : root.height*Style.marginPercent // icon distance from row edges
+      topMargin : root.height*Style.marginPercent
       left : root.left
     }
     color: theme.textColor 
@@ -53,4 +55,4 @@ Column {
     text: i18n("Network issue. \nPlease check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties.");
     wrapMode: Text.Wrap
   }
-} 
+}

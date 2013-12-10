@@ -16,6 +16,7 @@
     along with this program; if not, see <http://www.gnu.org/licenses/>.
 
 */
+
 import QtQuick 1.1
 import org.kde.plasma.components 0.1 as PlasmaComponents
 import org.kde.plasma.core 0.1 as PlasmaCore
@@ -25,31 +26,34 @@ import "./js/style.js" as Style
 
 Item {
   id: favoriteDistrosScreen
-  visible: true //visibility is controled by opacity
+  
+  visible: true // visibility is controled by opacity
 
   PlasmaComponents.TextField { 
     id: searchItem
-    anchors{
+    
+    anchors {
       top: parent.top
       left: parent.left
-    }
+    }    
     height: theme.defaultFont.mSize.height*1.6
     width: parent.width/2
     placeholderText: i18n("Enter distribution name...")
     clearButtonShown: true
+    
     onTextChanged: {
-      favoritesScreenItems.filter_distros(text); // when user changes text, filter favorites distro list
+      favoritesScreenItems.filterDistros(text); // when user changes text, filter favorites distro list
     }
   }
 
   FavoriteDistrosScreen {
     id: favoritesScreenItems
+    
     anchors {
       top: searchItem.bottom
       bottom: parent.bottom
       left: parent.left      
     }
-
     width: parent.width
   }
 }

@@ -22,7 +22,9 @@ import "../code/logic.js" as Logic
 import "./js/globals.js" as Params
 
 Item {
+
   id: root
+
   property alias latestModel: latest
   property string status: latest.status
   property string source: "http://distrowatch.com/news/dwd.xml"
@@ -33,28 +35,37 @@ Item {
   property string latestPostfix: Params.latestPostfix
   property string enableNotifications: Params.enableNotifications  
   
-  function reload_model() {
+  function reloadModel() {
     latest.reload()
-    latest.check_new_distros()
+    latest.checkForNewDistros()
   }
-  //List model for Distros
+    
+  function checkInList(latestDistro) { // find number occurences of a distro in the list
+    var matches = 0;
+    for (var i=0; i< latest.count;i++) {
+      if (latest.get(i).distroShortName == latestDistro)
+	matches++;  //to check multiples
+    }
+    return matches;
+  }
+  
+  function getLastInList(latestDistro)  { //get the distro name of the last occurence of a distro
+    var latestInList = "";
+    for (var i=0; i < latest.count;i++) {
+      if (latest.get(i).distroShortName == latestDistro)
+	latestInList = latest.get(i).distro // so as to return the last found distro
+    }
+    return latestInList;
+  }
+  
   XmlListModel {
     id: latest
-    source: root.source
-    //query: "/rss/channel/item[position() <= 5]" --> in case you want to fetch a subset of records
-    query: "/rss/channel/item"
-    XmlRole { name: "title"; query: "title/string()" }
-    XmlRole { name: "date"; query: "substring(title/string(),1,5)" }
-    XmlRole { name: "distro"; query: "substring(title/string(),7,string-length(title/string())-5)" }
-    XmlRole { name: "distro_short" ; query: "substring-after(link/string(),'com\/')" }
-    XmlRole { name: "link"; query: "link/string()" }
-    XmlRole { name: "item_index"; query: "position()" } //--------item's position, for highlight ----
-    
-    function check_new_distros() { //checks new distro list, reads config and triggers notification if new favorite distro has been found
+
+    function checkForNewDistros() { //checks new distro list, reads config and triggers notification if new favorite distro has been found
       for (var i=0; i< latest.count;i++) {
-	var distroshort = latest.get(i).distro_short;
+	var distroshort = latest.get(i).distroShortName;
 	var latestdistro = latest.get(i).distro;
-	var lastMatchInList = get_last_in_list(distroshort); //get the full distro name, in case that > 1 exist in the list
+	var lastMatchInList = getLastInList(distroshort); //get the full distro name, in case that > 1 exist in the list
 	//console.log(lastMatchInList); //debug only: show the last in list of latest distros
 	//console.log("distroshort: "  + distroshort) ; //debug only: show distro name
 	if (plasmoid.readConfig(root.enableNotifications) == true && plasmoid.readConfig(distroshort + root.isFavoritePostfix) == true && (plasmoid.readConfig(distroshort + root.latestPostfix) != lastMatchInList)) {
@@ -64,26 +75,21 @@ Item {
 	  //console.log(plasmoid.readConfig(distroshort + root.latestPostfix, latestdistro)); //debug only: show that config has been changed
 	}
       }
-    }    
-  } 
+    }
     
-  function matches_in_list(latestDistro) { // find number occurences of a distro in the list
-    var matches = 0;
-    for (var i=0; i< latest.count;i++) {
-      if (latest.get(i).distro_short == latestDistro)
-	matches++;  //to check multiples
-    }
-    return matches;
-  }
-  
-  function get_last_in_list(latestDistro)  { //get the distro name of the last occurence of a distro
-    var latestInList = "";
-    for (var i=0; i < latest.count;i++) {
-      if (latest.get(i).distro_short == latestDistro)
-	latestInList = latest.get(i).distro // so as to return the last found distro
-    }
-    return latestInList;
-  }
+    source: root.source
+    //query: "/rss/channel/item[position() <= 5]" --> in case you want to fetch a subset of records
+    query: "/rss/channel/item"
+    
+    XmlRole { name: "title"; query: "title/string()" }
+    XmlRole { name: "date"; query: "substring(title/string(),1,5)" }
+    XmlRole { name: "distro"; query: "substring(title/string(),7,string-length(title/string())-5)" }
+    XmlRole { name: "distroShortName" ; query: "substring-after(link/string(),'com\/')" }
+    XmlRole { name: "link"; query: "link/string()" }
+    XmlRole { name: "itemIndex"; query: "position()" } //--------item's position, for highlight ----
+    
+    
+  } 
    
   Timer {
       interval: root.interval*60000
@@ -91,7 +97,7 @@ Item {
       repeat: true
       onTriggered: {
 	latest.reload();
-	latest.check_new_distros();
+	latest.checkForNewDistros();
       }
   }
 }

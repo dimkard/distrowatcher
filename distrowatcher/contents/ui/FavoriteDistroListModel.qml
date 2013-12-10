@@ -31,12 +31,12 @@ Item {
   property int interval
   property int numOfItems: distrolist.count // count distro items
 
-  function query_model(searchString) { //filter favorite distributions by name
+  function queryModel(searchString) { //filter favorite distributions by name
     distrolist.query =  "/distrolist/item[contains(lower-case(child::distroname),lower-case('" + searchString + "'))]"
     distrolist.reload();
   }
   
-  function reload_model() {
+  function reloadModel() {
     distrolist.reload();
   }
 
@@ -46,10 +46,10 @@ Item {
     source: root.source
     //query: "/rss/channel/item[position() <= 5]" --> in case you want to fetch a subset of records
     query: "/distrolist/item"
-    XmlRole { name: "distro_short" ; query: "substring-after(link/string(),'com\/')" }
+    XmlRole { name: "distroShortName" ; query: "substring-after(link/string(),'com\/')" }
     XmlRole { name: "link"; query: "link/string()" }
     XmlRole { id: distroname ; name: "distroname"; query: "distroname/string()" }
     XmlRole { name: "latestversion"; query: "latestversion/string()" }
-    XmlRole { name: "item_index"; query: "position()" } //--------item's position, for highlight ----
+    XmlRole { name: "itemIndex"; query: "position()" } //--------item's position, for highlight ----
   }
 }
