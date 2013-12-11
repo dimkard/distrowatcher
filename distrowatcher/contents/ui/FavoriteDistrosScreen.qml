@@ -23,9 +23,9 @@ import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.extras 0.1 as PlasmaExtras 
 import "./js/style.js" as Style
 
-//Latest Distros Screen
 PlasmaExtras.ScrollArea {
   id: distroScrollArea
+
   property int dataCount: distroView.model.count //controls visibility
     
   function filterDistros (distroFilter) {  //call function to filter distros
@@ -35,7 +35,7 @@ PlasmaExtras.ScrollArea {
   flickableItem: 
     ListView {
       id:distroView
-      /* header:  //Seems to just add cluttering
+      /* header:  //Seems that just adds cluttering
 	  Text { 
 	    id: mytitle 
 	    font.bold: true
@@ -47,41 +47,42 @@ PlasmaExtras.ScrollArea {
 	    text: i18n("Select your favorite distributions")      
 	  }
       */
-      //property int cnt: 0 //only to add numbering to logs /debug only
+     
       orientation: Qt.Vertical
       interactive: true
       clip: true // enabled, since flicking may guide items outside the borders of the listView
       currentIndex: -1 //set to -1 to avoid highlighting of 1st record on load
+      spacing: Style.favSpacingAsPercentOfRow*(height/Style.numberOfFavoriteDistros)
+      maximumFlickVelocity: Style.maximumFlickVelocity;  // this pair avoid plasmoid "stuck"
+      highlightMoveDuration: Style.highlightMoveDuration
+      
       model: distroListModel.distroModel // set distroModel as the target xml model
+      
       delegate: FavoriteDistro {    //FavoriteDistro.qml created the layout, putting image and text in the position wanted
 	id: favoriteDistroItem
+	
 	height: theme.largeIconSize // avoid rendering issues
-	//(distroView.height - (Style.numberOfFavoriteDistros - 1)*distroView.spacing)/Style.numberOfFavoriteDistros
 	width: distroView.width //- scrollBar.width
-	//titleText: model.title
 	latestVersion: model.latestversion
 	distroName: model.distroname
 	distroShortText : model.distroShortName
 	linkText: model.link
-//	color: (parseInt(model.index) % 2 == 0) ? "transparent" : theme.backgroundColor
-	//color: (parseInt(model.index) % 2 == 0) ? Qt.darker(theme.backgroundColor,1.05) : theme.backgroundColor // we opted for transparency
 	itemIndex: parseInt(model.index) // index of item
 	isFlicking: distroView.flicking
+
 	onPositionChanged: {  //on mouse move, set currentIndex of the ListView to the current item, so as to be highlighted
 	      distroView.flicking ? distroView.currentIndex = distroView.currentIndex : distroView.currentIndex = itemIndex ; // -1 is not needed, since index (not position) is used. Also, index change during flicking disabled.
 	}
       }
-      spacing: Style.favSpacingAsPercentOfRow*(height/Style.numberOfFavoriteDistros)
-      //KDE native highlight
+      
       highlight: PlasmaComponents.Highlight {
-	      hover: true
-	      width: distroView.width //- scrollBar.width
+	hover: true
+	width: distroView.width
       }
-      maximumFlickVelocity: Style.maximumFlickVelocity;  // this pair avoid plasmoid "stuck"
-      //highlightMoveSpeed: 2000;    // ...
-      highlightMoveDuration: Style.highlightMoveDuration
-      FavoriteDistroListModel {    //get xml data from FavoriteDistroListModel.qml. DistroListModel contains XmlListModel: latest
+
+      FavoriteDistroListModel {    //get xml data from FavoriteDistroListModel.qml )contains XmlListModel: latest)
 	id: distroListModel
-      }	
+      }
+     
     }
 }

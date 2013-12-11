@@ -48,7 +48,7 @@ Item {
   }
 
   Timer {
-    id: repeatTimer
+    id: packageTimer
     
     interval: root.interval*60000
     running: true

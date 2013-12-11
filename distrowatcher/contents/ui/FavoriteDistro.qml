@@ -26,38 +26,41 @@ import "./js/globals.js" as Params
 
 Item {
   id: root
+
   property string linkText
   property string distroShortText
   property string distroName
   property string latestVersion
   property bool isFlicking 
   property int itemIndex
-  
   property string isFavoritePostfix: Params.isFavoritePostfix
+
   signal entered() //inform parent regarding interaction
   signal exited() //inform parent regarding interaction
   signal positionChanged() //inform parent regarding interaction
 
-  // Current KDE theme
   PlasmaCore.Theme {
     id: theme
   } 
   
   MouseArea {
     id: distroRecordMouseArea
+
     anchors.fill: parent
+    hoverEnabled: true
+
     onEntered: root.entered();
     onExited: root.exited();
-    onClicked: { 
-      //debug only // console.log("click" + root.linkText); 
+    onClicked: {
       plasmoid.openUrl(root.linkText);
     }
     onPositionChanged: root.positionChanged();
-    hoverEnabled: true
+    
   }
   
   Image {
     id: icon
+    
     anchors {
       verticalCenter : parent.verticalCenter 
       topMargin : root.height*Style.marginPercent // icon distance from row edges
@@ -68,6 +71,7 @@ Item {
     fillMode: Image.PreserveAspectFit
     smooth: true
     source: "./icons/distros/" +  distroShortText + ".png"
+    
     onStatusChanged: if (status == Image.Error) {
 			  // we set the icon to an empty image if we failed to find one
 			  source = ""
@@ -75,24 +79,25 @@ Item {
   }
 
   Text {
-      id: distro
-      anchors {
-	top: icon.top
-	left: icon.right
-	leftMargin: parent.width*Style.marginInsideRowPercent
-	verticalCenter : parent.verticalCenter
-      }
-      verticalAlignment : Text.AlignVCenter
-      text: root.distroName
-      font.bold: false
-      font.pointSize: theme.desktopFont.pointSize
-      horizontalAlignment: Text.AlignLeft
-      wrapMode: "WordWrap" 
-      color: theme.textColor    
-  }  
+    id: distro
+    
+    anchors {
+      top: icon.top
+      left: icon.right
+      leftMargin: parent.width*Style.marginInsideRowPercent
+      verticalCenter : parent.verticalCenter
+    }
+    verticalAlignment : Text.AlignVCenter
+    text: root.distroName
+    font.pointSize: theme.desktopFont.pointSize
+    horizontalAlignment: Text.AlignLeft
+    wrapMode: "WordWrap" 
+    color: theme.textColor    
+}  
 
   Extras.MouseEventListener { 
     id: favoritesIcon	
+   
     visible: true
     width: theme.smallMediumIconSize
     height: theme.smallMediumIconSize
@@ -104,6 +109,7 @@ Item {
 	topMargin : root.height*Style.marginPercent // icon distance from top
 	right: parent.right
       }
+    
     onPositionChanged: root.positionChanged();	
     onContainsMouseChanged: {
       if(!isFlicking)
@@ -112,6 +118,7 @@ Item {
 	else
 	  state =  "hideButton";
     }
+    
     states: [ //button states
       State {
 	name: "showButton"
@@ -136,6 +143,7 @@ Item {
 	}
       }
     ]
+    
     transitions: [
       Transition {
 	NumberAnimation {
@@ -148,6 +156,7 @@ Item {
 
     PlasmaComponents.Button {
       id: starButton
+      
       anchors.fill: parent
       opacity: 0 // by default no button is displayed
       checkable: false
@@ -157,6 +166,7 @@ Item {
       height: theme.smallIconSize
       minimumWidth: theme.smallIconSize
       minimumHeight: theme.smallIconSize
+      
       onClicked: {
 	var newFavStatus = (plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix) == true) ? false : true;
 	star.source = (newFavStatus == true) ? "./icons/favorite.png" : "./icons/non-favorite.png" 	  
@@ -166,18 +176,19 @@ Item {
 
     Image {
       id: star
+      
       visible: true//(plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix))
       anchors.centerIn: parent
       width: theme.smallMediumIconSize
       height: theme.smallMediumIconSize
       fillMode: Image.PreserveAspectFit
       smooth: true
+      source: (plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix) == true) ? "./icons/favorite.png" : "./icons/non-favorite.png" ;
       onStatusChanged: if (status == Image.Error) {
 			    // we set the icon to an empty image if we failed to find one
 			    source = ""
       }
-      source: (plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix) == true) ? "./icons/favorite.png" : "./icons/non-favorite.png" ;
     }
+    
   }
 }
- 

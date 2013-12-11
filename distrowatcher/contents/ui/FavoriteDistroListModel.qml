@@ -24,6 +24,7 @@ import org.kde.plasma.extras 0.1 as PlasmaExtras
 
 Item {
   id: root
+
   property alias distroModel: distrolist
   property string status: distrolist.status
   //property string source: "http://distrowatch.com/news/dwd.xml"
@@ -40,11 +41,11 @@ Item {
     distrolist.reload();
   }
 
-  //List model for Favorite Distros
   XmlListModel {
     id: distrolist
+
     source: root.source
-    //query: "/rss/channel/item[position() <= 5]" --> in case you want to fetch a subset of records
+    // query: "/rss/channel/item[position() <= 5]" // in case you want to fetch a subset of records
     query: "/distrolist/item"
     XmlRole { name: "distroShortName" ; query: "substring-after(link/string(),'com\/')" }
     XmlRole { name: "link"; query: "link/string()" }

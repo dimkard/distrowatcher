@@ -92,13 +92,16 @@ Item {
   } 
    
   Timer {
-      interval: root.interval*60000
-      running: true
-      repeat: true
-      onTriggered: {
-	latest.reload();
-	latest.checkForNewDistros();
-      }
+    id: distroTimer
+
+    interval: root.interval*60000
+    running: true
+    repeat: true
+    
+    onTriggered: {
+      latest.reload();
+      latest.checkForNewDistros();
+    }
   }
 }
   

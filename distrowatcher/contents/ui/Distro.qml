@@ -24,6 +24,7 @@ import "./js/style.js" as Style
 
 Item {
   id: root
+
   property string titleText
   property string linkText
   property string dateText
@@ -34,14 +35,17 @@ Item {
   signal entered() //inform parent regarding interaction
   signal exited() //inform parent regarding interaction
   signal positionChanged() //inform parent regarding interaction
-  // Current KDE theme
+  
   PlasmaCore.Theme {
     id: theme
   } 
 
   MouseArea {
     id: distroRecordMouseArea
+  
     anchors.fill: parent
+    hoverEnabled: true
+    
     onClicked: { 
       //debug only // console.log("click" + root.linkText); 
       plasmoid.openUrl(root.linkText);
@@ -49,11 +53,12 @@ Item {
     onEntered: root.entered();
     onExited: root.exited();
     onPositionChanged: root.positionChanged();
-    hoverEnabled: true
+    
   }
 
   Image {
     id: icon
+    
     anchors {
       verticalCenter : parent.verticalCenter 
       topMargin : root.height*Style.marginPercent // icon distance from row edges
@@ -64,6 +69,7 @@ Item {
     fillMode: Image.PreserveAspectFit
     smooth: true
     source: "http://distrowatch.com/images/yvzhuwbpy/" +  distroShortText + ".png"
+    
     onStatusChanged: if (status == Image.Error) {
 			  // we set the icon to an empty image if we failed to find one
 			  source = ""
@@ -72,6 +78,7 @@ Item {
     
   Text {
     id: date
+    
     anchors {
       top: icon.top
       left: icon.right	
@@ -79,8 +86,10 @@ Item {
     }
     verticalAlignment : Text.AlignVCenter
     text: root.dateText
-    font.bold: true
-    font.pointSize: theme.desktopFont.pointSize
+    font {
+      bold: true
+      pointSize: theme.desktopFont.pointSize
+    }
     horizontalAlignment: Text.AlignLeft
     style: Text.Raised  //fix white-white issue
     styleColor: "gray" //fix white-white issue
@@ -89,19 +98,22 @@ Item {
   }    
 
   Text {
-      id: distro
-      anchors {
-	top: date.top
-	left: date.right
-	leftMargin: parent.width*Style.marginInsideRowPercent
-	verticalCenter : parent.verticalCenter
-      }
-      verticalAlignment : Text.AlignVCenter
-      text: root.distroText
-      font.bold: false
-      font.pointSize: theme.desktopFont.pointSize
-      horizontalAlignment: Text.AlignLeft
-      wrapMode: "WordWrap" 
-      color: theme.textColor    
+    id: distro
+
+    anchors {
+      top: date.top
+      left: date.right
+      leftMargin: parent.width*Style.marginInsideRowPercent
+      verticalCenter : parent.verticalCenter
+    }
+    verticalAlignment : Text.AlignVCenter
+    text: root.distroText
+    font {
+      bold: false
+      pointSize: theme.desktopFont.pointSize
+    }
+    horizontalAlignment: Text.AlignLeft
+    wrapMode: "WordWrap" 
+    color: theme.textColor    
   }  
 }
