@@ -1,5 +1,6 @@
-Version 0.9
+Version 0.9.1
 ------------
+- Issue with multiple notifications when a distribution appears more than once in an rss bunch fixed
 - Unnecessary translations removed
 - Code cleaning
 - Text field replaced text area in favorites; clearing handle added.
