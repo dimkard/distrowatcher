@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
 "content=157314\n"
-"POT-Creation-Date: 2013-12-08 16:47+0200\n"
+"POT-Creation-Date: 2013-12-14 12:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,39 +18,39 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: distrowatcher/contents/ui/DistroListModel.qml:61
+#: distrowatcher/contents/ui/DistroListModel.qml:73
 msgid "Distribution release"
 msgstr ""
 
-#: distrowatcher/contents/ui/DistroListModel.qml:61
+#: distrowatcher/contents/ui/DistroListModel.qml:73
 msgid "A new version of %1 is available!"
 msgstr ""
 
-#: distrowatcher/contents/ui/main.qml:74
+#: distrowatcher/contents/ui/main.qml:76
 msgid "Distributions"
 msgstr ""
 
-#: distrowatcher/contents/ui/main.qml:78
+#: distrowatcher/contents/ui/main.qml:82
 msgid "Packages"
 msgstr ""
 
-#: distrowatcher/contents/ui/main.qml:137
+#: distrowatcher/contents/ui/main.qml:142
 msgid "Data from distrowatch.com"
 msgstr ""
 
-#: distrowatcher/contents/ui/main.qml:239
+#: distrowatcher/contents/ui/main.qml:253
 msgid "Return to latest distributions"
 msgstr ""
 
-#: distrowatcher/contents/ui/main.qml:239
+#: distrowatcher/contents/ui/main.qml:253
 msgid "Select your favorite distributions"
 msgstr ""
 
-#: distrowatcher/contents/ui/SearchableFavorites.qml:38
+#: distrowatcher/contents/ui/SearchableFavorites.qml:41
 msgid "Enter distribution name..."
 msgstr ""
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:53
+#: distrowatcher/contents/ui/UnavailableScreen.qml:55
 msgid ""
 "Network issue. \n"
 "Please check your network connection. If you do not face any network "
