@@ -3,7 +3,7 @@ function sendNotification(summary, body) {
     service = engine.serviceForSource("notification");
     op = service.operationDescription("createNotification");
     op["appName"] = "distrowatcher";
-    op["appIcon"] = "distrowatcher";
+    op["appIcon"] = "preferences-desktop-notification";
     op["summary"] = summary;
     op["body"] = body;
     op["timeout"] = 2000;
