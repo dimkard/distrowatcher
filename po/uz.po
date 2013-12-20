@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Umidjon Almasov <u.almasov@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: distrowatcher\n"
+"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?content=157314\n"
+"POT-Creation-Date: 2013-12-14 12:06+0200\n"
+"PO-Revision-Date: 2013-12-20 10:53+0000\n"
+"Last-Translator: Umidjon Almasov <u.almasov@gmail.com>\n"
+"Language-Team: Uzbek (Latin) (http://www.transifex.com/projects/p/distrowatcher/language/uz@Latn/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uz@Latn\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: distrowatcher/contents/ui/DistroListModel.qml:73
+msgid "Distribution release"
+msgstr "Distributiv nashri"
+
+#: distrowatcher/contents/ui/DistroListModel.qml:73
+msgid "A new version of %1 is available!"
+msgstr "%1'ning yangi versiyasi mavjud!"
+
+#: distrowatcher/contents/ui/main.qml:76
+msgid "Distributions"
+msgstr "Distributivlar"
+
+#: distrowatcher/contents/ui/main.qml:82
+msgid "Packages"
+msgstr "Paketlar"
+
+#: distrowatcher/contents/ui/main.qml:142
+msgid "Data from distrowatch.com"
+msgstr "Distrowatch.com'dan ma'lumot"
+
+#: distrowatcher/contents/ui/main.qml:253
+msgid "Return to latest distributions"
+msgstr "So'nggi distributivlarga qaytish"
+
+#: distrowatcher/contents/ui/main.qml:253
+msgid "Select your favorite distributions"
+msgstr "Sevimli distributivlarni tanlang"
+
+#: distrowatcher/contents/ui/SearchableFavorites.qml:41
+msgid "Enter distribution name..."
+msgstr "Distributiv nomini kiritish..."
+
+#: distrowatcher/contents/ui/UnavailableScreen.qml:55
+msgid ""
+"Network issue. \n"
+"Please check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties."
+msgstr "Tarmoq muammosi. \nTarmoqqa ulanishni tekshiring. Agar tarmoq muammosi bo'lmasa, distrowatch.com mavjud emas bo'lishi mumkin."
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:14
+#. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
+#: po/rc.cpp:3 rc.cpp:3
+msgid "Dialog"
+msgstr "Dialog"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, groupGeneral)
+#: po/rc.cpp:6 rc.cpp:6
+msgid "General"
+msgstr "Umumiy"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:34
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_refreshevery)
+#: po/rc.cpp:9 rc.cpp:9
+msgid "Refresh data every X minutes"
+msgstr "Har X daqiqa ma'lumotlarni yangilash"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:47
+#. i18n: ectx: property (text), widget (QLabel, lblRefreshevery)
+#: po/rc.cpp:12 rc.cpp:12
+msgid "Refresh every (minutes):"
+msgstr "Yangilash davri (daqiqa):"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:54
+#. i18n: ectx: property (toolTip), widget (QCheckBox,
+#. kcfg_enablenotifications)
+#: po/rc.cpp:15 rc.cpp:15
+msgid ""
+"Display a notification in case of new release of a favorite distribution"
+msgstr "Sevimli distributivning yangi nashri chiqqanda bildirishnoma ko'rsatish"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:70
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: po/rc.cpp:18 rc.cpp:18
+msgid "Enable notifications:"
+msgstr "Bildirishnomalarni yoqish:"
+
+#: po/rc.cpp:19 rc.cpp:19
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Umid Almasov"
+
+#: po/rc.cpp:20 rc.cpp:20
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "u.almasov@gmail.com"
