@@ -1,21 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Umidjon Almasov <u.almasov@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: distrowatcher\n"
-"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?content=157314\n"
-"POT-Creation-Date: 2013-12-14 12:06+0200\n"
+"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
+"content=157314\n"
+"POT-Creation-Date: 2013-12-23 11:24+0200\n"
 "PO-Revision-Date: 2013-12-20 10:53+0000\n"
 "Last-Translator: Umidjon Almasov <u.almasov@gmail.com>\n"
-"Language-Team: Uzbek (Latin) (http://www.transifex.com/projects/p/distrowatcher/language/uz@Latn/)\n"
+"Language-Team: Uzbek (Latin) (http://www.transifex.com/projects/p/"
+"distrowatcher/language/uz@Latn/)\n"
+"Language: uz@Latn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uz@Latn\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: distrowatcher/contents/ui/DistroListModel.qml:73
@@ -53,8 +55,12 @@ msgstr "Distributiv nomini kiritish..."
 #: distrowatcher/contents/ui/UnavailableScreen.qml:55
 msgid ""
 "Network issue. \n"
-"Please check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties."
-msgstr "Tarmoq muammosi. \nTarmoqqa ulanishni tekshiring. Agar tarmoq muammosi bo'lmasa, distrowatch.com mavjud emas bo'lishi mumkin."
+"Please check your network connection. If you do not face any network "
+"problem, distrowatch.com may be unavailable or facing difficulties."
+msgstr ""
+"Tarmoq muammosi. \n"
+"Tarmoqqa ulanishni tekshiring. Agar tarmoq muammosi bo'lmasa, distrowatch."
+"com mavjud emas bo'lishi mumkin."
 
 #. i18n: file: distrowatcher/contents/ui/config.ui:14
 #. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
@@ -81,12 +87,12 @@ msgid "Refresh every (minutes):"
 msgstr "Yangilash davri (daqiqa):"
 
 #. i18n: file: distrowatcher/contents/ui/config.ui:54
-#. i18n: ectx: property (toolTip), widget (QCheckBox,
-#. kcfg_enablenotifications)
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
 #: po/rc.cpp:15 rc.cpp:15
 msgid ""
 "Display a notification in case of new release of a favorite distribution"
-msgstr "Sevimli distributivning yangi nashri chiqqanda bildirishnoma ko'rsatish"
+msgstr ""
+"Sevimli distributivning yangi nashri chiqqanda bildirishnoma ko'rsatish"
 
 #. i18n: file: distrowatcher/contents/ui/config.ui:70
 #. i18n: ectx: property (text), widget (QLabel, label)
