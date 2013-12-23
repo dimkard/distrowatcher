@@ -5,3 +5,4 @@ deb.CMakeLists.txt
 build/
 *.deb
 *.plasmoid
+RELEASE_PATH
