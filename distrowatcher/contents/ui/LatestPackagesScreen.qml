@@ -38,7 +38,7 @@ PlasmaExtras.ScrollArea {
     clip: true // enabled, since flicking may guide items outside the borders of the listView
     interactive: true //in conjunction with property clip: true, results in the expected result (scrolling on click of middle button)
     currentIndex: -1 //set to -1 to avoid highlighting of 1st record on load
-    spacing: Style.spacingAsPercentOfRow*(height/Style.numberOfPackages)
+    spacing: 5 //no need for complex calculation here //Style.spacingAsPercentOfRow*(height/Style.numberOfPackages)
     highlight: PlasmaComponents.Highlight {
       hover: true
       width: packageView.width

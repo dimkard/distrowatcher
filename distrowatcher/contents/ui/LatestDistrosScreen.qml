@@ -53,7 +53,7 @@ PlasmaExtras.ScrollArea {
     clip: true // enabled, since flicking may guide items outside the borders of the listView
     currentIndex: -1 //set to -1 to avoid highlighting of 1st record on load
     //boundsBehavior: Flickable.StopAtBounds // removed, default is back
-    spacing: Style.spacingAsPercentOfRow*(height/Style.numberOfDistros)
+    spacing: 5 //no need for complex calculation here //Style.spacingAsPercentOfRow*(height/Style.numberOfDistros)
     maximumFlickVelocity: Style.maximumFlickVelocity  // this pair avoid plasmoid "stuck"
     highlightMoveDuration: Style.highlightMoveDuration
     
