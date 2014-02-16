@@ -25,6 +25,8 @@ import "./js/style.js" as Style
 Column {  
   id: root
   
+  signal reloadClicked() //let parent know that user requested to reload
+  spacing: 10
   PlasmaCore.Theme {
     id: theme
   }
@@ -34,8 +36,6 @@ Column {
 
     anchors {
       horizontalCenter : root.horizontalCenter
-      topMargin : root.height*Style.marginPercent
-      left : root.left
     }
     fillMode : Image.PreserveAspectFit 
     source: "./images/task-attention-48.png"
@@ -46,7 +46,6 @@ Column {
     
     anchors {
       horizontalCenter : root.horizontalCenter
-      topMargin : root.height*Style.marginPercent
       left : root.left
     }
     color: theme.textColor 
@@ -54,5 +53,15 @@ Column {
     horizontalAlignment: Text.AlignHCenter
     text: i18n("Network issue. \nPlease check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties.");
     wrapMode: Text.Wrap
+  }
+
+  PlasmaComponents.Button {
+    id: refreshButton
+    anchors {
+      horizontalCenter : root.horizontalCenter
+    }
+    checkable: false
+    text: i18n("Reload")
+    onClicked: root.reloadClicked()
   }
 }

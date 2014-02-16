@@ -34,6 +34,10 @@ PlasmaExtras.ScrollArea {
     distroView.model.checkForNewDistros();
   }
   
+  function reloadModel() { //addded for triggering reload after user has requested so
+    distroListModel.reloadModel();
+  }
+  
   onDataCountChanged: { //checkForNewDistros when a new list is available
     if (distroScrollArea.dataCount > 0 ) {
       distroView.model.checkForNewDistros();

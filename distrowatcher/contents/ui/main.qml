@@ -119,6 +119,10 @@ Rectangle {
       fill: parent
     }
     visible: (latestDistrosScreen.dataCount <= 0 || latestDistrosScreen.dataCount == undefined) && main.state == "hideFavorites" // to be displayed if models contain no data and we are not in favorites
+    onReloadClicked: {
+      latestDistrosScreen.reloadModel();
+      latestPackagesScreen.reloadModel();
+    }
   }
     
   Rectangle { // in the bottom display that the web source (distrowatch)

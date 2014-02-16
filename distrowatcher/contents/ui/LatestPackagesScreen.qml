@@ -29,6 +29,10 @@ PlasmaExtras.ScrollArea {
   property alias refreshEvery: packageView.refreshEvery
   property int dataCount: packageView.model.count // controls visibility
   
+  function reloadModel() { //addded for triggering reload after user has requested so
+  latestPackageListModel.reloadModel();
+}
+
   ListView {
     id:packageView
     
