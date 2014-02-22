@@ -39,7 +39,7 @@ Rectangle {
   width: Style.width
   height: Style.height
   color: "transparent"
-  state : "hideFavorites" // by default, open in normal mode
+  //state : "hideFavorites" // by default, open in normal mode // TO BE REMOVED, states are using when'
 
   Component.onCompleted: { // read configuration, in case of change in configuration
     plasmoid.addEventListener('ConfigChanged', configChanged); 
@@ -118,7 +118,7 @@ Rectangle {
       horizontalCenter: parent.horizontalCenter
       fill: parent
     }
-    visible: (latestDistrosScreen.dataCount <= 0 || latestDistrosScreen.dataCount == undefined) && main.state == "hideFavorites" // to be displayed if models contain no data and we are not in favorites
+    //visible: (latestDistrosScreen.dataCount <= 0 || latestDistrosScreen.dataCount == undefined) && main.state == "hideFavorites" // to be displayed if models contain no data and we are not in favorites //TO BE REMOVED
     onReloadClicked: {
       latestDistrosScreen.reloadModel();
       latestPackagesScreen.reloadModel();
@@ -150,7 +150,7 @@ Rectangle {
   Extras.MouseEventListener { // catch action in the 'favorites' button/image
     id: favoritesIcon	
     
-    visible: (latestDistrosScreen.visible || favoriteDistrosScreen.visible )
+    visible: (main.state == "showFavorites" || (main.state == "nonFavAvailable" && mainTabGroup.currentTab == latestDistrosScreen)) //to be displayed only in distros and favorites views
     width: theme.smallMediumIconSize
     height: theme.smallMediumIconSize
     hoverEnabled: true
@@ -163,24 +163,19 @@ Rectangle {
     PlasmaComponents.Button {
       id: iconButton
       
+      property int buttonState: -1 // -1: Non-favorite mode, 1: Favorite mode
+      
       anchors.fill: parent
-      opacity: 0 // by default no button is displayed (image is displayed instead)
       checkable: false
-      iconSource: (main.state == "showFavorites") ? QIcon("draw-arrow-back") : QIcon("bookmarks")
-      visible: (latestDistrosScreen.visible || favoriteDistrosScreen.opacity == 1) //for favorites we use opacity for smooth state transition
+      iconSource: (buttonState == 1) ? QIcon("draw-arrow-back") : QIcon("bookmarks")
+      visible: (main.state == "showFavorites" || (main.state == "nonFavAvailable" && mainTabGroup.currentTab == latestDistrosScreen)) //to be displayed only in distros and favorites views
       width: theme.smallMediumIconSize
       height: theme.smallMediumIconSize
       minimumWidth: theme.smallIconSize
       minimumHeight: theme.smallIconSize
       
       onClicked: {
-	//latestDistrosScreen.checForNewDistros(); //added only for testing notifications
-	if (main.state == "hideFavorites") { //open favorites
-	  main.state = "showFavorites"
-	}
-	else {
-	  main.state = "hideFavorites"
-	}
+	buttonState *= -1 //toggle state
       }
     }
 
@@ -189,22 +184,27 @@ Rectangle {
       
       icon: (main.state == "showFavorites") ? QIcon("draw-arrow-back") : QIcon("bookmarks")
       smooth: true
-      visible: (latestDistrosScreen.visible || favoriteDistrosScreen.opacity == 1)  // be in bacground when distros or favorires are being displayed
+      visible: (main.state == "showFavorites" || (main.state == "nonFavAvailable" && mainTabGroup.currentTab == latestDistrosScreen)) //to be displayed only in distros and favorites views
       anchors.centerIn: parent
       width: theme.smallIconSize
       height: theme.smallIconSize
     }
     
+    onVisibleChanged: { 
+      if (!visible) 
+	state = "hideFavoriteButton"
+    }
     onContainsMouseChanged: {
-      if (containsMouse)
-	state = "showFavoriteButton" 
+      if(containsMouse)
+	state = "showFavoriteButton"
       else
 	state = "hideFavoriteButton"
     }
-    
+      
     states: [ //button states
       State {
 	name: "showFavoriteButton"
+	
 	PropertyChanges {
 	  target: iconButton
 	  opacity: 1
@@ -213,9 +213,11 @@ Rectangle {
 	  target: noButtonIconItem
 	  opacity: 0
 	}
+      //StateChangeScript { script: console.log("button state = showFavoriteButton") } //DEBUG ONLY
       },
       State {
 	name: "hideFavoriteButton"
+//	when: !favoritesIcon.containsMouse || !favoritesIcon.visible
 	PropertyChanges {
 	  target: iconButton
 	  opacity: 0
@@ -224,6 +226,7 @@ Rectangle {
 	  target: noButtonIconItem
 	  opacity: 1
 	}
+      //StateChangeScript { script: console.log("button state = hideFavoriteButton") } //DEBUG ONLY
       }
   ]
   
@@ -260,6 +263,8 @@ Rectangle {
   states: [ // control show/hide of favorites screen
     State {
       name: "showFavorites"
+      when: iconButton.buttonState == 1 // -1: Non-favorite mode, 1: Favorite mode
+      
       PropertyChanges {
 	target: mainTabGroup
 	opacity: 0
@@ -272,9 +277,20 @@ Rectangle {
 	target: favoriteDistrosScreen 
 	opacity: 1
       }
+      PropertyChanges {
+	target: offlineScreen
+	opacity: 0
+      }
+      PropertyChanges {
+	target: aboutText
+	opacity: 1
+      }
+     // StateChangeScript { script: console.log("state = showFavorites") } //DEBUG ONLY
+
     },
     State {
-      name: "hideFavorites"
+      name: "nonFavAvailable"
+      when: latestDistrosScreen.dataCount > 0 
       PropertyChanges {
 	target: mainTabGroup
 	opacity: 1
@@ -287,10 +303,44 @@ Rectangle {
 	target: favoriteDistrosScreen 
 	opacity: 0
       }	
-    }
+      PropertyChanges {
+	target: offlineScreen
+	opacity: 0
+      }
+      PropertyChanges {
+	target: aboutText
+	opacity: 1
+      }
+      //StateChangeScript { script: console.log("state = nonFavAvailable") } //DEBUG ONLY
+    },
+    State {
+      name: "nonFavUnavailable"
+      when: (latestDistrosScreen.dataCount <= 0 || latestDistrosScreen.dataCount == undefined)
+      PropertyChanges {
+	target: mainTabGroup
+	opacity: 0
+      }
+      PropertyChanges {
+	target: tabBar
+	opacity: 0
+      }
+      PropertyChanges {
+	target: favoriteDistrosScreen 
+	opacity: 0
+      }	
+      PropertyChanges {
+	target: offlineScreen
+	opacity: 1
+      }
+      PropertyChanges {
+	target: aboutText
+	opacity: 0
+      }      
+      //StateChangeScript { script: console.log("state = nonFavUnavailable") } //DEBUG ONLY
+    }    
   ]
   
-  transitions: [ // transition between show-hide of favorites
+  transitions: [ // transition between states
     Transition {
       NumberAnimation {
 	properties: "opacity"
