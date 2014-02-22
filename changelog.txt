@@ -1,3 +1,9 @@
+Version 0.10.1
+--------------
+- Reload functionality added to unavailable screen
+- Smooth transition between screens
+- Translation updates (Greek, Spanish)
+
 Version 0.9.2
 -------------
 - Notification icon changed to a generic one since, in "Get New Hot Stuff" packaging, no distrowatcher icon is installed
