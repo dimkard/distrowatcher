@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
 "content=157314\n"
-"POT-Creation-Date: 2013-12-23 11:24+0200\n"
+"POT-Creation-Date: 2014-02-22 20:41+0200\n"
 "PO-Revision-Date: 2013-12-20 10:53+0000\n"
 "Last-Translator: Umidjon Almasov <u.almasov@gmail.com>\n"
 "Language-Team: Uzbek (Latin) (http://www.transifex.com/projects/p/"
@@ -36,15 +36,15 @@ msgstr "Distributivlar"
 msgid "Packages"
 msgstr "Paketlar"
 
-#: distrowatcher/contents/ui/main.qml:142
+#: distrowatcher/contents/ui/main.qml:146
 msgid "Data from distrowatch.com"
 msgstr "Distrowatch.com'dan ma'lumot"
 
-#: distrowatcher/contents/ui/main.qml:253
+#: distrowatcher/contents/ui/main.qml:260
 msgid "Return to latest distributions"
 msgstr "So'nggi distributivlarga qaytish"
 
-#: distrowatcher/contents/ui/main.qml:253
+#: distrowatcher/contents/ui/main.qml:260
 msgid "Select your favorite distributions"
 msgstr "Sevimli distributivlarni tanlang"
 
@@ -52,7 +52,7 @@ msgstr "Sevimli distributivlarni tanlang"
 msgid "Enter distribution name..."
 msgstr "Distributiv nomini kiritish..."
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:55
+#: distrowatcher/contents/ui/UnavailableScreen.qml:54
 msgid ""
 "Network issue. \n"
 "Please check your network connection. If you do not face any network "
@@ -61,6 +61,10 @@ msgstr ""
 "Tarmoq muammosi. \n"
 "Tarmoqqa ulanishni tekshiring. Agar tarmoq muammosi bo'lmasa, distrowatch."
 "com mavjud emas bo'lishi mumkin."
+
+#: distrowatcher/contents/ui/UnavailableScreen.qml:64
+msgid "Reload"
+msgstr ""
 
 #. i18n: file: distrowatcher/contents/ui/config.ui:14
 #. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)

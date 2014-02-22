@@ -1,23 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# dimkard <dimkard@gmail.com>, 2013
+# dimkard <dimkard@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: distrowatcher\n"
-"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
-"content=157314\n"
-"POT-Creation-Date: 2013-12-23 11:24+0200\n"
-"PO-Revision-Date: 2013-11-16 22:42+0000\n"
+"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?content=157314\n"
+"POT-Creation-Date: 2014-02-22 20:41+0200\n"
+"PO-Revision-Date: 2014-02-22 18:45+0000\n"
 "Last-Translator: dimkard <dimkard@gmail.com>\n"
-"Language-Team: Greek (http://www.transifex.com/projects/p/distrowatcher/"
-"language/el/)\n"
-"Language: el\n"
+"Language-Team: Greek (http://www.transifex.com/projects/p/distrowatcher/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: distrowatcher/contents/ui/DistroListModel.qml:73
@@ -36,15 +34,15 @@ msgstr "Διανομές"
 msgid "Packages"
 msgstr "Πακέτα"
 
-#: distrowatcher/contents/ui/main.qml:142
+#: distrowatcher/contents/ui/main.qml:146
 msgid "Data from distrowatch.com"
 msgstr "Δεδομένα από το distrowatch.com"
 
-#: distrowatcher/contents/ui/main.qml:253
+#: distrowatcher/contents/ui/main.qml:260
 msgid "Return to latest distributions"
 msgstr "Επιστροφή στις τελευταίες διανομές"
 
-#: distrowatcher/contents/ui/main.qml:253
+#: distrowatcher/contents/ui/main.qml:260
 msgid "Select your favorite distributions"
 msgstr "Επιλέξτε τις αγαπημένες σας διανομές"
 
@@ -52,16 +50,15 @@ msgstr "Επιλέξτε τις αγαπημένες σας διανομές"
 msgid "Enter distribution name..."
 msgstr "Καταχωρήστε όνομα διανομής..."
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:55
+#: distrowatcher/contents/ui/UnavailableScreen.qml:54
 msgid ""
 "Network issue. \n"
-"Please check your network connection. If you do not face any network "
-"problem, distrowatch.com may be unavailable or facing difficulties."
-msgstr ""
-"Πρόβλημα δικτύου. \n"
-"Ελέγξτε παρακαλώ τη σύνδεση δικτύου σας. Αν δεν αντιμετωπίζετε κάποιο "
-"δικτυακό πρόβλημα, ενδέχεται το distrowatch.com να μην είναι διαθέσιμο ή να "
-"αντιμετωπίζει δυσκολίες."
+"Please check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties."
+msgstr "Πρόβλημα δικτύου. \nΕλέγξτε παρακαλώ τη σύνδεση δικτύου σας. Αν δεν αντιμετωπίζετε κάποιο δικτυακό πρόβλημα, ενδέχεται το distrowatch.com να μην είναι διαθέσιμο ή να αντιμετωπίζει δυσκολίες."
+
+#: distrowatcher/contents/ui/UnavailableScreen.qml:64
+msgid "Reload"
+msgstr "Επαναφόρτωση"
 
 #. i18n: file: distrowatcher/contents/ui/config.ui:14
 #. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
@@ -88,13 +85,12 @@ msgid "Refresh every (minutes):"
 msgstr "Ανανέωση κάθε (σε λεπτά):"
 
 #. i18n: file: distrowatcher/contents/ui/config.ui:54
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
+#. i18n: ectx: property (toolTip), widget (QCheckBox,
+#. kcfg_enablenotifications)
 #: po/rc.cpp:15 rc.cpp:15
 msgid ""
 "Display a notification in case of new release of a favorite distribution"
-msgstr ""
-"Εμφάνιση ειδοποίησης σε περίπτωση νέας κυκλοφορίας για μια από τις "
-"αγαπημένες διανομές"
+msgstr "Εμφάνιση ειδοποίησης σε περίπτωση νέας κυκλοφορίας για μια από τις αγαπημένες διανομές"
 
 #. i18n: file: distrowatcher/contents/ui/config.ui:70
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -111,27 +107,3 @@ msgstr "Dimitris Kardarakos"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dimkard@gmail.com"
-
-#~ msgid "Title"
-#~ msgstr "Τίτλος"
-
-#~ msgid "Link"
-#~ msgstr "Σύνδεσμος"
-
-#~ msgid "Date"
-#~ msgstr "Ημερομηνία"
-
-#~ msgid "Distro"
-#~ msgstr "Διανομή"
-
-#~ msgid "Distro Short Name"
-#~ msgstr "Σύντομο όνομα διανομής"
-
-#~ msgid "Distro Name"
-#~ msgstr "Όνομα διανομής"
-
-#~ msgid "Distro Latest Version"
-#~ msgstr "Τελευταία έκδοση διανομής"
-
-#~ msgid "Package"
-#~ msgstr "Πακέτο"

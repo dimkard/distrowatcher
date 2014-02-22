@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
 "content=157314\n"
-"POT-Creation-Date: 2013-12-23 11:24+0200\n"
+"POT-Creation-Date: 2014-02-22 20:41+0200\n"
 "PO-Revision-Date: 2013-11-23 11:59+0000\n"
 "Last-Translator: Артём Демаков <dearalcher@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/distrowatcher/"
@@ -37,15 +37,15 @@ msgstr "Дистрибутивы"
 msgid "Packages"
 msgstr "Пакеты"
 
-#: distrowatcher/contents/ui/main.qml:142
+#: distrowatcher/contents/ui/main.qml:146
 msgid "Data from distrowatch.com"
 msgstr "Информация с distrowatch.com"
 
-#: distrowatcher/contents/ui/main.qml:253
+#: distrowatcher/contents/ui/main.qml:260
 msgid "Return to latest distributions"
 msgstr "Возвратиться к последнему дистрибутиву"
 
-#: distrowatcher/contents/ui/main.qml:253
+#: distrowatcher/contents/ui/main.qml:260
 msgid "Select your favorite distributions"
 msgstr "Выберите свой любимый дистрибутив"
 
@@ -53,7 +53,7 @@ msgstr "Выберите свой любимый дистрибутив"
 msgid "Enter distribution name..."
 msgstr "Введите название дистрибутива..."
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:55
+#: distrowatcher/contents/ui/UnavailableScreen.qml:54
 msgid ""
 "Network issue. \n"
 "Please check your network connection. If you do not face any network "
@@ -62,6 +62,10 @@ msgstr ""
 "Проблемы с соединением.\n"
 "Пожалуйста, проверьте соединение с сетью. Если в этом плане проблем нет, "
 "distrowatch.com просто может быть недоступным или испытывать трудности."
+
+#: distrowatcher/contents/ui/UnavailableScreen.qml:64
+msgid "Reload"
+msgstr ""
 
 #. i18n: file: distrowatcher/contents/ui/config.ui:14
 #. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)

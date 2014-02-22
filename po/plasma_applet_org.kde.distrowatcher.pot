@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
 "content=157314\n"
-"POT-Creation-Date: 2013-12-23 11:24+0200\n"
+"POT-Creation-Date: 2014-02-22 20:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,15 +34,15 @@ msgstr ""
 msgid "Packages"
 msgstr ""
 
-#: distrowatcher/contents/ui/main.qml:142
+#: distrowatcher/contents/ui/main.qml:146
 msgid "Data from distrowatch.com"
 msgstr ""
 
-#: distrowatcher/contents/ui/main.qml:253
+#: distrowatcher/contents/ui/main.qml:260
 msgid "Return to latest distributions"
 msgstr ""
 
-#: distrowatcher/contents/ui/main.qml:253
+#: distrowatcher/contents/ui/main.qml:260
 msgid "Select your favorite distributions"
 msgstr ""
 
@@ -50,11 +50,15 @@ msgstr ""
 msgid "Enter distribution name..."
 msgstr ""
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:55
+#: distrowatcher/contents/ui/UnavailableScreen.qml:54
 msgid ""
 "Network issue. \n"
 "Please check your network connection. If you do not face any network "
 "problem, distrowatch.com may be unavailable or facing difficulties."
+msgstr ""
+
+#: distrowatcher/contents/ui/UnavailableScreen.qml:64
+msgid "Reload"
 msgstr ""
 
 #. i18n: file: distrowatcher/contents/ui/config.ui:14
