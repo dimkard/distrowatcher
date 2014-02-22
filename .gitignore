@@ -6,3 +6,4 @@ build/
 *.deb
 *.plasmoid
 RELEASE_PATH
+TESTCASES
