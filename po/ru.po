@@ -1,25 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Артём Демаков <dearalcher@gmail.com>, 2013
+# Артём Демаков <dearalcher@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: distrowatcher\n"
-"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
-"content=157314\n"
+"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?content=157314\n"
 "POT-Creation-Date: 2014-02-22 20:41+0200\n"
-"PO-Revision-Date: 2013-11-23 11:59+0000\n"
+"PO-Revision-Date: 2014-02-27 05:15+0000\n"
 "Last-Translator: Артём Демаков <dearalcher@gmail.com>\n"
-"Language-Team: Russian (http://www.transifex.com/projects/p/distrowatcher/"
-"language/ru/)\n"
-"Language: ru\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/distrowatcher/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: distrowatcher/contents/ui/DistroListModel.qml:73
 msgid "Distribution release"
@@ -56,16 +53,12 @@ msgstr "Введите название дистрибутива..."
 #: distrowatcher/contents/ui/UnavailableScreen.qml:54
 msgid ""
 "Network issue. \n"
-"Please check your network connection. If you do not face any network "
-"problem, distrowatch.com may be unavailable or facing difficulties."
-msgstr ""
-"Проблемы с соединением.\n"
-"Пожалуйста, проверьте соединение с сетью. Если в этом плане проблем нет, "
-"distrowatch.com просто может быть недоступным или испытывать трудности."
+"Please check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties."
+msgstr "Проблемы с соединением.\nПожалуйста, проверьте соединение с сетью. Если в этом плане проблем нет, distrowatch.com просто может быть недоступным или испытывать трудности."
 
 #: distrowatcher/contents/ui/UnavailableScreen.qml:64
 msgid "Reload"
-msgstr ""
+msgstr "Перезагрузить"
 
 #. i18n: file: distrowatcher/contents/ui/config.ui:14
 #. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
@@ -92,7 +85,8 @@ msgid "Refresh every (minutes):"
 msgstr "Обновлять через (минуты):"
 
 #. i18n: file: distrowatcher/contents/ui/config.ui:54
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
+#. i18n: ectx: property (toolTip), widget (QCheckBox,
+#. kcfg_enablenotifications)
 #: po/rc.cpp:15 rc.cpp:15
 msgid ""
 "Display a notification in case of new release of a favorite distribution"
@@ -113,27 +107,3 @@ msgstr "Ваше имя"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Ваш email"
-
-#~ msgid "Title"
-#~ msgstr "Заголовок"
-
-#~ msgid "Link"
-#~ msgstr "Ссылка"
-
-#~ msgid "Date"
-#~ msgstr "Дата"
-
-#~ msgid "Distro"
-#~ msgstr "Дистрибутив"
-
-#~ msgid "Distro Short Name"
-#~ msgstr "Краткое название дистрибутива"
-
-#~ msgid "Distro Name"
-#~ msgstr "Название дистрибутива"
-
-#~ msgid "Distro Latest Version"
-#~ msgstr "Последняя версия дистрибутива"
-
-#~ msgid "Package"
-#~ msgstr "Пакет"
