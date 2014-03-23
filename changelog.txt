@@ -1,3 +1,7 @@
+Version 0.10.1
+--------------
+- Translation updates (Italian -> thanks to Giuseppe Pignataro, Russian)
+
 Version 0.10
 --------------
 - Reload functionality added to unavailable screen
