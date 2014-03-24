@@ -13,9 +13,12 @@ xargs --arg-file=${WDIR}/rcfiles.list extractrc > ${WDIR}/rc.cpp
 # additional string for KAboutData
 echo 'i18nc("NAME OF TRANSLATORS","Your names");' >> ${WDIR}/rc.cpp
 echo 'i18nc("EMAIL OF TRANSLATORS","Your emails");' >> ${WDIR}/rc.cpp
-cd ${WDIR}
+intltool-extract --quiet --type=gettext/ini distrowatcher/metadata.desktop.template
+cat distrowatcher/metadata.desktop.template.h >> ${WDIR}/rc.cpp
+rm distrowatcher/metadata.desktop.template.h
+cd ${WDIR} 
 echo "Done preparing rc files"
- 
+
  
 echo "Extracting messages"
 cd ${BASEDIR}
@@ -24,7 +27,7 @@ find . -name '*.cpp' -o -name '*.h' -o -name '*.c' -o -name '*.qml' | sort > ${W
 echo "rc.cpp" >> ${WDIR}/infiles.list
 cd ${WDIR}
 xgettext --from-code=UTF-8 -C -kde -ci18n -ki18n:1 -ki18nc:1c,2 -ki18np:1,2 -ki18ncp:1c,2,3 -ktr2i18n:1 \
-	-kI18N_NOOP:1 -kI18N_NOOP2:1c,2 -kaliasLocale -kki18n:1 -kki18nc:1c,2 -kki18np:1,2 -kki18ncp:1c,2,3 \
+	-kI18N_NOOP:1 -kI18N_NOOP2:1c,2 -kN_:1 -kaliasLocale -kki18n:1 -kki18nc:1c,2 -kki18np:1,2 -kki18ncp:1c,2,3 \
 	--msgid-bugs-address=${BUGADDR} \
 	--files-from=infiles.list -D ${BASEDIR} -D ${WDIR} -o plasma_applet_org.kde.${PROJECT}.pot || { echo "error while calling xgettext. aborting."; exit 1; }
 echo "Done extracting messages"
@@ -37,6 +40,9 @@ for cat in $catalogs; do
   msgmerge -o $cat.new $cat plasma_applet_org.kde.${PROJECT}.pot
   mv $cat.new $cat
 done
+cd ${BASEDIR}
+intltool-merge --quiet --desktop-style ${WDIR} distrowatcher/metadata.desktop.template distrowatcher/metadata.desktop
+cd ${WDIR}	
 echo "Done merging translations"
  
  
@@ -46,4 +52,3 @@ rm rcfiles.list
 rm infiles.list
 rm rc.cpp
 echo "Done"
-

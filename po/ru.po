@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
 "content=157314\n"
-"POT-Creation-Date: 2014-03-23 23:03+0200\n"
+"POT-Creation-Date: 2014-03-24 12:44+0200\n"
 "PO-Revision-Date: 2014-02-27 05:15+0000\n"
 "Last-Translator: Артём Демаков <dearalcher@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/distrowatcher/"
@@ -21,47 +21,38 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/DistroListModel.qml:73
 #: distrowatcher/contents/ui/DistroListModel.qml:73
 msgid "Distribution release"
 msgstr "Релиз дистрибутива"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/DistroListModel.qml:73
 #: distrowatcher/contents/ui/DistroListModel.qml:73
 msgid "A new version of %1 is available!"
 msgstr "Доступна новая версия %1!"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/main.qml:76
 #: distrowatcher/contents/ui/main.qml:76
 msgid "Distributions"
 msgstr "Дистрибутивы"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/main.qml:82
 #: distrowatcher/contents/ui/main.qml:82
 msgid "Packages"
 msgstr "Пакеты"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/main.qml:146
 #: distrowatcher/contents/ui/main.qml:146
 msgid "Data from distrowatch.com"
 msgstr "Информация с distrowatch.com"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/main.qml:260
 #: distrowatcher/contents/ui/main.qml:260
 msgid "Return to latest distributions"
 msgstr "Возвратиться к последнему дистрибутиву"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/main.qml:260
 #: distrowatcher/contents/ui/main.qml:260
 msgid "Select your favorite distributions"
 msgstr "Выберите свой любимый дистрибутив"
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/SearchableFavorites.qml:41
 #: distrowatcher/contents/ui/SearchableFavorites.qml:41
 msgid "Enter distribution name..."
 msgstr "Введите название дистрибутива..."
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/UnavailableScreen.qml:54
 #: distrowatcher/contents/ui/UnavailableScreen.qml:54
 msgid ""
 "Network issue. \n"
@@ -72,90 +63,61 @@ msgstr ""
 "Пожалуйста, проверьте соединение с сетью. Если в этом плане проблем нет, "
 "distrowatch.com просто может быть недоступным или испытывать трудности."
 
-#: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/UnavailableScreen.qml:64
 #: distrowatcher/contents/ui/UnavailableScreen.qml:64
 msgid "Reload"
 msgstr "Перезагрузить"
 
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:14
-#. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
 #. i18n: file: distrowatcher/contents/ui/config.ui:14
 #. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:14
-#. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
-#. i18n: file: distrowatcher/contents/ui/config.ui:14
-#. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
-#: po/rc.cpp:3 po/rc.cpp:21 rc.cpp:3 rc.cpp:21
+#: po/rc.cpp:3 rc.cpp:3
 msgid "Dialog"
 msgstr "Диалог"
 
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupGeneral)
 #. i18n: file: distrowatcher/contents/ui/config.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, groupGeneral)
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupGeneral)
-#. i18n: file: distrowatcher/contents/ui/config.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupGeneral)
-#: po/rc.cpp:6 po/rc.cpp:24 rc.cpp:6 rc.cpp:24
+#: po/rc.cpp:6 rc.cpp:6
 msgid "General"
 msgstr "Главное"
 
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:34
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_refreshevery)
 #. i18n: file: distrowatcher/contents/ui/config.ui:34
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_refreshevery)
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:34
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_refreshevery)
-#. i18n: file: distrowatcher/contents/ui/config.ui:34
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_refreshevery)
-#: po/rc.cpp:9 po/rc.cpp:27 rc.cpp:9 rc.cpp:27
+#: po/rc.cpp:9 rc.cpp:9
 msgid "Refresh data every X minutes"
 msgstr "Обновлять информацию каждые X минут(-ы)"
 
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:47
-#. i18n: ectx: property (text), widget (QLabel, lblRefreshevery)
 #. i18n: file: distrowatcher/contents/ui/config.ui:47
 #. i18n: ectx: property (text), widget (QLabel, lblRefreshevery)
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:47
-#. i18n: ectx: property (text), widget (QLabel, lblRefreshevery)
-#. i18n: file: distrowatcher/contents/ui/config.ui:47
-#. i18n: ectx: property (text), widget (QLabel, lblRefreshevery)
-#: po/rc.cpp:12 po/rc.cpp:30 rc.cpp:12 rc.cpp:30
+#: po/rc.cpp:12 rc.cpp:12
 msgid "Refresh every (minutes):"
 msgstr "Обновлять через (минуты):"
 
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:54
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
 #. i18n: file: distrowatcher/contents/ui/config.ui:54
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:54
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
-#. i18n: file: distrowatcher/contents/ui/config.ui:54
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
-#: po/rc.cpp:15 po/rc.cpp:33 rc.cpp:15 rc.cpp:33
+#: po/rc.cpp:15 rc.cpp:15
 msgid ""
 "Display a notification in case of new release of a favorite distribution"
 msgstr "Выводить уведомление, если вышла новая версия любимого дистрибутива"
 
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:70
-#. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: distrowatcher/contents/ui/config.ui:70
 #. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: build/_CPack_Packages/Linux/DEB/distrowatcher_0.10.1/usr/share/kde4/apps/plasma/plasmoids/org.kde.distrowatcher/contents/ui/config.ui:70
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: distrowatcher/contents/ui/config.ui:70
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: po/rc.cpp:18 po/rc.cpp:36 rc.cpp:18 rc.cpp:36
+#: po/rc.cpp:18 rc.cpp:18
 msgid "Enable notifications:"
 msgstr "Включить уведомления:"
 
-#: po/rc.cpp:37 rc.cpp:37
+#: po/rc.cpp:19 rc.cpp:19
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Ваше имя"
 
-#: po/rc.cpp:38 rc.cpp:38
+#: po/rc.cpp:20 rc.cpp:20
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Ваш email"
+
+#: po/rc.cpp:21 rc.cpp:21
+msgid "Distro Watcher"
+msgstr ""
+
+#: po/rc.cpp:22 rc.cpp:22
+msgid "Shows the latest releases of Linux distributions and packages"
+msgstr ""
