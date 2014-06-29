@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# giuseppep <anubisteam01@gmail.com>, 2014
+# Giuseppe Pignataro <anubisteam01@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
 "content=157314\n"
-"POT-Creation-Date: 2014-03-24 12:44+0200\n"
-"PO-Revision-Date: 2014-03-19 15:51+0000\n"
-"Last-Translator: giuseppep <anubisteam01@gmail.com>\n"
+"POT-Creation-Date: 2014-06-29 15:28+0300\n"
+"PO-Revision-Date: 2014-03-28 22:26+0000\n"
+"Last-Translator: Giuseppe Pignataro <anubisteam01@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/distrowatcher/"
 "language/it/)\n"
 "Language: it\n"
@@ -117,8 +117,8 @@ msgstr "anubisteam01@gmail.com"
 
 #: po/rc.cpp:21 rc.cpp:21
 msgid "Distro Watcher"
-msgstr ""
+msgstr "Distro Watcher"
 
 #: po/rc.cpp:22 rc.cpp:22
 msgid "Shows the latest releases of Linux distributions and packages"
-msgstr ""
+msgstr "Mostra gli ultimi rilasci di distro Linux e pacchetti"

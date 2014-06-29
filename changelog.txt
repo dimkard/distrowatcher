@@ -1,3 +1,7 @@
+Version 0.10.2
+--------------
+- Translation updates (Italian, Russian)
+
 Version 0.10.1
 --------------
 - Translation updates (Italian -> thanks to Giuseppe Pignataro, Russian)

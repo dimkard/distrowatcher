@@ -1,24 +1,24 @@
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# dimkard <dimkard@gmail.com>, 2013-2014.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
 "content=157314\n"
-"POT-Creation-Date: 2014-03-24 12:44+0200\n"
-"PO-Revision-Date: 2014-03-24 12:39+0200\n"
+"POT-Creation-Date: 2014-06-29 15:28+0300\n"
+"PO-Revision-Date: 2014-03-24 10:53+0000\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language-Team: Greek (http://www.transifex.com/projects/p/distrowatcher/"
+"language/el/)\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"language/el/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
 
 #: distrowatcher/contents/ui/DistroListModel.qml:73
 msgid "Distribution release"
