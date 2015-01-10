@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Moo, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: distrowatcher\n"
+"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
+"content=157314\n"
+"POT-Creation-Date: 2015-01-10 18:49+0200\n"
+"PO-Revision-Date: 2014-12-03 10:37+0000\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian (http://www.transifex.com/projects/p/distrowatcher/"
+"language/lt/)\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: distrowatcher/contents/ui/DistroListModel.qml:73
+msgid "Distribution release"
+msgstr "Distribucijos leidimas"
+
+#: distrowatcher/contents/ui/DistroListModel.qml:73
+msgid "A new version of %1 is available!"
+msgstr "Nauja %1 versija yra prieinama!"
+
+#: distrowatcher/contents/ui/main.qml:76
+msgid "Distributions"
+msgstr "Distribucijos"
+
+#: distrowatcher/contents/ui/main.qml:82
+msgid "Packages"
+msgstr "Paketai"
+
+#: distrowatcher/contents/ui/main.qml:146
+msgid "Data from distrowatch.com"
+msgstr "Duomenys iš distrowatch.com"
+
+#: distrowatcher/contents/ui/main.qml:260
+msgid "Return to latest distributions"
+msgstr "Grįžti į naujausias distribucijas"
+
+#: distrowatcher/contents/ui/main.qml:260
+msgid "Select your favorite distributions"
+msgstr "Pasirinkite savo mėgstamiausias distribucijas"
+
+#: distrowatcher/contents/ui/SearchableFavorites.qml:41
+msgid "Enter distribution name..."
+msgstr "Įveskite distribucijos pavadinimą..."
+
+#: distrowatcher/contents/ui/UnavailableScreen.qml:54
+msgid ""
+"Network issue. \n"
+"Please check your network connection. If you do not face any network "
+"problem, distrowatch.com may be unavailable or facing difficulties."
+msgstr ""
+"Tinklo problemos.\n"
+"Prašome patikrinti savo interneto ryšį. Jei su jūsų interneto ryšiu viskas "
+"gerai, gali būti, kad distrowatch.com yra neprieinamas arba susidūrė su "
+"kitomis problemomis."
+
+#: distrowatcher/contents/ui/UnavailableScreen.qml:64
+msgid "Reload"
+msgstr "Įkelti iš naujo"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:14
+#. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
+#: po/rc.cpp:3 rc.cpp:3
+msgid "Dialog"
+msgstr "Dialogas"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, groupGeneral)
+#: po/rc.cpp:6 rc.cpp:6
+msgid "General"
+msgstr "Bendra"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:34
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_refreshevery)
+#: po/rc.cpp:9 rc.cpp:9
+msgid "Refresh data every X minutes"
+msgstr "Atnaujinti duomenis kas X minučių"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:47
+#. i18n: ectx: property (text), widget (QLabel, lblRefreshevery)
+#: po/rc.cpp:12 rc.cpp:12
+msgid "Refresh every (minutes):"
+msgstr "Atnaujinti kas (minutės):"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:54
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
+#: po/rc.cpp:15 rc.cpp:15
+msgid ""
+"Display a notification in case of new release of a favorite distribution"
+msgstr "Rodyti pranešimą, naujo mėgstamos distribucijos leidimo atveju"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:70
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: po/rc.cpp:18 rc.cpp:18
+msgid "Enable notifications:"
+msgstr "Įjungti pranešimus:"
+
+#: po/rc.cpp:19 rc.cpp:19
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Jūsų vardai"
+
+#: po/rc.cpp:20 rc.cpp:20
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Jūsų el. paštai"
+
+#: po/rc.cpp:21 rc.cpp:21
+msgid "Distro Watcher"
+msgstr "Distro Watcher"
+
+#: po/rc.cpp:22 rc.cpp:22
+msgid "Shows the latest releases of Linux distributions and packages"
+msgstr "Rodyti paskiausius Linux distribucijų ir paketų leidimus."
