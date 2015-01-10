@@ -11,7 +11,7 @@ Moreover, users can click to the button in the bottom-right corner of the plasmo
 
 The plasmoid has been written in QML and JavaScript.
 
-Translated to: Greek, Spanish, Russian, Uzbek(Latin) and Italian. If you would like to contribute to translations, visit the relative transifex project at https://www.transifex.com/projects/p/distrowatcher/
+Translated to: Greek, Spanish, Russian, Uzbek(Latin), Italian and Lithuanian. If you would like to contribute to translations, visit the relative transifex project at https://www.transifex.com/projects/p/distrowatcher/
 
 Notes
 -----
@@ -53,7 +53,7 @@ Installation
 
 License
 --------
-Copyright (C) 2014 Dimitris Kardarakos <dimkard AT gmail DOT com>
+Copyright (C) 2015 Dimitris Kardarakos <dimkard AT gmail DOT com>
 
 QML and JavaScript written has been based on QT Quick documentation, tutorials and examples found in https://qt-project.org. Icons used come (online) from distrowatch.com and Oxygen icon package. 
 
