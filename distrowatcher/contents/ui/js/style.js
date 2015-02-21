@@ -1,10 +1,8 @@
 // plasmoid size
-
 var width = 380
 var height = 360
 
 // popup size
-
 var popupWidth = 300
 var popupHeight = 460
 
@@ -33,6 +31,7 @@ var tabBarHeightProportion = 0.1
 var mainTabGroupProportion = 0.8
 var offlineWindowProportion = 0.8
 var tabBarWidthProportion = 0.7
+var tabBarVLayoutWidthProportion = 0.9
 var scrollBarProportion = 0.04
 var statusIconProportion = 0.05
 
@@ -55,6 +54,7 @@ var leftMarginPercent = 0.05
 var rightMarginPercent = 0.05
 var marginScreenPercent = 0.01
 var marginInsideRowPercent = 0.05
+var scrollWidth = 20
 
 //Highlight move duration
 var highlightMoveDuration = 200

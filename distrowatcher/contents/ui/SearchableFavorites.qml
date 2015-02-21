@@ -28,31 +28,53 @@ Item {
   id: favoriteDistrosScreen
   
   visible: true // visibility is controled by opacity
-
-  PlasmaComponents.TextField { 
-    id: searchItem
+  
+  Row {
+    id: searchRow
     
+    spacing: 5
     anchors {
-      top: parent.top
+      bottom: parent.bottom
       left: parent.left
-    }    
+    }
     height: theme.defaultFont.mSize.height*1.6
-    width: parent.width/2
-    placeholderText: i18n("Enter distribution name...")
-    clearButtonShown: true
+    width: parent.width
     
-    onTextChanged: {
-      favoritesScreenItems.filterDistros(text); // when user changes text, filter favorites distro list
+    Text {
+      id: filterText
+ 
+      height: parent.height
+      verticalAlignment: Text.AlignVCenter
+//      font.pointSize: theme.desktopFont.pointSize
+      color: theme.textColor
+      text: i18n("Filter:")
+    } 
+    
+    PlasmaComponents.TextField { 
+      id: searchItem
+     
+      placeholderText: i18n("Enter distribution name...")
+      clearButtonShown: true
+      height:parent.height
+      width: (parent.width-filterText.width)-Style.scrollWidth
+//      font.pointSize: theme.desktopFont.pointSize
+      onTextChanged: {
+	favoritesScreenItems.filterDistros(text); // when user changes text, filter favorites distro list
+      }
     }
   }
-
+  
   FavoriteDistrosScreen {
     id: favoritesScreenItems
     
     anchors {
-      top: searchItem.bottom
-      bottom: parent.bottom
+//       top: searchItem.bottom
+//       bottom: parent.bottom
+//       left: parent.left      
+      bottom: searchRow.top
+      top: parent.top
       left: parent.left      
+      
     }
     width: parent.width
   }

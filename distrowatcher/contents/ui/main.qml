@@ -30,14 +30,15 @@ Rectangle {
   property int refreshEvery : plasmoid.readConfig("refreshevery") // how often plasmoid will fetch data from the web  
   property int minimumWidth: Style.width // enables set of minimums and dock to panel
   property int minimumHeight: Style.height // enables set of minimums and dock to panel
+  property bool verticalLayout: true //TODO: replace with read config
   
   function configChanged() {
     main.refreshEvery = plasmoid.readConfig("refreshevery");
   }
   
   smooth: true
-  width: Style.width
-  height: Style.height
+  //width: Style.width
+  //height: Style.height
   color: "transparent"
   //state : "hideFavorites" // by default, open in normal mode // TO BE REMOVED, states are using when'
 
@@ -48,7 +49,7 @@ Rectangle {
   Image {
     id: backgroundImage
 
-    source: ((tabBar.visible && mainTabGroup.currentTab == latestDistrosScreen) || state == "showFavorites") ?  "./images/distros_bg.png" : "./images/packages_bg.png" // change transparency level in case of packages, since dates fall into the white surface
+    source: ((tabBar.visible && mainTabGroup.currentTab == latestDistrosScreen) /*TODO: Remove, no such a stage exists|| state == "showFavorites" */ ) ?  "./images/distros_bg.png" : "./images/packages_bg.png" // change transparency level in case of packages, since dates fall into the white surface
     anchors.fill: parent
     fillMode: Image.Stretch
   }
@@ -59,14 +60,15 @@ Rectangle {
 
   PlasmaComponents.TabBar { // select which screen shall be visible (Distros/Packages)
     id: tabBar
-
+    rotation: 0
     height: Style.tabBarHeightProportion*main.height
     width: Style.tabBarWidthProportion*parent.width
     anchors {
       top: main.top
-      topMargin: main.height*Style.marginScreenPercent
+      topMargin:main.height*Style.marginScreenPercent
       horizontalCenter: parent.horizontalCenter
     }
+    
     visible: latestDistrosScreen.dataCount > 0 // to be displayed only if model returns data
 
     PlasmaComponents.TabButton {
@@ -81,20 +83,31 @@ Rectangle {
       tab: latestPackagesScreen
       text:i18n("Packages")
     }
+    PlasmaComponents.TabButton {
+      id: favoritesTabButton
+      
+      tab: favoriteDistrosScreen
+      text:i18n("Favorites")
+    }
+    
   }
+
   
+// temporarily disable
+
   PlasmaComponents.TabGroup {   // contains the distros/packages screens
     id: mainTabGroup
     
     anchors {
-      top: tabBar.visible ? tabBar.bottom : tabBar.top // if tab bar is not visible, fill the whole screen
+      top: (tabBar.visible ? tabBar.bottom : tabBar.top) // if tab bar is not visible, fill the whole screen
       left: main.left
       right: main.right
       bottom: aboutText.top
       margins: main.height*Style.marginScreenPercent
     }
-    visible: latestDistrosScreen.dataCount > 0 // to be displayed only if model returns data	  
-
+     visible: latestDistrosScreen.dataCount > 0 // to be displayed only if model returns data
+    
+    
     LatestDistrosScreen {
       id: latestDistrosScreen
       
@@ -107,7 +120,13 @@ Rectangle {
       
       anchors.fill: parent
       refreshEvery: main.refreshEvery
-    } 
+    }
+    SearchableFavorites {
+      id: favoriteDistrosScreen
+    
+      anchors.fill: parent
+      visible: true // visibility is controled by opacity 
+    }
   }
 
   UnavailableScreen {
@@ -147,147 +166,140 @@ Rectangle {
     }
   }
   
-  Extras.MouseEventListener { // catch action in the 'favorites' button/image
-    id: favoritesIcon	
-    
-    visible: (main.state == "showFavorites" || (main.state == "nonFavAvailable" && mainTabGroup.currentTab == latestDistrosScreen)) //to be displayed only in distros and favorites views
-    width: theme.smallMediumIconSize
-    height: theme.smallMediumIconSize
-    hoverEnabled: true
-    state: "hideFavoriteButton" //by default do not display button (thus, display image)
-    anchors {
-      bottom: main.bottom
-      right: main.right
-    }
+  //20150221: Remove favorites button
+//   Extras.MouseEventListener { // catch action in the 'favorites' button/image
+//     id: favoritesIcon	
+//     
+//     visible: (main.state == "showFavorites" || (main.state == "nonFavAvailable" && mainTabGroup.currentTab == latestDistrosScreen)) //to be displayed only in distros and favorites views
+//     width: theme.smallMediumIconSize
+//     height: theme.smallMediumIconSize
+//     hoverEnabled: true
+//     state: "hideFavoriteButton" //by default do not display button (thus, display image)
+//     anchors {
+//       bottom: main.bottom
+//       right: main.right
+//     }
+// 
+//     PlasmaComponents.Button {
+//       id: iconButton
+//       
+//       property int buttonState: -1 // -1: Non-favorite mode, 1: Favorite mode
+//       
+//       anchors.fill: parent
+//       checkable: false
+//       iconSource: (buttonState == 1) ? QIcon("draw-arrow-back") : QIcon("bookmarks")
+//       visible: (main.state == "showFavorites" || (main.state == "nonFavAvailable" && mainTabGroup.currentTab == latestDistrosScreen)) //to be displayed only in distros and favorites views
+//       width: theme.smallMediumIconSize
+//       height: theme.smallMediumIconSize
+//       minimumWidth: theme.smallIconSize
+//       minimumHeight: theme.smallIconSize
+//       
+//       onClicked: {
+// 	buttonState *= -1 //toggle state
+//       }
+//     }
+// 
+//     Extras.QIconItem {
+//       id: noButtonIconItem
+//       
+//       icon: (main.state == "showFavorites") ? QIcon("draw-arrow-back") : QIcon("bookmarks")
+//       smooth: true
+//       visible: (main.state == "showFavorites" || (main.state == "nonFavAvailable" && mainTabGroup.currentTab == latestDistrosScreen)) //to be displayed only in distros and favorites views
+//       anchors.centerIn: parent
+//       width: theme.smallIconSize
+//       height: theme.smallIconSize
+//     }
+//     
+//     onVisibleChanged: { 
+//       if (!visible) 
+// 	state = "hideFavoriteButton"
+//     }
+//     onContainsMouseChanged: {
+//       if(containsMouse)
+// 	state = "showFavoriteButton"
+//       else
+// 	state = "hideFavoriteButton"
+//     }
+//       
+//     states: [ //button states
+//       State {
+// 	name: "showFavoriteButton"
+// 	
+// 	PropertyChanges {
+// 	  target: iconButton
+// 	  opacity: 1
+// 	}
+// 	PropertyChanges {
+// 	  target: noButtonIconItem
+// 	  opacity: 0
+// 	}
+//       //StateChangeScript { script: console.log("button state = showFavoriteButton") } //DEBUG ONLY
+//       },
+//       State {
+// 	name: "hideFavoriteButton"
+// //	when: !favoritesIcon.containsMouse || !favoritesIcon.visible
+// 	PropertyChanges {
+// 	  target: iconButton
+// 	  opacity: 0
+// 	}
+// 	PropertyChanges {
+// 	  target: noButtonIconItem
+// 	  opacity: 1
+// 	}
+//       //StateChangeScript { script: console.log("button state = hideFavoriteButton") } //DEBUG ONLY
+//       }
+//   ]
+//   
+//   transitions: [
+//     Transition {
+//       NumberAnimation {
+// 	properties: "opacity"
+// 	easing.type: Easing.InOutQuad
+// 	duration: 300
+//       }
+//     }
+//   ]	
+//   }
 
-    PlasmaComponents.Button {
-      id: iconButton
-      
-      property int buttonState: -1 // -1: Non-favorite mode, 1: Favorite mode
-      
-      anchors.fill: parent
-      checkable: false
-      iconSource: (buttonState == 1) ? QIcon("draw-arrow-back") : QIcon("bookmarks")
-      visible: (main.state == "showFavorites" || (main.state == "nonFavAvailable" && mainTabGroup.currentTab == latestDistrosScreen)) //to be displayed only in distros and favorites views
-      width: theme.smallMediumIconSize
-      height: theme.smallMediumIconSize
-      minimumWidth: theme.smallIconSize
-      minimumHeight: theme.smallIconSize
-      
-      onClicked: {
-	buttonState *= -1 //toggle state
-      }
-    }
 
-    Extras.QIconItem {
-      id: noButtonIconItem
-      
-      icon: (main.state == "showFavorites") ? QIcon("draw-arrow-back") : QIcon("bookmarks")
-      smooth: true
-      visible: (main.state == "showFavorites" || (main.state == "nonFavAvailable" && mainTabGroup.currentTab == latestDistrosScreen)) //to be displayed only in distros and favorites views
-      anchors.centerIn: parent
-      width: theme.smallIconSize
-      height: theme.smallIconSize
-    }
-    
-    onVisibleChanged: { 
-      if (!visible) 
-	state = "hideFavoriteButton"
-    }
-    onContainsMouseChanged: {
-      if(containsMouse)
-	state = "showFavoriteButton"
-      else
-	state = "hideFavoriteButton"
-    }
-      
-    states: [ //button states
-      State {
-	name: "showFavoriteButton"
-	
-	PropertyChanges {
-	  target: iconButton
-	  opacity: 1
-	}
-	PropertyChanges {
-	  target: noButtonIconItem
-	  opacity: 0
-	}
-      //StateChangeScript { script: console.log("button state = showFavoriteButton") } //DEBUG ONLY
-      },
-      State {
-	name: "hideFavoriteButton"
-//	when: !favoritesIcon.containsMouse || !favoritesIcon.visible
-	PropertyChanges {
-	  target: iconButton
-	  opacity: 0
-	}
-	PropertyChanges {
-	  target: noButtonIconItem
-	  opacity: 1
-	}
-      //StateChangeScript { script: console.log("button state = hideFavoriteButton") } //DEBUG ONLY
-      }
-  ]
-  
-  transitions: [
-    Transition {
-      NumberAnimation {
-	properties: "opacity"
-	easing.type: Easing.InOutQuad
-	duration: 300
-      }
-    }
-  ]	
-  }
+  //20150221: Not needed since favorites are added to layout
+//   PlasmaCore.ToolTip {
+//     id: favoriteTooltip
+//     
+//     target: favoritesIcon
+//     mainText: (main.state == "showFavorites") ? i18n("Return to latest distributions") : i18n("Select your favorite distributions")
+//   }
+//   
 
-  SearchableFavorites {
-    id: favoriteDistrosScreen
-    
-    visible: true // visibility is controled by opacity
-    anchors {
-      top: parent.top
-      left: parent.left	
-      right: parent.right
-      bottom: aboutText.top
-    }
-  }
 
-  PlasmaCore.ToolTip {
-    id: favoriteTooltip
-    
-    target: favoritesIcon
-    mainText: (main.state == "showFavorites") ? i18n("Return to latest distributions") : i18n("Select your favorite distributions")
-  }
-  
-  states: [ // control show/hide of favorites screen
-    State {
-      name: "showFavorites"
-      when: iconButton.buttonState == 1 // -1: Non-favorite mode, 1: Favorite mode
-      
-      PropertyChanges {
-	target: mainTabGroup
-	opacity: 0
-      }
-      PropertyChanges {
-	target: tabBar
-	opacity: 0
-      }
-      PropertyChanges {
-	target: favoriteDistrosScreen 
-	opacity: 1
-      }
-      PropertyChanges {
-	target: offlineScreen
-	opacity: 0
-      }
-      PropertyChanges {
-	target: aboutText
-	opacity: 1
-      }
-     // StateChangeScript { script: console.log("state = showFavorites") } //DEBUG ONLY
-
-    },
+ states: [ // control show/hide of favorites screen
+//     State {
+//       name: "showFavorites"
+//       when: iconButton.buttonState == 1 // -1: Non-favorite mode, 1: Favorite mode
+//       
+//       PropertyChanges {
+// 	target: mainTabGroup
+// 	opacity: 0
+//       }
+//       PropertyChanges {
+// 	target: tabBar
+// 	opacity: 0
+//       }
+//       PropertyChanges {
+// 	target: favoriteDistrosScreen 
+// 	opacity: 1
+//       }
+//       PropertyChanges {
+// 	target: offlineScreen
+// 	opacity: 0
+//       }
+//       PropertyChanges {
+// 	target: aboutText
+// 	opacity: 1
+//       }
+//      // StateChangeScript { script: console.log("state = showFavorites") } //DEBUG ONLY
+// 
+//     },
     State {
       name: "nonFavAvailable"
       when: latestDistrosScreen.dataCount > 0 
@@ -299,10 +311,10 @@ Rectangle {
 	target: tabBar
 	opacity: 1
       }
-      PropertyChanges {
-	target: favoriteDistrosScreen 
-	opacity: 0
-      }	
+//       PropertyChanges {
+// 	target: favoriteDistrosScreen 
+// 	opacity: 0
+//       }	
       PropertyChanges {
 	target: offlineScreen
 	opacity: 0
@@ -324,10 +336,10 @@ Rectangle {
 	target: tabBar
 	opacity: 0
       }
-      PropertyChanges {
-	target: favoriteDistrosScreen 
-	opacity: 0
-      }	
+//       PropertyChanges {
+// 	target: favoriteDistrosScreen 
+// 	opacity: 0
+//       }	
       PropertyChanges {
 	target: offlineScreen
 	opacity: 1
