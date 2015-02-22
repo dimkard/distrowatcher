@@ -71,7 +71,30 @@
           </property>
          </widget>
         </item>
-       </layout>
+	<item row="3" column="2">
+	  <widget class="QCheckBox" name="kcfg_isvertical">
+	  <property name="toolTip">
+	    <string>If selected, buttons will be displayed on the top of the plasmoid. Otherwise, on the left.</string>
+	  </property>
+	  <property name="statusTip">
+	    <string notr="true"/>
+	  </property>
+	  <property name="text">
+	    <string/>
+	  </property>
+	  <property name="checked">
+	    <bool>true</bool>
+	  </property>
+	  </widget>
+	</item>
+	<item row="3" column="0">
+	  <widget class="QLabel" name="label">
+	  <property name="text">
+	    <string>Use vertical layout:</string>
+	  </property>
+	  </widget>
+	</item>
+	</layout>
       </item>
      </layout>
     </widget>

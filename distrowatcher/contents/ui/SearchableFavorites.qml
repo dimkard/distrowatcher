@@ -25,7 +25,7 @@ import "./js/style.js" as Style
 
 
 Item {
-  id: favoriteDistrosScreen
+  id: searchableFavorites
   
   visible: true // visibility is controled by opacity
   
@@ -57,7 +57,6 @@ Item {
       clearButtonShown: true
       height:parent.height
       width: (parent.width-filterText.width)-Style.scrollWidth
-//      font.pointSize: theme.desktopFont.pointSize
       onTextChanged: {
 	favoritesScreenItems.filterDistros(text); // when user changes text, filter favorites distro list
       }
@@ -68,9 +67,7 @@ Item {
     id: favoritesScreenItems
     
     anchors {
-//       top: searchItem.bottom
-//       bottom: parent.bottom
-//       left: parent.left      
+      bottomMargin: 5
       bottom: searchRow.top
       top: parent.top
       left: parent.left      

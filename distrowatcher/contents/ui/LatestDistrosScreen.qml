@@ -45,6 +45,7 @@ PlasmaExtras.ScrollArea {
     }
   }
 
+  
   ListView {
     id:distroView
     
@@ -80,7 +81,7 @@ PlasmaExtras.ScrollArea {
 	//console.log(distroView.cnt++ + ": Distro index: " + itemIndex);
       }
     }
-
+  
     highlight: PlasmaComponents.Highlight {
       hover: true
       width: distroView.width //- scrollBar.width

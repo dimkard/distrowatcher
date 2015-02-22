@@ -28,10 +28,9 @@ var borderRadius = 8
 
 // proportions
 var tabBarHeightProportion = 0.1
+var tabBarWidthProportion = 0.9
 var mainTabGroupProportion = 0.8
 var offlineWindowProportion = 0.8
-var tabBarWidthProportion = 0.7
-var tabBarVLayoutWidthProportion = 0.9
 var scrollBarProportion = 0.04
 var statusIconProportion = 0.05
 

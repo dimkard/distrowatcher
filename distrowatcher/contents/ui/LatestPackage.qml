@@ -35,6 +35,14 @@ Item {
   signal exited()
   signal positionChanged()
 
+  Image {
+    id: backgroundImage
+
+    source: "./images/pkgDelegateBg.png" // change transparency level in case of packages, since dates fall into the white surface
+    anchors.fill: parent
+    fillMode: Image.Stretch
+  }
+  
   PlasmaCore.Theme {
     id: theme
   }
