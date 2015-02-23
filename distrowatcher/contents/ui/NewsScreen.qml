@@ -84,10 +84,10 @@ QtExtras.MouseEventListener {
       }
       spacing: 5
     
-      PlasmaComponents.Button {
+      PlasmaComponents.ToolButton {
 	id: goNext
 
-	text: "<"
+	iconSource: "go-previous"
 	width: 35
 	height: 35
 	font.bold: true
@@ -97,10 +97,10 @@ QtExtras.MouseEventListener {
 	
 	}
       
-      PlasmaComponents.Button {
+      PlasmaComponents.ToolButton {
 	id: goPrevious
 
-	text: ">"
+	iconSource: "go-next"
 	width: 35
 	height: 35
 	font.bold: true
@@ -123,20 +123,20 @@ QtExtras.MouseEventListener {
       }
       spacing: 5
             
-      PlasmaComponents.Button {
+      PlasmaComponents.ToolButton {
 	id: incFont
 
-	text: "+"
+	iconSource: "list-add"
 	width: 35
 	height: 35
 	font.bold: true
 	onClicked: { newsView.fontIncreaseFactor++ ; }	
       }
       
-      PlasmaComponents.Button {
+      PlasmaComponents.ToolButton {
 	id: decFont
 
-	text: "-"
+	iconSource: "list-remove"
 	width: 35
 	height: 35
 	font.bold: true
