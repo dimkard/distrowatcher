@@ -33,7 +33,7 @@ Item {
   property string newsText
   property int itemIndex 
   property int fontIncreaseFactor
-  property int fontSize: ( theme.desktopFont.pointSize + fontIncreaseFactor <= 0 ? 0 : theme.desktopFont.pointSize + fontIncreaseFactor)
+  property int fontSize: ( theme.desktopFont.pointSize + fontIncreaseFactor <= 1 ? 1 : theme.desktopFont.pointSize + fontIncreaseFactor)
   
   signal entered()
   signal exited()
