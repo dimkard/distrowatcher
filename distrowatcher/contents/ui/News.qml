@@ -67,7 +67,7 @@ Item {
     text: root.titleText
     width: parent.width
     wrapMode: Text.WordWrap
-    horizontalAlignment: Text.AlignJustify
+    horizontalAlignment: Text.AlignLeft
     anchors {
       top: root.top
       left: root.left
