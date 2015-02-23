@@ -24,74 +24,91 @@ import org.kde.qtextracomponents 0.1 as Extras
 import "./js/style.js" as Style
 
 Column {
-    id: tabButAndGroup
-    
-    property int refreshEvery: plasmoid.readConfig("refreshevery")
-    property bool isInLatestDistros: (mainTabGroup.currentTab == latestDistrosScreen) ? true : false //TODO: Remove
-    property string currentTabName: mainTabGroup.currentTab.tabName
-    property bool dataExists: (latestDistrosScreen.dataCount && latestDistrosScreen.dataCount > 0) ? true : false
+  id: tabButAndGroup
+  
+  property int refreshEvery: plasmoid.readConfig("refreshevery")
+  property bool isInLatestDistros: (mainTabGroup.currentTab == latestDistrosScreen) ? true : false //TODO: Remove
+  property string currentTabName: mainTabGroup.currentTab.tabName
+  property bool dataExists: (latestDistrosScreen.dataCount && latestDistrosScreen.dataCount > 0) ? true : false
 
-    function reloadModels() { //addded for triggering reload after user has requested so
-      latestDistrosScreen.reloadModel();
-      latestPackagesScreen.reloadModel();
+  function reloadModels() { //addded for triggering reload after user has requested so
+    latestDistrosScreen.reloadModel();
+    latestPackagesScreen.reloadModel();
+    newsScreen.reloadModel();
+  }
+  
+  spacing: 15
+  
+  PlasmaComponents.TabBar { // select which screen shall be visible (Distros/Packages)
+    id: tabBar
+    rotation: 0
+    height: Style.tabBarHeightProportion*parent.height
+    width: Style.tabBarWidthProportion*parent.width
+    anchors.horizontalCenter: parent.horizontalCenter;
+    
+    PlasmaComponents.TabButton {
+      id: distrosTabButton
+      
+      tab: latestDistrosScreen
+      text: i18n("Distributions")
+    }
+    PlasmaComponents.TabButton {
+      id: packagesTabButton
+      
+      tab: latestPackagesScreen
+      text:i18n("Packages")
+    }
+    PlasmaComponents.TabButton {
+      id: favoritesTabButton
+      
+      tab: favoriteDistrosScreen
+      text:i18n("Favorites")
+    }
+    PlasmaComponents.TabButton {
+      id: newsTabButton
+      
+      tab: newsScreen
+      text:i18n("News")
+    }
+  }
+      
+  PlasmaComponents.TabGroup {   // contains the distros/packages screens
+    id: mainTabGroup
+    
+    height: (1-Style.tabBarHeightProportion)*parent.height
+    width:  parent.width
+    
+    LatestDistrosScreen {
+      id: latestDistrosScreen
+      
+      property string tabName: "Distributions"
+      anchors.fill: parent
+      refreshEvery: tabButAndGroup.refreshEvery
+    }
+      
+    LatestPackagesScreen {
+      id: latestPackagesScreen
+      
+      property string tabName: "Packages" 
+      anchors.fill: parent
+      refreshEvery: tabButAndGroup.refreshEvery
     }
     
-    spacing: 15
+    SearchableFavorites {
+      id: favoriteDistrosScreen
     
-    PlasmaComponents.TabBar { // select which screen shall be visible (Distros/Packages)
-      id: tabBar
-      rotation: 0
-      height: Style.tabBarHeightProportion*parent.height
-      width: Style.tabBarWidthProportion*parent.width
-      anchors.horizontalCenter: parent.horizontalCenter;
-      
-      PlasmaComponents.TabButton {
-	id: distrosTabButton
-	
-	tab: latestDistrosScreen
-	text: i18n("Distributions")
-      }
-      PlasmaComponents.TabButton {
-	id: packagesTabButton
-	
-	tab: latestPackagesScreen
-	text:i18n("Packages")
-      }
-      PlasmaComponents.TabButton {
-	id: favoritesTabButton
-	
-	tab: favoriteDistrosScreen
-	text:i18n("Favorites")
-      }
+      property string tabName: "Favorites"
+      anchors.fill: parent
+      visible: true
     }
-       
-    PlasmaComponents.TabGroup {   // contains the distros/packages screens
-      id: mainTabGroup
+    
+    NewsScreen {
+      id: newsScreen
       
-      height: (1-Style.tabBarHeightProportion)*parent.height
-      width:  parent.width
-     
-      LatestDistrosScreen {
-	id: latestDistrosScreen
-	
-	property string tabName: "Distributions"
-	anchors.fill: parent
-	refreshEvery: tabButAndGroup.refreshEvery
-      }
-	
-      LatestPackagesScreen {
-	id: latestPackagesScreen
-	
-	property string tabName: "Packages" 
-	anchors.fill: parent
-	refreshEvery: tabButAndGroup.refreshEvery
-      }
-      SearchableFavorites {
-	id: favoriteDistrosScreen
-      
-	property string tabName: "Favorites"
-	anchors.fill: parent
-	visible: true
-      }
-    }
-  } 
+      property string tabName: "News" 
+      anchors.fill: parent
+      anchors.topMargin: 5
+      refreshEvery: tabButAndGroup.refreshEvery
+    }    
+  }
+}

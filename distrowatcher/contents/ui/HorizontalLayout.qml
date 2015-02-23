@@ -24,87 +24,104 @@ import org.kde.qtextracomponents 0.1 as Extras
 import "./js/style.js" as Style
 
 Row {
-    id: tabButAndGroup
+  id: tabButAndGroup
 
-    property int refreshEvery
-    property string currentTabName: mainTabGroup.currentTab.tabName
-    property bool isInLatestDistros: (mainTabGroup.currentTab == latestDistrosScreen) ? true : false //TODO: Remove
-    property bool dataExists: (latestDistrosScreen.dataCount && latestDistrosScreen.dataCount > 0) ? true : false
-    
-    function reloadModels() { //addded for triggering reload after user has requested so
-      latestDistrosScreen.reloadModel();
-      latestPackagesScreen.reloadModel();
-    }
-    
-    spacing: 15
+  property int refreshEvery
+  property string currentTabName: mainTabGroup.currentTab.tabName
+  property bool isInLatestDistros: (mainTabGroup.currentTab == latestDistrosScreen) ? true : false //TODO: Remove
+  property bool dataExists: (latestDistrosScreen.dataCount && latestDistrosScreen.dataCount > 0) ? true : false
+  
+  function reloadModels() { //addded for triggering reload after user has requested so
+    latestDistrosScreen.reloadModel();
+    latestPackagesScreen.reloadModel();
+    newsScreen.reloadModel();
+  }
+  
+  spacing: 15
 
-    Item {
-      id: tabBar
+  Item {
+    id: tabBar
+    
+    width: Style.tabBarHeightProportion*parent.width 
+    height: Style.tabBarWidthProportion*parent.height
+    anchors.verticalCenter: parent.verticalCenter
+    
+    PlasmaComponents.TabBar { // select which screen shall be visible (Distros/Packages)
+      id: tabBarVertical
       
-      width: Style.tabBarHeightProportion*parent.width 
-      height: Style.tabBarWidthProportion*parent.height
+      rotation: 90
       anchors.verticalCenter: parent.verticalCenter
+      anchors.horizontalCenter: parent.horizontalCenter
+      width: parent.height
+      height: parent.width
       
-      PlasmaComponents.TabBar { // select which screen shall be visible (Distros/Packages)
-	id: tabBarVertical
+      PlasmaComponents.TabButton {
+	id: distrosTabButton
 	
-	rotation: 90
-	anchors.verticalCenter: parent.verticalCenter
-	anchors.horizontalCenter: parent.horizontalCenter
-	width: parent.height
-	height: parent.width
+	tab: latestDistrosScreen
+	text:i18n("Distributions")
+      }
+      PlasmaComponents.TabButton {
+	id: packagesTabButton
 	
-	PlasmaComponents.TabButton {
-	  id: distrosTabButton
-	  
-	  tab: latestDistrosScreen
-	  text:i18n("Distributions")
-	}
-	PlasmaComponents.TabButton {
-	  id: packagesTabButton
-	  
-	  tab: latestPackagesScreen
-	  text:i18n("Packages")
-	}
-	PlasmaComponents.TabButton {
-	  id: favoritesTabButton
-	  
-	  tab: favoriteDistrosScreen
-	  text:i18n("Favorites")
-	}
-      }      
+	tab: latestPackagesScreen
+	text:i18n("Packages")
+      }
+      PlasmaComponents.TabButton {
+	id: favoritesTabButton
+	
+	tab: favoriteDistrosScreen
+	text:i18n("Favorites")
+      }
+      PlasmaComponents.TabButton {
+	id: newsTabButton
+      
+	tab: newsScreen
+	text:i18n("News")
+      }
+    }      
+  }
+
+  PlasmaComponents.TabGroup {   // contains the distros/packages screens
+    id: mainTabGroup
+    anchors.verticalCenter: tabButAndGroup.verticalCenter
+    width: tabButAndGroup.width - Style.tabBarHeightProportion*tabButAndGroup.width - tabButAndGroup.spacing
+    height:tabButAndGroup.height
+    
+    LatestDistrosScreen {
+      id: latestDistrosScreen
+      
+      property string tabName: "Distributions"
+      anchors.fill: parent
+      anchors.topMargin: 5
+      refreshEvery: tabButAndGroup.refreshEvery
+    }
+      
+    LatestPackagesScreen {
+      id: latestPackagesScreen
+      
+      property string tabName: "Packages"
+      anchors.fill: parent
+      anchors.topMargin: 5
+      refreshEvery: tabButAndGroup.refreshEvery
     }
 
-    PlasmaComponents.TabGroup {   // contains the distros/packages screens
-      id: mainTabGroup
-      anchors.verticalCenter: tabButAndGroup.verticalCenter
-      width: tabButAndGroup.width - Style.tabBarHeightProportion*tabButAndGroup.width - tabButAndGroup.spacing
-      height:tabButAndGroup.height
-      
-      LatestDistrosScreen {
-	id: latestDistrosScreen
-	
-	property string tabName: "Distributions"
-	anchors.fill: parent
-	anchors.topMargin: 5
-	refreshEvery: tabButAndGroup.refreshEvery
-      }
-	
-      LatestPackagesScreen {
-	id: latestPackagesScreen
-	
-	property string tabName: "Packages"
-	anchors.fill: parent
-	anchors.topMargin: 5
-	refreshEvery: tabButAndGroup.refreshEvery
-      }
-      SearchableFavorites {
-	id: favoriteDistrosScreen
-      
-	property string tabName: "Favorites"
-	anchors.fill: parent
-	anchors.topMargin: 5
-	visible: true
-      }
+    SearchableFavorites {
+      id: favoriteDistrosScreen
+    
+      property string tabName: "Favorites"
+      anchors.fill: parent
+      anchors.topMargin: 5
+      visible: true
     }
-  } 
+    
+    NewsScreen {
+      id: newsScreen
+      
+      property string tabName: "News" 
+      anchors.fill: parent
+      anchors.topMargin: 5
+      refreshEvery: tabButAndGroup.refreshEvery
+    }      
+  }
+}

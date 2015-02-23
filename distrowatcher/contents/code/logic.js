@@ -10,3 +10,11 @@ function sendNotification(summary, body) {
     service.startOperationCall(op);
 }
  
+function trimSpace(mystr) {
+  if(String.prototype.trim) {  
+    return mystr.trim();
+  }
+  else {
+    return mystr.replace(/^\s+|\s+$/g,'');
+  }
+}

@@ -13,6 +13,8 @@ var numberOfDistros = 5
 //# of favorites
 var numberOfFavoriteDistros = 8
 
+//# of news
+var numberOfNews = 1
 // # of packages to retrieve
 var numberOfPackages = 5	
 

@@ -30,11 +30,12 @@ Rectangle {
   property int refreshEvery : plasmoid.readConfig("refreshevery") // how often plasmoid will fetch data from the web  
   property int minimumWidth: Style.width // enables set of minimums and dock to panel
   property int minimumHeight: Style.height // enables set of minimums and dock to panel
-  property bool isVertical: plasmoid.readConfig("isvertical"); // If selected, buttons will be displayed on top
+  property bool isVertical: plasmoid.readConfig("isvertical") // If selected, buttons will be displayed on top
   
   function configChanged() {
     main.refreshEvery = plasmoid.readConfig("refreshevery");
     main.isVertical =  plasmoid.readConfig("isvertical");
+    //console.log("isvertical: " + plasmoid.readConfig("isvertical") );
   }
   
   smooth: true
