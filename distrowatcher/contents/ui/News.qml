@@ -73,11 +73,14 @@ Item {
       top: root.top
       left: root.left
       right: root.right
-      margins: 15
+      leftMargin: 10
+      rightMargin: 10
+      topMargin: 10
+      bottomMargin: 5
     }
     font {
       bold: true
-      pointSize: root.fontSize + 3
+      pointSize: root.fontSize + 2
     }
     style: Text.Raised
     color: theme.textColor
@@ -94,7 +97,10 @@ Item {
       top: title.bottom
       left: root.left
       right: root.right
-      margins: 15
+      leftMargin: 10
+      rightMargin: 10
+      topMargin: 5
+      bottomMargin: 5
     }
     style: Text.Raised
     font {
@@ -111,7 +117,10 @@ Item {
       bottom: completeStory.top
       left: root.left
       right: root.right
-      margins: 15
+      leftMargin: 10
+      rightMargin: 10
+      topMargin: 10
+      bottomMargin: 5
     }   
 
     Flickable {
@@ -131,6 +140,7 @@ Item {
 	  bold: false
 	  pointSize: root.fontSize
 	}
+	horizontalAlignment: Text.AlignJustify
 	wrapMode: Text.WordWrap
 	color: theme.textColor
       }
