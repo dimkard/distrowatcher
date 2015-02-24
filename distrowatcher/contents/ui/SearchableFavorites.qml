@@ -28,6 +28,19 @@ Item {
   id: searchableFavorites
   
   visible: true // visibility is controled by opacity
+
+  FavoriteDistrosScreen {
+    id: favoritesScreenItems
+    
+    anchors {
+      bottomMargin: 5
+      bottom: searchRow.top
+      top: searchableFavorites.top
+      left: searchableFavorites.left      
+      
+    }
+    width: parent.width
+  }
   
   Row {
     id: searchRow
@@ -61,18 +74,5 @@ Item {
 	favoritesScreenItems.filterDistros(text); // when user changes text, filter favorites distro list
       }
     }
-  }
-  
-  FavoriteDistrosScreen {
-    id: favoritesScreenItems
-    
-    anchors {
-      bottomMargin: 5
-      bottom: searchRow.top
-      top: parent.top
-      left: parent.left      
-      
-    }
-    width: parent.width
   }
 }
