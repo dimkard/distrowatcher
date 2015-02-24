@@ -75,7 +75,7 @@ Item {
       right: root.right
       leftMargin: 10
       rightMargin: 10
-      topMargin: 10
+      topMargin: 5
       bottomMargin: 5
     }
     font {
@@ -184,7 +184,7 @@ Item {
       anchors {
 	  bottom: root.bottom
 	  left: root.left
-	  margins: 15
+	  margins: 10
       }   
       width: 80
       height: 30
