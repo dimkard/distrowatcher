@@ -43,7 +43,8 @@ Item {
     query: "/rdf:RDF/item"
     
     XmlRole { name: "title"; query: "title/string()" }
-    XmlRole { name: "date"; query: "substring(dc:date/string(),1,10)" }
+    //XmlRole { name: "date"; query: "substring(dc:date/string(),1,10)" }
+    XmlRole { name: "date"; query: "dc:date/string()" }
     XmlRole { name: "description"; query: "description/string()" }
     XmlRole { name: "link"; query: "link/string()" }
     XmlRole { name: "itemIndex"; query: "position()" } //--------item's position, for highlight ----

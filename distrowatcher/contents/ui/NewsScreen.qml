@@ -88,8 +88,8 @@ QtExtras.MouseEventListener {
 	id: goNext
 
 	iconSource: "go-previous"
-	width: 35
-	height: 35
+	width: 30
+	height: 30
 	font.bold: true
 	onClicked: { if ( newsView.currentIndex > 0 )
 		      newsView.currentIndex =  newsView.currentIndex - 1;
@@ -101,8 +101,8 @@ QtExtras.MouseEventListener {
 	id: goPrevious
 
 	iconSource: "go-next"
-	width: 35
-	height: 35
+	width: 30
+	height: 30
 	font.bold: true
 	onClicked: { if ( newsView.currentIndex < container.dataCount -1 )
 		      newsView.currentIndex =  newsView.currentIndex + 1;	
@@ -118,7 +118,8 @@ QtExtras.MouseEventListener {
       visible: container.containsMouse
       anchors {
 	right: parent.right
-	verticalCenter: parent.verticalCenter
+// 	verticalCenter: parent.verticalCenter
+	bottom: parent.bottom
 	rightMargin: 10
       }
       spacing: 5
@@ -127,8 +128,8 @@ QtExtras.MouseEventListener {
 	id: incFont
 
 	iconSource: "list-add"
-	width: 35
-	height: 35
+	width: 25
+	height: 25
 	font.bold: true
 	onClicked: { newsView.fontIncreaseFactor++ ; }	
       }
@@ -137,8 +138,8 @@ QtExtras.MouseEventListener {
 	id: decFont
 
 	iconSource: "list-remove"
-	width: 35
-	height: 35
+	width: 25
+	height: 25
 	font.bold: true
 	onClicked: { newsView.fontIncreaseFactor--; }
       }

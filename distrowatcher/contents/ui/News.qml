@@ -23,13 +23,14 @@ import org.kde.plasma.components 0.1 as PlasmaComponents
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.qtextracomponents 0.1 as QtExtras
 import "./js/style.js" as Style
+import "../code/logic.js" as Logic
 
 Item {
   id: root
   
   property string titleText
   property string linkText
-  property string dateText
+  property date dateText
   property string newsText
   property int itemIndex 
   property int fontIncreaseFactor
@@ -85,7 +86,7 @@ Item {
   Text {
     id: date
     
-    text: root.dateText
+    text: Qt.formatDateTime(root.dateText, "dd/MM/yyyy hh:mm")
     width: parent.width
     wrapMode: Text.WordWrap
     horizontalAlignment: Text.AlignJustify
