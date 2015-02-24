@@ -104,24 +104,37 @@ Item {
     color: theme.textColor
   }
 
-  Text {
-    id: description
-    
-    text: root.newsText       
-    width: parent.width
-    horizontalAlignment: Text.AlignJustify
+  Item {
+    id:description
     anchors {
       top: date.bottom
+      bottom: completeStory.top
       left: root.left
       right: root.right
       margins: 15
     }   
-    font {
-      bold: false
-      pointSize: root.fontSize
+
+    Flickable {
+      id: flickArea
+      anchors.fill: parent
+      contentWidth: newsDesc.width; contentHeight: newsDesc.height
+      flickableDirection: Flickable.VerticalFlick
+      
+      clip: true
+
+      Text {
+	id: newsDesc
+    
+	text: root.newsText
+	width: description.width
+	font {
+	  bold: false
+	  pointSize: root.fontSize
+	}
+	wrapMode: Text.WordWrap
+	color: theme.textColor
+      }
     }
-    wrapMode: Text.WordWrap
-    color: theme.textColor
   }
   
 //   MouseArea {
@@ -159,7 +172,7 @@ Item {
 
       text: i18n("More...")
       anchors {
-	  top: description.bottom
+	  bottom: root.bottom
 	  left: root.left
 	  margins: 15
       }   
