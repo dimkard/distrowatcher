@@ -42,7 +42,7 @@ Item {
   Image {
     id: backgroundImage
 
-    source: "./images/pkgDelegateBg.png" // change transparency level in case of newss, since dates fall into the white surface
+    source: "./images/newsDelegateBg.png" // change transparency level in case of news, since dates fall into the white surface
     anchors.fill: parent
     fillMode: Image.Stretch
   }
