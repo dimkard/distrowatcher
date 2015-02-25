@@ -127,7 +127,7 @@ QtExtras.MouseEventListener {
       PlasmaComponents.ToolButton {
 	id: incFont
 
-	iconSource: "zoom-in-symbolic"
+	iconSource: "image-zoom-in"
 	width: 30
 	height: 30
 	font.bold: true
@@ -137,7 +137,7 @@ QtExtras.MouseEventListener {
       PlasmaComponents.ToolButton {
 	id: decFont
 
-	iconSource: "zoom-out-symbolic"
+	iconSource: "image-zoom-out"
 	width: 30
 	height: 30
 	font.bold: true
