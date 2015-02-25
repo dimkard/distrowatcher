@@ -127,9 +127,9 @@ QtExtras.MouseEventListener {
       PlasmaComponents.ToolButton {
 	id: incFont
 
-	iconSource: "list-add"
-	width: 25
-	height: 25
+	iconSource: "zoom-in-symbolic"
+	width: 30
+	height: 30
 	font.bold: true
 	onClicked: { newsView.fontIncreaseFactor++ ; }	
       }
@@ -137,9 +137,9 @@ QtExtras.MouseEventListener {
       PlasmaComponents.ToolButton {
 	id: decFont
 
-	iconSource: "list-remove"
-	width: 25
-	height: 25
+	iconSource: "zoom-out-symbolic"
+	width: 30
+	height: 30
 	font.bold: true
 	onClicked: { newsView.fontIncreaseFactor--; }
       }
