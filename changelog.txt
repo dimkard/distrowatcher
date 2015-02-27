@@ -1,3 +1,11 @@
+Version 0.11
+------------
+- New tab added (News), from "Latest News and Updates" section of distrowatch.com. 
+- Horizontal layout option added
+- List of distributions updated.
+- User interface polishing.
+- Translation updates
+
 Version 0.10.3
 --------------
 - Translated to Lithuanian by Moo

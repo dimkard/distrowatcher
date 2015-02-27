@@ -5,11 +5,14 @@ Description
 -----------
 The specific plasmoid displays the latest releases of Linux distributions and packages, as published in distrowatch.com. In order to retrieve the relative data, RSS feeds from distrowatch are being used. 
 
-The plasmoid consists of two distinct views; the first displaying Linux distributions, the second displaying packages. Switching between views can be accomplished using a KDE tab bar. By clicking to a distribution record, default browser opens distribution's homepage at distrowatch.com. By clicking to a package record, default browser opens package's homepage.
+The plasmoid consists of four distinct views:
+- Distributions
+- Packages
+- Favorites
+- News 
+Switching between views can be accomplished using a KDE tab bar. By clicking to a distribution record, default browser opens distribution's homepage at distrowatch.com. By clicking to a package record, default browser opens package's homepage. Favorites can be selected by just clicking to the relative button. Clicking to a distribution record, users are navigated (using the predefault web browser) to the relative distrowatch page. After selecting favorites, as soon as a new release of a favorite distribution is available, a notification pop-up is displayed. Notifications can be disabled using the relative configuration option. In News tab, the latest news and updates, as published in distrowatch.com are displayed. Navigation between news is accomplished via the relative buttons. Zoom in/out option exists as well.
 
-Moreover, users can click to the button in the bottom-right corner of the plasmoid so as to navigate to the distributions' list; favorites can be selected by just clicking to the relative button. Clicking to a distribution record, they are navigated (using the predefault web browser) to the relative distrowatch page. After selecting favorites, as soon as a new release of a favorite distribution is available, a notification pop-up is displayed. Notifications can be disabled using the relative configuration option. 
-
-The plasmoid has been written in QML and JavaScript.
+Horizontal and vertical layout option is provided.
 
 Translated to: Greek, Spanish, Russian, Uzbek(Latin), Italian and Lithuanian. If you would like to contribute to translations, visit the relative transifex project at https://www.transifex.com/projects/p/distrowatcher/
 
@@ -50,6 +53,10 @@ Installation
 - $ make
 - $ (sudo) make install
 - "Distro Watcher" widget is now available to add to desktop/panel.
+
+or
+
+- plasmapkg -i distrowatcher.plasmoid 
 
 License
 --------
