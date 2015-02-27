@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
 "content=157314\n"
-"POT-Creation-Date: 2015-01-10 18:49+0200\n"
+"POT-Creation-Date: 2015-02-27 18:51+0200\n"
 "PO-Revision-Date: 2014-03-28 22:26+0000\n"
 "Last-Translator: Giuseppe Pignataro <anubisteam01@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/distrowatcher/"
@@ -28,27 +28,39 @@ msgstr "Rilascio distro"
 msgid "A new version of %1 is available!"
 msgstr "Una nuova versione di %1 è disponibile!"
 
-#: distrowatcher/contents/ui/main.qml:76
+#: distrowatcher/contents/ui/HorizontalLayout.qml:61
+#: distrowatcher/contents/ui/VerticalLayout.qml:53
 msgid "Distributions"
 msgstr "Distro"
 
-#: distrowatcher/contents/ui/main.qml:82
+#: distrowatcher/contents/ui/HorizontalLayout.qml:67
+#: distrowatcher/contents/ui/VerticalLayout.qml:59
 msgid "Packages"
 msgstr "Pacchetti"
 
-#: distrowatcher/contents/ui/main.qml:146
+#: distrowatcher/contents/ui/HorizontalLayout.qml:73
+#: distrowatcher/contents/ui/VerticalLayout.qml:65
+msgid "Favorites"
+msgstr ""
+
+#: distrowatcher/contents/ui/HorizontalLayout.qml:79
+#: distrowatcher/contents/ui/VerticalLayout.qml:71
+msgid "News"
+msgstr ""
+
+#: distrowatcher/contents/ui/main.qml:103
 msgid "Data from distrowatch.com"
 msgstr "Dati da distrowatch.com"
 
-#: distrowatcher/contents/ui/main.qml:260
-msgid "Return to latest distributions"
-msgstr "Ritorna alle ultime distro"
+#: distrowatcher/contents/ui/News.qml:150
+msgid "More..."
+msgstr ""
 
-#: distrowatcher/contents/ui/main.qml:260
-msgid "Select your favorite distributions"
-msgstr "Seleziona le tue distro preferite"
+#: distrowatcher/contents/ui/SearchableFavorites.qml:63
+msgid "Filter:"
+msgstr ""
 
-#: distrowatcher/contents/ui/SearchableFavorites.qml:41
+#: distrowatcher/contents/ui/SearchableFavorites.qml:69
 msgid "Enter distribution name..."
 msgstr "Inserisci il nome della distro..."
 
@@ -105,20 +117,40 @@ msgstr ""
 msgid "Enable notifications:"
 msgstr "Abilita notifiche:"
 
-#: po/rc.cpp:19 rc.cpp:19
+#. i18n: file: distrowatcher/contents/ui/config.ui:77
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_isvertical)
+#: po/rc.cpp:21 rc.cpp:21
+msgid ""
+"If selected, buttons will be displayed on the top of the plasmoid. "
+"Otherwise, on the left."
+msgstr ""
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:93
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: po/rc.cpp:24 rc.cpp:24
+msgid "Use vertical layout:"
+msgstr ""
+
+#: po/rc.cpp:25 rc.cpp:25
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Giuseppe Pignataro"
 
-#: po/rc.cpp:20 rc.cpp:20
+#: po/rc.cpp:26 rc.cpp:26
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "anubisteam01@gmail.com"
 
-#: po/rc.cpp:21 rc.cpp:21
+#: po/rc.cpp:27 rc.cpp:27
 msgid "Distro Watcher"
 msgstr "Distro Watcher"
 
-#: po/rc.cpp:22 rc.cpp:22
+#: po/rc.cpp:28 rc.cpp:28
 msgid "Shows the latest releases of Linux distributions and packages"
 msgstr "Mostra gli ultimi rilasci di distro Linux e pacchetti"
+
+#~ msgid "Return to latest distributions"
+#~ msgstr "Ritorna alle ultime distro"
+
+#~ msgid "Select your favorite distributions"
+#~ msgstr "Seleziona le tue distro preferite"
