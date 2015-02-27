@@ -51,16 +51,6 @@ Item {
     id: theme
   }
  
-//   MouseArea {
-//     id: newsRecordMouseArea
-//     
-//     anchors.fill: parent
-//     hoverEnabled: true
-//     
-// //    onClicked: plasmoid.openUrl(root.linkText);
-//     onEntered: root.entered();
-//     onExited: root.exited();
-//   }
 
   Text {
     id: title
@@ -146,50 +136,25 @@ Item {
       }
     }
   }
-  
-//   MouseArea {
-//     id: completeStory
-//     
-//     anchors {
-// 	top: description.bottom
-// 	
-// 	//bottom: root.bottom
-// 	left: root.left
-// 	margins: 15
-//     }   
-//     width: completeStoryText.paintedWidth
-//     height: completeStoryText.paintedHeight
-//     onClicked: { plasmoid.openUrl(root.linkText); }
-//     hoverEnabled: true
-//     
-//     Text {
-//       id: completeStoryText
-//       anchors.fill: parent
-//       text: i18n("Complete story...")
-//   
-//       font {
-// 	bold: false
-// 	pointSize: root.fontSize
-// 	underline: true
-//       }
-//       wrapMode: Text.WordWrap
-//       color: theme.textColor
-//     }
-//   }
 
-    PlasmaComponents.Button {
-      id: completeStory
+  PlasmaComponents.Button {
+    id: completeStory
 
-      text: i18n("More...")
-      anchors {
-	  bottom: root.bottom
-	  left: root.left
-	  margins: 10
-      }   
-      width: 80
-      height: 30
-      //TODO: Fix height, add tooltip
-      onClicked: { plasmoid.openUrl(root.linkText); }
+    text: moreText.text
+    anchors {
+	bottom: root.bottom
+	left: root.left
+	margins: 10
     }
-
+    
+    Text {
+	id: moreText
+	
+	visible: false
+	text: i18n("More...")
+    }
+    width: moreText.paintedWidth + 10 
+    height: moreText.paintedHeight + 10 
+    onClicked: { plasmoid.openUrl(root.linkText); }
+  }
 }
