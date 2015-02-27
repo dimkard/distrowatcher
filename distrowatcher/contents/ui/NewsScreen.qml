@@ -1,6 +1,6 @@
 /*
 
-    Copyright (C) 2013 Dimitris Kardarakos <dimkard@gmail.com>
+    Copyright (C) 2015 Dimitris Kardarakos <dimkard@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -26,8 +26,6 @@ import "./js/style.js" as Style
 import "../code/logic.js" as Logic
 import "./js/globals.js" as Params
 
-//TODO: Currently, it is just a copy of latest newss. Implementation needed.
-
 QtExtras.MouseEventListener {
   id: container
   
@@ -52,16 +50,15 @@ QtExtras.MouseEventListener {
     height: 100
     snapMode: ListView.SnapToItem
     orientation: ( container.isVertical ) ? Qt.Vertical : Qt.Horizontal
-    clip: true // enabled, since flicking may guide items outside the borders of the listView
-    interactive: false//in conjunction with property clip: true, results in the expected result (scrolling on click of middle button)
-    //currentIndex: -1 //set to -1 to avoid highlighting of 1st record on load
-    spacing: 5 //no need for complex calculation here //Style.spacingAsPercentOfRow*(height/Style.numberOfNews)
+    clip: true 
+    interactive: false
+    spacing: 5 
     highlightMoveDuration: Style.highlightMoveDuration
-    maximumFlickVelocity: Style.maximumFlickVelocity;  // decreased, to avoid stuck  
+    maximumFlickVelocity: Style.maximumFlickVelocity
     
     model: latestNewsListModel.latestNewsModel // set latestNewsModel as the target xml model
     
-    delegate: News {    //Distro.qml created the layout, putting image and text in the position wanted
+    delegate: News {
       id: latestNewsItem
       
       height: (newsView.height - (Style.numberOfNews -1)*newsView.spacing)/Style.numberOfNews
@@ -71,7 +68,7 @@ QtExtras.MouseEventListener {
       newsText: Logic.trimSpace(model.description)
       linkText: model.link
       fontIncreaseFactor: newsView.fontIncreaseFactor
-      }
+     }
 
     Row {
       id: navigButtons
@@ -93,9 +90,8 @@ QtExtras.MouseEventListener {
 	font.bold: true
 	onClicked: { if ( newsView.currentIndex > 0 )
 		      newsView.currentIndex =  newsView.currentIndex - 1;
-		  }
-	
 	}
+      }
       
       PlasmaComponents.ToolButton {
 	id: goPrevious
@@ -114,11 +110,9 @@ QtExtras.MouseEventListener {
       
       id: fontButtons
       
-      //visible: newsView.hoverOnButtons || newsView.mouseInsideNews
       visible: container.containsMouse
       anchors {
 	right: parent.right
-// 	verticalCenter: parent.verticalCenter
 	bottom: parent.bottom
 	rightMargin: 10
       }
@@ -145,7 +139,7 @@ QtExtras.MouseEventListener {
       }
     }      
     
-    NewsListModel {    //get xml data from LatestNewsListModel.qml. LatestNewsListModel contains XmlListModel: latestNewsModel
+    NewsListModel {
       id: latestNewsListModel
 
       interval: parent.refreshEvery

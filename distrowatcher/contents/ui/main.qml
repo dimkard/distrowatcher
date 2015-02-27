@@ -1,7 +1,6 @@
-
 /*
 
-    Copyright (C) 2013 Dimitris Kardarakos <dimkard@gmail.com>
+    Copyright (C) 2015 Dimitris Kardarakos <dimkard@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -35,120 +34,21 @@ Rectangle {
   function configChanged() {
     main.refreshEvery = plasmoid.readConfig("refreshevery");
     main.isVertical =  plasmoid.readConfig("isvertical");
-    //console.log("isvertical: " + plasmoid.readConfig("isvertical") );
   }
   
   smooth: true
   width: Style.width
   height: Style.height
   color: "transparent"
-  //state : "hideFavorites" // by default, open in normal mode // TO BE REMOVED, states are using when'
 
   Component.onCompleted: { // read configuration, in case of change in configuration
     plasmoid.addEventListener('ConfigChanged', configChanged); 
   }
   
-//   Rectangle {
-//     rotation: 270
-//     width: parent.height - (theme.smallestFont.pointSize + 7)
-//     height: parent.width
-//     anchors.verticalCenter: parent.verticalCenter
-//     anchors.horizontalCenter: parent.horizontalCenter
-//     color: "transparent"
-//     gradient: Gradient {
-//       GradientStop { position: 0.1; color: "transparent" }
-//       GradientStop { position: 0.15; color: (tabButAndGroup.currentTabName === "Distributions" || tabButAndGroup.currentTabName === "Favorites" ? "white" : "transparent") }
-//       GradientStop { position: 0.3; color: "transparent" }
-//     }
-//   }
-
-//   Image {
-//     id: backgroundImage
-// 
-//     source: ((tabButAndGroup.visible && (tabButAndGroup.item.currentTabName === "Distributions" || tabButAndGroup.item.currentTabName === "Favorites")) ) ?  "./images/distros_bg.png" : "./images/packages_bg.png" // change transparency level in case of packages, since dates fall into the white surface
-//     anchors.fill: parent
-//     fillMode: Image.Stretch
-//   }
-  
-  
-
   PlasmaCore.Theme {
     id: theme
   }
   
-/*
-  Column {
-    id: tabButAndGroup
-
-    anchors {
-      top: main.top
-      topMargin:main.height*Style.marginScreenPercent
-      horizontalCenter: parent.horizontalCenter
-    }
-    
-    spacing: 15
-    width: parent.width
-    height: parent.height - (theme.smallestFont.pointSize + 30) // parent - bottom text - spacing
-    
-    visible: latestDistrosScreen.dataCount > 0 // to be displayed only if model returns data
-    
-    PlasmaComponents.TabBar { // select which screen shall be visible (Distros/Packages)
-      id: tabBar
-      rotation: 0
-      height: Style.tabBarHeightProportion*parent.height
-      width: Style.tabBarWidthProportion*parent.width
-      anchors.horizontalCenter: parent.horizontalCenter;
-      
-      PlasmaComponents.TabButton {
-	id: distrosTabButton
-	
-	tab: latestDistrosScreen
-	text: i18n("Distributions")
-      }
-      PlasmaComponents.TabButton {
-	id: packagesTabButton
-	
-	tab: latestPackagesScreen
-	text:i18n("Packages")
-      }
-      PlasmaComponents.TabButton {
-	id: favoritesTabButton
-	
-	tab: favoriteDistrosScreen
-	text:i18n("Favorites")
-      }
-    }
-       
-    PlasmaComponents.TabGroup {   // contains the distros/packages screens
-      id: mainTabGroup
-      
-      height: (1-Style.tabBarHeightProportion)*parent.height
-      width:  parent.width
-     
-      LatestDistrosScreen {
-	id: latestDistrosScreen
-	
-	anchors.fill: parent
-	refreshEvery: main.refreshEvery
-      }
-	
-      LatestPackagesScreen {
-	id: latestPackagesScreen
-	
-	anchors.fill: parent
-	refreshEvery: main.refreshEvery
-      }
-      SearchableFavorites {
-	id: favoriteDistrosScreen
-      
-	anchors.fill: parent
-	visible: true
-      }
-    }
-  }
-*/
-
-
   Loader {
     id: tabButAndGroup
     
@@ -168,37 +68,6 @@ Rectangle {
     height: parent.height - (theme.smallestFont.pointSize + ( main.isVertical ? 30 : 15 ) )  // parent - bottom text - spacing (30 for vertival, 14 for horizontal
   }
   
-//   HorizontalLayout {
-//     id: tabButAndGroup
-// 
-//     visible: dataExists // to be displayed only if model returns data
-//     refreshEvery: main.refreshEvery
-//     
-//     anchors.left: main.left
-//     spacing: 15
-//     width: parent.width
-//     height: parent.height - (theme.smallestFont.pointSize + 15) // parent - bottom text - spacing
-//   }
-
-  //TODO: Switch needed
-//   VerticalLayout {
-//     id: tabButAndGroup
-// 
-//     visible: dataExists // to be displayed only if model returns data
-//     refreshEvery: main.refreshEvery
-//     
-//     
-//     anchors {
-//       top: main.top
-//       topMargin:main.height*Style.marginScreenPercent
-//       horizontalCenter: parent.horizontalCenter
-//     }
-//     
-//     spacing: 15
-//     width: parent.width
-//     height: parent.height - (theme.smallestFont.pointSize + 30) // parent - bottom text - spacing
-//   }
-
   UnavailableScreen {
     id: offlineScreen
     
@@ -207,7 +76,6 @@ Rectangle {
       horizontalCenter: parent.horizontalCenter
       fill: parent
     }
-    //visible: (latestDistrosScreen.dataCount <= 0 || latestDistrosScreen.dataCount == undefined) && main.state == "hideFavorites" // to be displayed if models contain no data and we are not in favorites //TO BE REMOVED
     onReloadClicked: {
       tabButAndGroup.reloadModels();
       tabButAndGroup.reloadModels();

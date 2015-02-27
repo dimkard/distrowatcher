@@ -28,7 +28,6 @@ Row {
 
   property int refreshEvery
   property string currentTabName: mainTabGroup.currentTab.tabName
-  property bool isInLatestDistros: (mainTabGroup.currentTab == latestDistrosScreen) ? true : false //TODO: Remove
   property bool dataExists: (latestDistrosScreen.dataCount && latestDistrosScreen.dataCount > 0) ? true : false
   
   function reloadModels() { //addded for triggering reload after user has requested so

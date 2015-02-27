@@ -1,6 +1,6 @@
 /*
 
-    Copyright (C) 2013 Dimitris Kardarakos <dimkard@gmail.com>
+    Copyright (C) 2015 Dimitris Kardarakos <dimkard@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,7 +16,6 @@
     along with this program; if not, see <http://www.gnu.org/licenses/>.
 
 */
-//TODO: Currently, it is just a copy of latest newss. Implementation needed.
 
 import QtQuick 1.1
 import org.kde.plasma.components 0.1 as PlasmaComponents
@@ -42,7 +41,7 @@ Item {
   Image {
     id: backgroundImage
 
-    source: "./images/newsDelegateBg.png" // change transparency level in case of news, since dates fall into the white surface
+    source: "./images/newsDelegateBg.png"
     anchors.fill: parent
     fillMode: Image.Stretch
   }
@@ -51,7 +50,6 @@ Item {
     id: theme
   }
  
-
   Text {
     id: title
     
@@ -104,57 +102,58 @@ Item {
     id:description
     anchors {
       top: date.bottom
-      bottom: completeStory.top
+      bottom: root.bottom
       left: root.left
       right: root.right
       leftMargin: 10
       rightMargin: 10
       topMargin: 10
-      bottomMargin: 5
+      bottomMargin: 35
     }   
 
     Flickable {
       id: flickArea
+
       anchors.fill: parent
-      contentWidth: newsDesc.width; contentHeight: newsDesc.height
+      contentWidth: newsDesc.width
+      contentHeight: newsDesc.height + completeStoryButton.height + newsAndMore.spacing
       flickableDirection: Flickable.VerticalFlick
-      
       clip: true
 
-      Text {
-	id: newsDesc
-    
-	text: root.newsText
-	width: description.width
-	font {
-	  bold: false
-	  pointSize: root.fontSize
+      Column {
+	id: newsAndMore
+	
+	spacing: 5
+	  Text {
+	  id: newsDesc
+      
+	  text: root.newsText
+	  width: description.width
+	  font {
+	    bold: false
+	    pointSize: root.fontSize
+	  }
+	  horizontalAlignment: Text.AlignJustify
+	  wrapMode: Text.WordWrap
+	  color: theme.textColor
 	}
-	horizontalAlignment: Text.AlignJustify
-	wrapMode: Text.WordWrap
-	color: theme.textColor
+	
+	PlasmaComponents.Button {
+	  id: completeStoryButton
+
+	  text: moreTextButton.text
+	  
+	  Text {
+	      id: moreTextButton
+	      
+	      visible: false
+	      text: i18n("More...")
+	  }
+	  width: moreTextButton.paintedWidth + 10 
+	  height: moreTextButton.paintedHeight + 10 
+	  onClicked: { plasmoid.openUrl(root.linkText); }
+	}
       }
     }
-  }
-
-  PlasmaComponents.Button {
-    id: completeStory
-
-    text: moreText.text
-    anchors {
-	bottom: root.bottom
-	left: root.left
-	margins: 10
-    }
-    
-    Text {
-	id: moreText
-	
-	visible: false
-	text: i18n("More...")
-    }
-    width: moreText.paintedWidth + 10 
-    height: moreText.paintedHeight + 10 
-    onClicked: { plasmoid.openUrl(root.linkText); }
   }
 }

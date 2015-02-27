@@ -1,6 +1,6 @@
 /*
 
-    Copyright (C) 2013 Dimitris Kardarakos <dimkard@gmail.com>
+    Copyright (C) 2015 Dimitris Kardarakos <dimkard@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,7 +16,6 @@
     along with this program; if not, see <http://www.gnu.org/licenses/>.
 
 */
-//TODO: Currently, it is just a copy of latest newss. Implementation needed.
 
 import QtQuick 1.1
 
@@ -26,7 +25,6 @@ Item {
   property alias latestNewsModel: newsModel
   property string status: newsModel.status
   property string source: "http://distrowatch.com/news/dw.xml"
-  //property string source: "./dwp.xml" //Only for test
   property int numOfItems: newsModel.count // count news items
   property int interval
 
@@ -39,15 +37,13 @@ Item {
 
     source: root.source
     namespaceDeclarations: "declare namespace rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'; declare default element namespace 'http://purl.org/rss/1.0/'; declare namespace dc='http://purl.org/dc/elements/1.1/'; declare namespace slash='http://purl.org/rss/1.0/modules/slash/'; declare namespace taxo='http://purl.org/rss/1.0/modules/taxonomy/'; declare namespace admin='http://webns.net/mvcb/'; declare namespace syn='http://purl.org/rss/1.0/modules/syndication/';"
-    //query: "/rss/channel/item[position() <= 5]" --> in case you want to fetch a subset of records
     query: "/rdf:RDF/item"
     
     XmlRole { name: "title"; query: "title/string()" }
-    //XmlRole { name: "date"; query: "substring(dc:date/string(),1,10)" }
     XmlRole { name: "date"; query: "dc:date/string()" }
     XmlRole { name: "description"; query: "description/string()" }
     XmlRole { name: "link"; query: "link/string()" }
-    XmlRole { name: "itemIndex"; query: "position()" } //--------item's position, for highlight ----
+    XmlRole { name: "itemIndex"; query: "position()" }
   }
 
   Timer {

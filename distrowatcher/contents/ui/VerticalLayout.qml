@@ -27,7 +27,6 @@ Column {
   id: tabButAndGroup
   
   property int refreshEvery: plasmoid.readConfig("refreshevery")
-  property bool isInLatestDistros: (mainTabGroup.currentTab == latestDistrosScreen) ? true : false //TODO: Remove
   property string currentTabName: mainTabGroup.currentTab.tabName
   property bool dataExists: (latestDistrosScreen.dataCount && latestDistrosScreen.dataCount > 0) ? true : false
 
@@ -41,6 +40,7 @@ Column {
   
   PlasmaComponents.TabBar { // select which screen shall be visible (Distros/Packages)
     id: tabBar
+    
     rotation: 0
     height: Style.tabBarHeightProportion*parent.height
     width: Style.tabBarWidthProportion*parent.width
@@ -72,7 +72,7 @@ Column {
     }
   }
       
-  PlasmaComponents.TabGroup {   // contains the distros/packages screens
+  PlasmaComponents.TabGroup {
     id: mainTabGroup
     
     height: (1-Style.tabBarHeightProportion)*parent.height
