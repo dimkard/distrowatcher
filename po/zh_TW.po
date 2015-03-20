@@ -1,21 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Jeff Huang <s8321414@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: distrowatcher\n"
-"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?content=157314\n"
-"POT-Creation-Date: 2015-02-27 18:51+0200\n"
+"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
+"content=157314\n"
+"POT-Creation-Date: 2015-03-20 20:32+0200\n"
 "PO-Revision-Date: 2015-03-02 05:13+0000\n"
 "Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/distrowatcher/language/zh_TW/)\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/"
+"distrowatcher/language/zh_TW/)\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: distrowatcher/contents/ui/DistroListModel.qml:73
@@ -65,8 +67,12 @@ msgstr "輸入散佈版名稱..."
 #: distrowatcher/contents/ui/UnavailableScreen.qml:54
 msgid ""
 "Network issue. \n"
-"Please check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties."
-msgstr "網路問題。 \n請檢查您的網路連線。如果您並未遇到任何網路問題，distrowatch.com 可能暫時不可用或是有其他麻煩了。"
+"Please check your network connection. If you do not face any network "
+"problem, distrowatch.com may be unavailable or facing difficulties."
+msgstr ""
+"網路問題。 \n"
+"請檢查您的網路連線。如果您並未遇到任何網路問題，distrowatch.com 可能暫時不可"
+"用或是有其他麻煩了。"
 
 #: distrowatcher/contents/ui/UnavailableScreen.qml:64
 msgid "Reload"
@@ -97,8 +103,7 @@ msgid "Refresh every (minutes):"
 msgstr "每(幾分鐘)重新整理："
 
 #. i18n: file: distrowatcher/contents/ui/config.ui:54
-#. i18n: ectx: property (toolTip), widget (QCheckBox,
-#. kcfg_enablenotifications)
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
 #: po/rc.cpp:15 rc.cpp:15
 msgid ""
 "Display a notification in case of new release of a favorite distribution"
