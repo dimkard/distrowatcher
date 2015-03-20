@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Jeff Huang <s8321414@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: distrowatcher\n"
+"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?content=157314\n"
+"POT-Creation-Date: 2015-02-27 18:51+0200\n"
+"PO-Revision-Date: 2015-03-02 05:13+0000\n"
+"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/distrowatcher/language/zh_TW/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: distrowatcher/contents/ui/DistroListModel.qml:73
+msgid "Distribution release"
+msgstr "散佈版釋出"
+
+#: distrowatcher/contents/ui/DistroListModel.qml:73
+msgid "A new version of %1 is available!"
+msgstr "%1 的新版本已提供！"
+
+#: distrowatcher/contents/ui/HorizontalLayout.qml:61
+#: distrowatcher/contents/ui/VerticalLayout.qml:53
+msgid "Distributions"
+msgstr "散佈版"
+
+#: distrowatcher/contents/ui/HorizontalLayout.qml:67
+#: distrowatcher/contents/ui/VerticalLayout.qml:59
+msgid "Packages"
+msgstr "軟體包"
+
+#: distrowatcher/contents/ui/HorizontalLayout.qml:73
+#: distrowatcher/contents/ui/VerticalLayout.qml:65
+msgid "Favorites"
+msgstr "我的最愛"
+
+#: distrowatcher/contents/ui/HorizontalLayout.qml:79
+#: distrowatcher/contents/ui/VerticalLayout.qml:71
+msgid "News"
+msgstr "新聞"
+
+#: distrowatcher/contents/ui/main.qml:103
+msgid "Data from distrowatch.com"
+msgstr "資料取自 distrowatch.com"
+
+#: distrowatcher/contents/ui/News.qml:150
+msgid "More..."
+msgstr "更多..."
+
+#: distrowatcher/contents/ui/SearchableFavorites.qml:63
+msgid "Filter:"
+msgstr "過濾器："
+
+#: distrowatcher/contents/ui/SearchableFavorites.qml:69
+msgid "Enter distribution name..."
+msgstr "輸入散佈版名稱..."
+
+#: distrowatcher/contents/ui/UnavailableScreen.qml:54
+msgid ""
+"Network issue. \n"
+"Please check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties."
+msgstr "網路問題。 \n請檢查您的網路連線。如果您並未遇到任何網路問題，distrowatch.com 可能暫時不可用或是有其他麻煩了。"
+
+#: distrowatcher/contents/ui/UnavailableScreen.qml:64
+msgid "Reload"
+msgstr "重新載入"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:14
+#. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
+#: po/rc.cpp:3 rc.cpp:3
+msgid "Dialog"
+msgstr "對話框"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:20
+#. i18n: ectx: property (title), widget (QGroupBox, groupGeneral)
+#: po/rc.cpp:6 rc.cpp:6
+msgid "General"
+msgstr "一般"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:34
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_refreshevery)
+#: po/rc.cpp:9 rc.cpp:9
+msgid "Refresh data every X minutes"
+msgstr "每 X 分鐘重新整理資料"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:47
+#. i18n: ectx: property (text), widget (QLabel, lblRefreshevery)
+#: po/rc.cpp:12 rc.cpp:12
+msgid "Refresh every (minutes):"
+msgstr "每(幾分鐘)重新整理："
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:54
+#. i18n: ectx: property (toolTip), widget (QCheckBox,
+#. kcfg_enablenotifications)
+#: po/rc.cpp:15 rc.cpp:15
+msgid ""
+"Display a notification in case of new release of a favorite distribution"
+msgstr "我的最愛的散佈版其中中一個有新版本時顯示通知"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:70
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: po/rc.cpp:18 rc.cpp:18
+msgid "Enable notifications:"
+msgstr "啟用通知："
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:77
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_isvertical)
+#: po/rc.cpp:21 rc.cpp:21
+msgid ""
+"If selected, buttons will be displayed on the top of the plasmoid. "
+"Otherwise, on the left."
+msgstr "若選取，按鈕將會顯示在 plasmoid 的頂端。否則會顯示在左邊。"
+
+#. i18n: file: distrowatcher/contents/ui/config.ui:93
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: po/rc.cpp:24 rc.cpp:24
+msgid "Use vertical layout:"
+msgstr "使用垂直佈局："
+
+#: po/rc.cpp:25 rc.cpp:25
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Jeff Huang"
+
+#: po/rc.cpp:26 rc.cpp:26
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "s8321414@gmail.com"
+
+#: po/rc.cpp:27 rc.cpp:27
+msgid "Distro Watcher"
+msgstr "散佈版觀察家"
+
+#: po/rc.cpp:28 rc.cpp:28
+msgid "Shows the latest releases of Linux distributions and packages"
+msgstr "顯示 Linux 散佈版及軟體包的最新版本"
