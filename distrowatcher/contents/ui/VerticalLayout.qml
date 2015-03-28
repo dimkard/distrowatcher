@@ -26,7 +26,8 @@ import "./js/style.js" as Style
 Column {
   id: tabButAndGroup
   
-  property int refreshEvery: plasmoid.readConfig("refreshevery")
+//   property int refreshEvery: plasmoid.readConfig("refreshevery") //TODO: Recover after porting to Plasma5
+  property int refreshEvery: 15 //TODO: Remove after porting 
   property string currentTabName: mainTabGroup.currentTab.tabName
   property bool dataExists: (latestDistrosScreen.dataCount && latestDistrosScreen.dataCount > 0) ? true : false
 

@@ -68,12 +68,12 @@ Item {
 	var lastMatchInList = getLastInList(distroshort); //get the full distro name, in case that > 1 exist in the list
 	//console.log(lastMatchInList); //debug only: show the last in list of latest distros
 	//console.log("distroshort: "  + distroshort) ; //debug only: show distro name
-	if (plasmoid.readConfig(root.enableNotifications) == true && plasmoid.readConfig(distroshort + root.isFavoritePostfix) == true && (plasmoid.readConfig(distroshort + root.latestPostfix) != lastMatchInList)) {
-	  //console.log(i18n("A new version of %1 is available!",distroshort)) ; //here goes notification
-	  Logic.sendNotification(i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort))
-	  plasmoid.writeConfig(distroshort + root.latestPostfix, lastMatchInList);
-	  //console.log(plasmoid.readConfig(distroshort + root.latestPostfix, latestdistro)); //debug only: show that config has been changed
-	}
+// 	if (plasmoid.readConfig(root.enableNotifications) == true && plasmoid.readConfig(distroshort + root.isFavoritePostfix) == true && (plasmoid.readConfig(distroshort + root.latestPostfix) != lastMatchInList)) { 
+// 	  //console.log(i18n("A new version of %1 is available!",distroshort)) ; //here goes notification
+// 	  Logic.sendNotification(i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort))
+// 	  plasmoid.writeConfig(distroshort + root.latestPostfix, lastMatchInList);
+// 	  //console.log(plasmoid.readConfig(distroshort + root.latestPostfix, latestdistro)); //debug only: show that config has been changed
+// 	} //TODO: Recover as last part of porting to Plasma5
       }
     }
     

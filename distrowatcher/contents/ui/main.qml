@@ -26,24 +26,26 @@ import "./js/style.js" as Style
 Rectangle {
   id: main
 
-  property int refreshEvery : plasmoid.readConfig("refreshevery") // how often plasmoid will fetch data from the web  
+//   property int refreshEvery : plasmoid.readConfig("refreshevery") // how often plasmoid will fetch data from the web  //TODO: Recover after porting to Plasma5
+  property int refreshEvery: 15 //TODO: Remove after porting to Plasma5
   property int minimumWidth: Style.width // enables set of minimums and dock to panel
   property int minimumHeight: Style.height // enables set of minimums and dock to panel
-  property bool isVertical: plasmoid.readConfig("isvertical") // If selected, buttons will be displayed on top
-  
-  function configChanged() {
-    main.refreshEvery = plasmoid.readConfig("refreshevery");
-    main.isVertical =  plasmoid.readConfig("isvertical");
-  }
-  
+//   property bool isVertical: plasmoid.readConfig("isvertical") // If selected, buttons will be displayed on top //TODO: Recover after porting to Plasma5
+  property bool isVertical: true //TODO: Remove after porting to Plasma5
+//   function configChanged() {
+//     main.refreshEvery = plasmoid.readConfig("refreshevery"); 
+//     main.isVertical =  plasmoid.readConfig("isvertical");
+//   } //TODO: Recover after porting to Plasma5
+
   smooth: true
   width: Style.width
   height: Style.height
   color: "transparent"
 
-  Component.onCompleted: { // read configuration, in case of change in configuration
-    plasmoid.addEventListener('ConfigChanged', configChanged); 
-  }
+//   Component.onCompleted: { // read configuration, in case of change in configuration
+//     plasmoid.addEventListener('ConfigChanged', configChanged); 
+//   } //TODO: Recover after porting to Plasma5
+
   
   PlasmaCore.Theme {
     id: theme

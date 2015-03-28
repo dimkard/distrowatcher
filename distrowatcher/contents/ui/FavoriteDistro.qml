@@ -175,23 +175,24 @@ Item {
       minimumWidth: theme.smallIconSize
       minimumHeight: theme.smallIconSize
       
-      onClicked: {
-	var newFavStatus = (plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix) == true) ? false : true;
-	star.source = (newFavStatus == true) ? "./icons/favorite.png" : "./icons/non-favorite.png" 	  
-	plasmoid.writeConfig(root.distroShortText + root.isFavoritePostfix, newFavStatus);
-      }
+//       onClicked: {
+// 	var newFavStatus = (plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix) == true) ? false : true;
+// 	star.source = (newFavStatus == true) ? "./icons/favorite.png" : "./icons/non-favorite.png" 	  
+// 	plasmoid.writeConfig(root.distroShortText + root.isFavoritePostfix, newFavStatus);
+//       } //TODO: Recover as last part of porting to Plasma5
     }
 
     Image {
       id: star
       
-      visible: true//(plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix))
+      visible: true
       anchors.centerIn: parent
       width: theme.smallMediumIconSize
       height: theme.smallMediumIconSize
       fillMode: Image.PreserveAspectFit
       smooth: true
-      source: (plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix) == true) ? "./icons/favorite.png" : "./icons/non-favorite.png" ;
+//       source: (plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix) == true) ? "./icons/favorite.png" : "./icons/non-favorite.png" ; //TODO: Recover as last part of porting to Plasma5
+      source: "./icons/non-favorite.png" ;//TODO: Remove after porting to Plasma5
       onStatusChanged: if (status == Image.Error) {
 			    // we set the icon to an empty image if we failed to find one
 			    source = ""
