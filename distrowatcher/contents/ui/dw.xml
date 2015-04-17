@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns="http://purl.org/rss/1.0/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+xmlns:admin="http://webns.net/mvcb/"
+xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+>
+
+<channel rdf:about="http://distrowatch.com/">
+<title>DistroWatch.com: News</title>
+<link>http://distrowatch.com/</link>
+<description>Latest news on Linux distributions and BSD projects</description>
+
+<dc:language>EN</dc:language>
+<dc:rights>Copyright 2001-2015, DistroWatch.com. All Rights Reserved.</dc:rights>
+
+<dc:date>2015-04-14T17:14:52-00:00</dc:date>
+<dc:publisher>DistroWatch.com</dc:publisher>
+<dc:creator>distro@distrowatch.com</dc:creator>
+<dc:subject>Linux/BSD</dc:subject>
+<syn:updatePeriod>hourly</syn:updatePeriod>
+<syn:updateFrequency>1</syn:updateFrequency>
+<syn:updateBase>2013-01-01T00:00+00:00</syn:updateBase>
+
+<items>
+ <rdf:Seq>
+<rdf:li rdf:resource="http://distrowatch.com/8891"></rdf:li>
+<rdf:li rdf:resource="http://distrowatch.com/8890"></rdf:li>
+<rdf:li rdf:resource="http://distrowatch.com/8889"></rdf:li>
+<rdf:li rdf:resource="http://distrowatch.com/8888"></rdf:li>
+<rdf:li rdf:resource="http://distrowatch.com/8887"></rdf:li>
+<rdf:li rdf:resource="http://distrowatch.com/8886"></rdf:li>
+<rdf:li rdf:resource="http://distrowatch.com/8885"></rdf:li>
+<rdf:li rdf:resource="http://distrowatch.com/8884"></rdf:li>
+<rdf:li rdf:resource="http://distrowatch.com/8883"></rdf:li>
+<rdf:li rdf:resource="http://distrowatch.com/8882"></rdf:li>
+ </rdf:Seq>
+</items>
+<image rdf:resource="http://distrowatch.com/images/other/dw.png">
+</image>
+<textinput rdf:resource="http://distrowatch.com/table.php">
+</textinput>
+</channel>
+
+<item rdf:about="http://distrowatch.com/8891">
+<title>Distribution Release: Toutou Linux 6.0 "SlaXen RCX"</title>
+<link>http://distrowatch.com/8891</link>
+<description> Toutou Linux is a lightweight operating system based on the Puppy distribution. Toutou is optimized for French speaking users and provides a friendly user interface based upon Openbox. The latest release of Toutou, SlaXen 6.0 RCX, offers users Openbox 3.5.2 and a new side panel for quickly launching....</description>
+<dc:date>2015-04-14T17:14:52+00:00</dc:date>
+<slash:section>toutou</slash:section>
+</item>
+
+<item rdf:about="http://distrowatch.com/8890">
+<title>Distribution Release: Scientific Linux 7.1</title>
+<link>http://distrowatch.com/8890</link>
+<description> Pat Riehecky has announced the release of Scientific Linux 7.1, a distribution compiled from the source code for Red Hat Enterprise Linux 7.1 and enhanced with extra scientific applications: "Scientific Linux 7.1 x86_64 released." This release delivers a number of changes, including: "abrt - removed the recommendation to....</description>
+<dc:date>2015-04-14T01:08:19+00:00</dc:date>
+<slash:section>scientific</slash:section>
+</item>
+
+<item rdf:about="http://distrowatch.com/8889">
+<title>DistroWatch Weekly, Issue 605</title>
+<link>http://distrowatch.com/8889</link>
+<description> This week in DistroWatch Weekly: Review: Exploring SuperX 3.0News: Details on DragonFly BSD's HAMMER2 file system, new features in openSUSE's Tumbleweed, Manjaro's security certificate expired and Linux reaches 4.0Questions and answers: Google Code closing and social mediaAsk a leader: Vince Pooley from the Chapeau projectTorrent corner: Antergos, Bella....</description>
+<dc:date>2015-04-13T00:10:02+00:00</dc:date>
+<slash:section>weekly</slash:section>
+</item>
+
+<item rdf:about="http://distrowatch.com/8888">
+<title>Distribution Release: Antergos 2015.04.12</title>
+<link>http://distrowatch.com/8888</link>
+<description> Dustin Falgout has announced the release of a new version of the Antergos distribution. The new release, version 2015.04.12, offers an updated system installer and the GNOME 3.16 desktop environment. The distribution can be downloaded as one of two images, a Full edition and a Minimal edition. The....</description>
+<dc:date>2015-04-12T16:47:36+00:00</dc:date>
+<slash:section>antergos</slash:section>
+</item>
+
+<item rdf:about="http://distrowatch.com/8887">
+<title>Development Release: Parsix GNU/Linux 7.5 Test 2</title>
+<link>http://distrowatch.com/8887</link>
+<description> The makers of Parsix, a desktop distribution based on Debian's latest Stable branch, have announced the availability of a new development releases, Parsix GNU/Linux 7.5 Test 2. The new test release offers UEFI support for 64-bit machines and focuses mostly on improving the system installer and desktop performance.....</description>
+<dc:date>2015-04-12T01:05:50+00:00</dc:date>
+<slash:section>parsix</slash:section>
+</item>
+
+<item rdf:about="http://distrowatch.com/8886">
+<title>Distribution Release: elementary OS 0.3</title>
+<link>http://distrowatch.com/8886</link>
+<description> The developers of elementary OS have announced the launch of a new stable release, code name "Freya". The new release features UEFI support, improved interactive notifications, a new firewall utility, designed administrative utilities and a unified login/lock screen. "elementary is proud to announce the stable release of elementary....</description>
+<dc:date>2015-04-11T20:36:56+00:00</dc:date>
+<slash:section>elementary</slash:section>
+</item>
+
+<item rdf:about="http://distrowatch.com/8885">
+<title>Distribution Release: HandyLinux 1.9</title>
+<link>http://distrowatch.com/8885</link>
+<description> The developers behind HandyLinux, a beginner friendly distribution, have announced the availability of HandyLinux 1.9. The new release is based on Debian Wheezy and mostly focuses on minor improvements and bug fixes over the 1.8 release. The 486 and 686 builds have been merged, removing the necessity of....</description>
+<dc:date>2015-04-11T15:04:39+00:00</dc:date>
+<slash:section>handy</slash:section>
+</item>
+
+<item rdf:about="http://distrowatch.com/8884">
+<title>Distribution Release: Slackel 6.0.3 "Openbox"</title>
+<link>http://distrowatch.com/8884</link>
+<description> Slackel, a distribution based on Slackware and Salix, has launched a new release, version 6.0.3 "Live Openbox". The new release provides a lightweight desktop environment with useful, yet efficient, desktop applications. The new Slackel supports UEFI and ships with Midori as the default web browser and AbiWord for....</description>
+<dc:date>2015-04-10T13:51:34+00:00</dc:date>
+<slash:section>slackel</slash:section>
+</item>
+
+<item rdf:about="http://distrowatch.com/8883">
+<title>Distribution Release: Linux Mint 2 "LMDE"</title>
+<link>http://distrowatch.com/8883</link>
+<description> Clement Lefebvre has announced the launch of Linux Mint "Debian Edition", version 2. The new release, code named "Betsy", is available in two variants (Cinnamon and MATE) and is based on packages provided by Debian "Jessie". There are separate release announcements for Linux Mint Debian Edition 2 Cinnamon....</description>
+<dc:date>2015-04-10T13:33:30+00:00</dc:date>
+<slash:section>mint</slash:section>
+</item>
+
+<item rdf:about="http://distrowatch.com/8882">
+<title>Distribution Release: Bella OS 2.2</title>
+<link>http://distrowatch.com/8882</link>
+<description> Bella OS is a user-friendly Linux distribution based on the latest Xubuntu LTS release with a highly customised Xfce desktop that combines the best features of several popular operating systems. Bella OS 2.2, released yesterday, is the project's current stable release: "Launch release version 2.2 is now live!....</description>
+<dc:date>2015-04-09T08:08:48+00:00</dc:date>
+<slash:section>bella</slash:section>
+</item>
+
+<textinput rdf:about="http://distrowatch.com/table.php">
+<title>Search Distributions</title>
+<description>Search BSD/Linux distributions</description>
+<name>distribution</name>
+<link>http://distrowatch.com/table.php</link>
+</textinput>
+</rdf:RDF>

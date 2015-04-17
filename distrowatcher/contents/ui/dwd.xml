@@ -1,0 +1,87 @@
+<rss version="2.0">
+
+<channel>
+<title>DistroWatch.com: Distributions</title>
+<link>http://distrowatch.com/</link>
+<description>Latest distribution releases</description>
+
+<image>
+<title>DistroWatch</title>
+<url>http://distrowatch.com/images/other/dw.png</url>
+<link>http://distrowatch.com/</link>
+</image>
+
+<item>
+<title>04/14 Toutou 6.0 "SlaXen RCX"</title>
+<link>http://distrowatch.com/toutou</link>
+<description></description>
+</item>
+
+<item>
+<title>04/14 Clonezilla 2.4.1-6</title>
+<link>http://distrowatch.com/clonezilla</link>
+<description></description>
+</item>
+
+<item>
+<title>04/13 Scientific 7.1</title>
+<link>http://distrowatch.com/scientific</link>
+<description></description>
+</item>
+
+<item>
+<title>04/13 Toutou 4.3.6 (beta)</title>
+<link>http://distrowatch.com/toutou</link>
+<description></description>
+</item>
+
+<item>
+<title>04/13 Q4OS 1.1-RC2</title>
+<link>http://distrowatch.com/q4os</link>
+<description></description>
+</item>
+
+<item>
+<title>04/12 Antergos 2015.04.12</title>
+<link>http://distrowatch.com/antergos</link>
+<description></description>
+</item>
+
+<item>
+<title>04/11 Parsix 7.5-test2</title>
+<link>http://distrowatch.com/parsix</link>
+<description></description>
+</item>
+
+<item>
+<title>04/11 elementary OS 0.3</title>
+<link>http://distrowatch.com/elementary</link>
+<description></description>
+</item>
+
+<item>
+<title>04/11 HandyLinux 1.9</title>
+<link>http://distrowatch.com/handy</link>
+<description></description>
+</item>
+
+<item>
+<title>04/10 Caixa M&#225;gica 23</title>
+<link>http://distrowatch.com/caixamagica</link>
+<description></description>
+</item>
+
+<item>
+<title>04/10 Slackel 6.0.3 "Openbox"</title>
+<link>http://distrowatch.com/slackel</link>
+<description></description>
+</item>
+
+<item>
+<title>04/10 Mint LMDE 2 "Cinnamon"</title>
+<link>http://distrowatch.com/mint</link>
+<description></description>
+</item>
+
+</channel>
+</rss>

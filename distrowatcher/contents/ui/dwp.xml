@@ -1,0 +1,87 @@
+<rss version="2.0">
+
+<channel>
+<title>DistroWatch.com: Packages</title>
+<link>http://distrowatch.com/</link>
+<description>Latest package releases</description>
+
+<image>
+<title>DistroWatch</title>
+<url>http://distrowatch.com/images/other/dw.png</url>
+<link>http://distrowatch.com/</link>
+</image>
+
+<item>
+<title>04/14 apt 1.0.9.8</title>
+<link>http://packages.qa.debian.org/a/apt.html</link>
+<description>APT: a front-end for the dpkg package manager</description>
+</item>
+
+<item>
+<title>04/14 gtk+ 3.16.2</title>
+<link>http://www.gtk.org/</link>
+<description>GTK+: a multi-platform toolkit for creating GUIs</description>
+</item>
+
+<item>
+<title>04/13 phpMyAdmin 4.4.2</title>
+<link>http://www.phpmyadmin.net/</link>
+<description>phpMyAdmin: a tool written in PHP intended to handle the administration of MySQL over the web</description>
+</item>
+
+<item>
+<title>04/13 ruby 2.2.2</title>
+<link>http://www.ruby-lang.org/en/</link>
+<description>Ruby: interpreted, dynamically typed, pure object-oriented scripting language</description>
+</item>
+
+<item>
+<title>04/13 vlc 2.2.1</title>
+<link>http://www.videolan.org/streaming/</link>
+<description>VLC: a cross-platform media player and streaming server</description>
+</item>
+
+<item>
+<title>04/13 evolution 3.16.1</title>
+<link>http://gnome.org/projects/evolution/</link>
+<description>Evolution: information management software providing mail, address book and calendaring functionality</description>
+</item>
+
+<item>
+<title>04/12 postfix 3.0.1</title>
+<link>http://www.postfix.org/start.html</link>
+<description>Postfix: a mail transport agent</description>
+</item>
+
+<item>
+<title>04/12 MesaLib 10.5.3</title>
+<link>http://www.mesa3d.org/</link>
+<description>MesaLib: a 3D graphics library</description>
+</item>
+
+<item>
+<title>04/12 linux 4.0</title>
+<link>http://www.kernel.org/</link>
+<description>Linux kernel: a UNIX clone written from scratch by Linus Torvalds</description>
+</item>
+
+<item>
+<title>04/12 ffmpeg 2.6.2</title>
+<link>http://ffmpeg.org/</link>
+<description>FFmpeg: a complete, cross-platform solution to record, convert and stream audio and video</description>
+</item>
+
+<item>
+<title>04/11 freecad 0.15.4671</title>
+<link>http://sourceforge.net/apps/mediawiki/free-cad/</link>
+<description>FreeCAD: a general purpose parametric 3D modeller for CAD</description>
+</item>
+
+<item>
+<title>04/11 gnupg 2.1.3</title>
+<link>http://www.gnupg.org/</link>
+<description>GnuPG: a tool for secure communication and data storage</description>
+</item>
+
+</channel>
+</rss>
