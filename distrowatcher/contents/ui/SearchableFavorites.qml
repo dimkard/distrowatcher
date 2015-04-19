@@ -50,7 +50,7 @@ Item {
       bottom: parent.bottom
       left: parent.left
     }
-    height: theme.defaultFont.mSize.height*1.6
+    height: theme.mSize(theme.defaultFont).height*1.6
     width: parent.width
     
     Text {
@@ -58,7 +58,7 @@ Item {
  
       height: parent.height
       verticalAlignment: Text.AlignVCenter
-//      font.pointSize: theme.desktopFont.pointSize
+//      font.pointSize: theme.defaultFont.pointSize
       color: theme.textColor
       text: i18n("Filter:")
     } 

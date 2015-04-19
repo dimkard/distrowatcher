@@ -33,7 +33,8 @@ Item {
   property string newsText
   property int itemIndex 
   property int fontIncreaseFactor
-  property int fontSize: ( theme.desktopFont.pointSize + fontIncreaseFactor <= 1 ? 1 : theme.desktopFont.pointSize + fontIncreaseFactor)
+  property int fontSize: ( theme.defaultFont.pointSize + fontIncreaseFactor <= 1 ? 1 : theme.defaultFont.pointSize + fontIncreaseFactor)
+  
   
   signal entered()
   signal exited()
@@ -149,7 +150,7 @@ Item {
 	  }
 	  width: moreTextButton.paintedWidth + 10 
 	  height: moreTextButton.paintedHeight + 10 
-	  onClicked: { plasmoid.openUrl(root.linkText); }
+	  onClicked: { Qt.openUrlExternally(root.linkText); }
 	}
       }
     }

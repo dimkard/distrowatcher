@@ -46,7 +46,7 @@ Column {
       left : root.left
     }
     color: theme.textColor 
-    font.pointSize: theme.desktopFont.pointSize
+    font.pointSize: theme.defaultFont.pointSize
     horizontalAlignment: Text.AlignHCenter
     text: i18n("Network issue. \nPlease check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties.");
     wrapMode: Text.Wrap

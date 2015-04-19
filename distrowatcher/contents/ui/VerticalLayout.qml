@@ -37,7 +37,7 @@ Column {
     //console.log("Test"); //TODO: Remove, debug only
     latestDistrosScreen.reloadModel();
     latestPackagesScreen.reloadModel();
-    //newsScreen.reloadModel(); //TODO: Recover, temporarily disabled
+    newsScreen.reloadModel();
   }
   
   spacing: 15
@@ -64,19 +64,19 @@ Column {
       text:i18n("Packages")
     }
 
-//     PlasmaComponents.TabButton { //TODO: Recover, temporarily disabled
-//       id: favoritesTabButton
-//       
-//       tab: favoriteDistrosScreen
-//       text:i18n("Favorites")
-//     }
+    PlasmaComponents.TabButton {
+      id: favoritesTabButton
+      
+      tab: favoriteDistrosScreen
+      text:i18n("Favorites")
+    }
     
-//     PlasmaComponents.TabButton { //TODO: Recover, temporarily disabled
-//       id: newsTabButton
-//       
-//       tab: newsScreen
-//       text:i18n("News")
-//     }
+    PlasmaComponents.TabButton { 
+      id: newsTabButton
+      
+      tab: newsScreen
+      text:i18n("News")
+    }
   }
       
   PlasmaComponents.TabGroup {
@@ -101,21 +101,21 @@ Column {
       refreshEvery: tabButAndGroup.refreshEvery
     }
     
-//     SearchableFavorites { //TODO: Recover, temporarily disabled
-//       id: favoriteDistrosScreen
-//     
-//       property string tabName: "Favorites"
-//       anchors.fill: parent
-//       visible: true
-//     }
+    SearchableFavorites {
+      id: favoriteDistrosScreen
     
-//     NewsScreen { //TODO: Recover, temporarily disabled
-//       id: newsScreen
-//       
-//       property string tabName: "News" 
-//       anchors.fill: parent
-//       anchors.topMargin: 5
-//       refreshEvery: tabButAndGroup.refreshEvery
-//     }    
+      property string tabName: "Favorites"
+      anchors.fill: parent
+      visible: true
+    }
+    
+    NewsScreen {
+      id: newsScreen
+      
+      property string tabName: "News" 
+      anchors.fill: parent
+      anchors.topMargin: 5
+      refreshEvery: tabButAndGroup.refreshEvery
+    }    
   }
 }

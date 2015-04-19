@@ -62,7 +62,7 @@ Rectangle {
 	  
     onStatusChanged: if (tabButAndGroup.status == Loader.Ready) { 
         item.refreshEvery = tabButAndGroup.refreshEvery; 
-        main.logging = tabButAndGroup.width //TODO: remove
+        main.logging = "Ready" //TODO: remove
         }
         else if (tabButAndGroup.status == Loader.Loading) { //TODO: remove
             main.logging = "Loading" //TODO: remove
@@ -87,14 +87,14 @@ Rectangle {
       fill: parent
     }
     onReloadClicked: {
-      // tabButAndGroup.reloadModels(); TODO: Recover
-        if (tabButAndGroup.status == Loader.Null) 
+      // tabButAndGroup.reloadModels(); //TODO: Recover
+        if (tabButAndGroup.status == Loader.Null) //TODO: Remove
             main.logging = "Null";
-        if (tabButAndGroup.status == Loader.Ready) 
+        if (tabButAndGroup.status == Loader.Ready)  //TODO: Remove
             main.logging = "Ready"; 
-        if (tabButAndGroup.status == Loader.Loading) 
+        if (tabButAndGroup.status == Loader.Loading) //TODO: Remove
             main.logging = "Loading";        
-        if (tabButAndGroup.status == Loader.Error) 
+        if (tabButAndGroup.status == Loader.Error)  //TODO: Remove
             main.logging = "Error" ;
     }
   }
@@ -117,7 +117,7 @@ Rectangle {
       horizontalAlignment: Text.AlignHCenter
       font.pointSize: theme.smallestFont.pointSize
       color: theme.textColor
-      text: i18n("Data from distrowatch.com")
+      text: i18n("Data from distrowatch.com") //TODO: Recover
       //text: main.logging //TODO: Remove, debug only
     }
   }

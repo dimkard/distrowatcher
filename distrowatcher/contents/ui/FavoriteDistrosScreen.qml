@@ -32,21 +32,9 @@ PlasmaExtras.ScrollArea {
     distroListModel.queryModel(distroFilter);
   }
   
-  flickableItem: 
+  //flickableItem: //removed during plasma5 port
     ListView {
       id:distroView
-      /* header:  //Seems that just adds cluttering
-	  Text { 
-	    id: mytitle 
-	    font.bold: true
-	    font.pointSize: theme.desktopFont.pointSize
-	    color: theme.buttonTextColor
-	    anchors.left: distroView.left
-	    width: distroView.width
-	    horizontalAlignment:Text.AlignHCenter
-	    text: i18n("Select your favorite distributions")      
-	  }
-      */
      
       orientation: Qt.Vertical
       interactive: true
@@ -61,7 +49,7 @@ PlasmaExtras.ScrollArea {
       delegate: FavoriteDistro {    //FavoriteDistro.qml created the layout, putting image and text in the position wanted
 	id: favoriteDistroItem
 	
-	height: theme.largeIconSize // avoid rendering issues
+	height: units.iconSizes.large // avoid rendering issues //changed for plasma5
 	width: distroView.width //- scrollBar.width
 	latestVersion: model.latestversion
 	distroName: model.distroname

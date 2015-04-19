@@ -73,7 +73,7 @@ Item {
     horizontalAlignment: Text.AlignLeft
     font {
       bold: true
-      pointSize: theme.desktopFont.pointSize
+      pointSize: theme.defaultFont.pointSize
     }
     wrapMode: "WordWrap"
     color: theme.textColor
@@ -93,7 +93,7 @@ Item {
     horizontalAlignment: Text.AlignLeft        
     font {
       bold: false
-      pointSize: theme.desktopFont.pointSize
+      pointSize: theme.defaultFont.pointSize
     }
     wrapMode: "WordWrap"
     color: theme.textColor

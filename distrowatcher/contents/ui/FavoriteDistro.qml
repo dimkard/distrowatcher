@@ -20,7 +20,8 @@
 import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.qtextracomponents 2.0 as Extras
+//import org.kde.qtextracomponents 2.0 as Extras //TODO: remove, seems broken
+import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import "./js/style.js" as Style
 import "./js/globals.js" as Params
 
@@ -57,7 +58,7 @@ Item {
     onEntered: root.entered();
     onExited: root.exited();
     onClicked: {
-      plasmoid.openUrl(root.linkText);
+      Qt.openUrlExternally(root.linkText);
     }
     onPositionChanged: root.positionChanged();
     
@@ -94,18 +95,18 @@ Item {
     }
     verticalAlignment : Text.AlignVCenter
     text: root.distroName
-    font.pointSize: theme.desktopFont.pointSize
+    font.pointSize: theme.defaultFont.pointSize
     horizontalAlignment: Text.AlignLeft
     wrapMode: "WordWrap" 
     color: theme.textColor    
 }  
 
-  Extras.MouseEventListener { 
+  KQuickControlsAddons.MouseEventListener { 
     id: favoritesIcon	
    
     visible: true
-    width: theme.smallMediumIconSize
-    height: theme.smallMediumIconSize
+    width: units.iconSizes.smallMedium
+    height: units.iconSizes.smallMedium
     hoverEnabled: true
     state: "hidebutton" //by default show image and hide button
     anchors {
@@ -167,10 +168,10 @@ Item {
       checkable: false
       iconSource: "bookmarks"
       visible: true
-      width: theme.smallIconSize
-      height: theme.smallIconSize
-      minimumWidth: theme.smallIconSize
-      minimumHeight: theme.smallIconSize
+      width: units.iconSizes.small
+      height: units.iconSizes.small
+      minimumWidth: units.iconSizes.small
+      minimumHeight: units.iconSizes.small
       
 //       onClicked: {
 // 	var newFavStatus = (plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix) == true) ? false : true;
@@ -184,8 +185,8 @@ Item {
       
       visible: true
       anchors.centerIn: parent
-      width: theme.smallMediumIconSize
-      height: theme.smallMediumIconSize
+      width: units.iconSizes.smallMedium
+      height: units.iconSizes.smallMedium
       fillMode: Image.PreserveAspectFit
       smooth: true
 //       source: (plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix) == true) ? "./icons/favorite.png" : "./icons/non-favorite.png" ; //TODO: Recover as last part of porting to Plasma5

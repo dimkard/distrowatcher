@@ -94,7 +94,7 @@ Item {
     text: root.dateText
     font {
       bold: true
-      pointSize: theme.desktopFont.pointSize
+      pointSize: theme.defaultFont.pointSize
     }
     horizontalAlignment: Text.AlignLeft
     style: Text.Raised  //fix white-white issue
@@ -116,7 +116,7 @@ Item {
     text: root.distroText
     font {
       bold: false
-      pointSize: theme.desktopFont.pointSize
+      pointSize: theme.defaultFont.pointSize
     }
     horizontalAlignment: Text.AlignLeft
     wrapMode: "WordWrap" 
