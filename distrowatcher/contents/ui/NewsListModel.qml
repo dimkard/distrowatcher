@@ -17,14 +17,15 @@
 
 */
 
-import QtQuick 1.1
-
+import QtQuick 2.0
+import QtQuick.XmlListModel 2.0
 Item {
   id: root
 
   property alias latestNewsModel: newsModel
   property string status: newsModel.status
-  property string source: "http://distrowatch.com/news/dw.xml"
+  //property string source: "http://distrowatch.com/news/dw.xml" //TODO: recover
+  property string source: "./dw.xml" //TODO: Remove Only for test
   property int numOfItems: newsModel.count // count news items
   property int interval
 

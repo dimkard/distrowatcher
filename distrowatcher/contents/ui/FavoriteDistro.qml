@@ -17,10 +17,10 @@
 
 */
 
-import QtQuick 1.1
-import org.kde.plasma.components 0.1 as PlasmaComponents
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.qtextracomponents 0.1 as Extras
+import QtQuick 2.0
+import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.qtextracomponents 2.0 as Extras
 import "./js/style.js" as Style
 import "./js/globals.js" as Params
 
@@ -47,9 +47,6 @@ Item {
       fillMode: Image.Stretch
     }
     
-  PlasmaCore.Theme {
-    id: theme
-  } 
   
   MouseArea {
     id: distroRecordMouseArea

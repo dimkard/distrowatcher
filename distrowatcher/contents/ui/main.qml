@@ -17,21 +17,22 @@
 
 */
 
-import QtQuick 1.1
-import org.kde.plasma.components 0.1 as PlasmaComponents
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.qtextracomponents 0.1 as Extras
+import QtQuick 2.0
+import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.core 2.0 as PlasmaCore
+//import org.kde.qtextracomponents 2.0 as Extras
 import "./js/style.js" as Style
 
 Rectangle {
   id: main
 
 //   property int refreshEvery : plasmoid.readConfig("refreshevery") // how often plasmoid will fetch data from the web  //TODO: Recover after porting to Plasma5
-  property int refreshEvery: 15 //TODO: Remove after porting to Plasma5
+  property int refreshEvery: 5 //TODO: Remove after porting to Plasma5
   property int minimumWidth: Style.width // enables set of minimums and dock to panel
   property int minimumHeight: Style.height // enables set of minimums and dock to panel
 //   property bool isVertical: plasmoid.readConfig("isvertical") // If selected, buttons will be displayed on top //TODO: Recover after porting to Plasma5
   property bool isVertical: true //TODO: Remove after porting to Plasma5
+  property string logging
 //   function configChanged() {
 //     main.refreshEvery = plasmoid.readConfig("refreshevery"); 
 //     main.isVertical =  plasmoid.readConfig("isvertical");
@@ -47,10 +48,7 @@ Rectangle {
 //   } //TODO: Recover after porting to Plasma5
 
   
-  PlasmaCore.Theme {
-    id: theme
-  }
-  
+
   Loader {
     id: tabButAndGroup
     
@@ -62,12 +60,22 @@ Rectangle {
       }
     }
 	  
-    onStatusChanged: if (tabButAndGroup.status == Loader.Ready) { item.refreshEvery = tabButAndGroup.refreshEvery; }
+    onStatusChanged: if (tabButAndGroup.status == Loader.Ready) { 
+        item.refreshEvery = tabButAndGroup.refreshEvery; 
+        main.logging = tabButAndGroup.width //TODO: remove
+        }
+        else if (tabButAndGroup.status == Loader.Loading) { //TODO: remove
+            main.logging = "Loading" //TODO: remove
+        }//TODO: remove
+        else if (tabButAndGroup.status == Loader.Error) { //TODO: remove
+            main.logging = "Error" //TODO: remove
+            console.log("DW: Error Loading tabButAndGroup");
+        }//TODO: remove
     onRefreshEveryChanged: if (tabButAndGroup.status == Loader.Ready) item.refreshEvery = tabButAndGroup.refreshEvery;
     source: (main.isVertical) ? "VerticalLayout.qml" : "HorizontalLayout.qml"
     anchors.left: main.left
     width: parent.width
-    height: parent.height - (theme.smallestFont.pointSize + ( main.isVertical ? 30 : 15 ) )  // parent - bottom text - spacing (30 for vertival, 14 for horizontal
+    height: parent.height - (theme.smallestFont.pointSize + ( main.isVertical ? 30 : 15 ) )  // parent - bottom text - spacing (30 for vertival, 14 for horizontal //TODO: recover
   }
   
   UnavailableScreen {
@@ -79,8 +87,15 @@ Rectangle {
       fill: parent
     }
     onReloadClicked: {
-      tabButAndGroup.reloadModels();
-      tabButAndGroup.reloadModels();
+      // tabButAndGroup.reloadModels(); TODO: Recover
+        if (tabButAndGroup.status == Loader.Null) 
+            main.logging = "Null";
+        if (tabButAndGroup.status == Loader.Ready) 
+            main.logging = "Ready"; 
+        if (tabButAndGroup.status == Loader.Loading) 
+            main.logging = "Loading";        
+        if (tabButAndGroup.status == Loader.Error) 
+            main.logging = "Error" ;
     }
   }
     
@@ -103,6 +118,7 @@ Rectangle {
       font.pointSize: theme.smallestFont.pointSize
       color: theme.textColor
       text: i18n("Data from distrowatch.com")
+      //text: main.logging //TODO: Remove, debug only
     }
   }
   

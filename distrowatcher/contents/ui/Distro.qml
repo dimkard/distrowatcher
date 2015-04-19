@@ -17,9 +17,9 @@
 
 */
 
-import QtQuick 1.1
-import org.kde.plasma.components 0.1 as PlasmaComponents
-import org.kde.plasma.core 0.1 as PlasmaCore
+import QtQuick 2.0
+import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.core 2.0 as PlasmaCore
 import "./js/style.js" as Style
 
 Item {
@@ -44,9 +44,6 @@ Item {
     fillMode: Image.Stretch
   }
   
-  PlasmaCore.Theme {
-    id: theme
-  } 
 
   MouseArea {
     id: distroRecordMouseArea
@@ -56,7 +53,8 @@ Item {
     
     onClicked: { 
       //debug only // console.log("click" + root.linkText); 
-      plasmoid.openUrl(root.linkText);
+      //plasmoid.openUrl(root.linkText); //not working in Plasma5
+      Qt.openUrlExternally(root.linkText);
     }
     onEntered: root.entered();
     onExited: root.exited();

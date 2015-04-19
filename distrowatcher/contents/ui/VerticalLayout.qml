@@ -17,24 +17,27 @@
 
 */
 
-import QtQuick 1.1
-import org.kde.plasma.components 0.1 as PlasmaComponents
-import org.kde.plasma.core 0.1 as PlasmaCore
-import org.kde.qtextracomponents 0.1 as Extras
-import "./js/style.js" as Style
+import QtQuick 2.0
+import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.core 2.0 as PlasmaCore
+//import org.kde.qtextracomponents 2.0 as Extras
+import "plasmapackage:/ui/js/style.js" as Style
 
 Column {
   id: tabButAndGroup
   
 //   property int refreshEvery: plasmoid.readConfig("refreshevery") //TODO: Recover after porting to Plasma5
-  property int refreshEvery: 15 //TODO: Remove after porting 
+  property int refreshEvery: 1 //TODO: Remove after porting 
   property string currentTabName: mainTabGroup.currentTab.tabName
-  property bool dataExists: (latestDistrosScreen.dataCount && latestDistrosScreen.dataCount > 0) ? true : false
+  property bool dataExists: (latestDistrosScreen.dataCount && latestDistrosScreen.dataCount > 0) ? true : false //TODO: Recover, temporarily disabled
+  //property bool dataExists: true //TODO: Remove after testing
+  //property string distroCount: "7" //TODO: Remove, debug only
 
-  function reloadModels() { //addded for triggering reload after user has requested so
+  function reloadModels() { //added for triggering reload after user has requested so
+    //console.log("Test"); //TODO: Remove, debug only
     latestDistrosScreen.reloadModel();
     latestPackagesScreen.reloadModel();
-    newsScreen.reloadModel();
+    //newsScreen.reloadModel(); //TODO: Recover, temporarily disabled
   }
   
   spacing: 15
@@ -45,32 +48,35 @@ Column {
     rotation: 0
     height: Style.tabBarHeightProportion*parent.height
     width: Style.tabBarWidthProportion*parent.width
-    anchors.horizontalCenter: parent.horizontalCenter;
-    
+    anchors.horizontalCenter: parent.horizontalCenter
+
     PlasmaComponents.TabButton {
       id: distrosTabButton
       
       tab: latestDistrosScreen
       text: i18n("Distributions")
     }
+    
     PlasmaComponents.TabButton {
       id: packagesTabButton
       
       tab: latestPackagesScreen
       text:i18n("Packages")
     }
-    PlasmaComponents.TabButton {
-      id: favoritesTabButton
-      
-      tab: favoriteDistrosScreen
-      text:i18n("Favorites")
-    }
-    PlasmaComponents.TabButton {
-      id: newsTabButton
-      
-      tab: newsScreen
-      text:i18n("News")
-    }
+
+//     PlasmaComponents.TabButton { //TODO: Recover, temporarily disabled
+//       id: favoritesTabButton
+//       
+//       tab: favoriteDistrosScreen
+//       text:i18n("Favorites")
+//     }
+    
+//     PlasmaComponents.TabButton { //TODO: Recover, temporarily disabled
+//       id: newsTabButton
+//       
+//       tab: newsScreen
+//       text:i18n("News")
+//     }
   }
       
   PlasmaComponents.TabGroup {
@@ -86,7 +92,7 @@ Column {
       anchors.fill: parent
       refreshEvery: tabButAndGroup.refreshEvery
     }
-      
+     
     LatestPackagesScreen {
       id: latestPackagesScreen
       
@@ -95,21 +101,21 @@ Column {
       refreshEvery: tabButAndGroup.refreshEvery
     }
     
-    SearchableFavorites {
-      id: favoriteDistrosScreen
+//     SearchableFavorites { //TODO: Recover, temporarily disabled
+//       id: favoriteDistrosScreen
+//     
+//       property string tabName: "Favorites"
+//       anchors.fill: parent
+//       visible: true
+//     }
     
-      property string tabName: "Favorites"
-      anchors.fill: parent
-      visible: true
-    }
-    
-    NewsScreen {
-      id: newsScreen
-      
-      property string tabName: "News" 
-      anchors.fill: parent
-      anchors.topMargin: 5
-      refreshEvery: tabButAndGroup.refreshEvery
-    }    
+//     NewsScreen { //TODO: Recover, temporarily disabled
+//       id: newsScreen
+//       
+//       property string tabName: "News" 
+//       anchors.fill: parent
+//       anchors.topMargin: 5
+//       refreshEvery: tabButAndGroup.refreshEvery
+//     }    
   }
 }
