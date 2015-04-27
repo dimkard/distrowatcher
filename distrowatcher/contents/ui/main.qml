@@ -26,17 +26,16 @@ import "./js/style.js" as Style
 Rectangle {
   id: main
 
-//   property int refreshEvery : plasmoid.readConfig("refreshevery") // how often plasmoid will fetch data from the web  //TODO: Recover after porting to Plasma5
-  property int refreshEvery: 5 //TODO: Remove after porting to Plasma5
+  property int refreshEvery : plasmoid.configuration.refreshevery
   property int minimumWidth: Style.width // enables set of minimums and dock to panel
   property int minimumHeight: Style.height // enables set of minimums and dock to panel
-//   property bool isVertical: plasmoid.readConfig("isvertical") // If selected, buttons will be displayed on top //TODO: Recover after porting to Plasma5
-  property bool isVertical: true //TODO: Remove after porting to Plasma5
+  property bool isVertical: plasmoid.configuration.isvertical
   property string logging
+
 //   function configChanged() {
 //     main.refreshEvery = plasmoid.readConfig("refreshevery"); 
 //     main.isVertical =  plasmoid.readConfig("isvertical");
-//   } //TODO: Recover after porting to Plasma5
+//   } //Not needeed in Plasma5
 
   smooth: true
   width: Style.width
@@ -45,7 +44,7 @@ Rectangle {
 
 //   Component.onCompleted: { // read configuration, in case of change in configuration
 //     plasmoid.addEventListener('ConfigChanged', configChanged); 
-//   } //TODO: Recover after porting to Plasma5
+//   } //Not needeed in Plasma5
 
   
 
@@ -118,7 +117,7 @@ Rectangle {
       font.pointSize: theme.smallestFont.pointSize
       color: theme.textColor
       text: i18n("Data from distrowatch.com") //TODO: Recover
-      //text: main.logging //TODO: Remove, debug only
+      //text: main.refreshEvery //TODO: Remove, debug only
     }
   }
   
