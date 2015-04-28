@@ -32,19 +32,19 @@ Rectangle {
   property bool isVertical: plasmoid.configuration.isvertical
   property string logging
 
-//   function configChanged() {
-//     main.refreshEvery = plasmoid.readConfig("refreshevery"); 
-//     main.isVertical =  plasmoid.readConfig("isvertical");
-//   } //Not needeed in Plasma5
+//   function configChanged() { //TODO: Remove
+//     main.refreshEvery = plasmoid.readConfig("refreshevery");  //TODO: Remove
+//     main.isVertical =  plasmoid.readConfig("isvertical"); //TODO: Remove
+//   } //TODO: Remove, not needeed in Plasma5
 
   smooth: true
   width: Style.width
   height: Style.height
   color: "transparent"
 
-//   Component.onCompleted: { // read configuration, in case of change in configuration
-//     plasmoid.addEventListener('ConfigChanged', configChanged); 
-//   } //Not needeed in Plasma5
+//   Component.onCompleted: { // read configuration, in case of change in configuration //TODO: Remove
+//     plasmoid.addEventListener('ConfigChanged', configChanged);  //TODO: Remove
+//   } ////TODO: Remove Not needeed in Plasma5
 
   
 

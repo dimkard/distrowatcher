@@ -26,12 +26,10 @@ import "plasmapackage:/ui/js/style.js" as Style
 Column {
   id: tabButAndGroup
   
-//   property int refreshEvery: plasmoid.readConfig("refreshevery") //TODO: Recover after porting to Plasma5
-  property int refreshEvery: 1 //TODO: Remove after porting 
+//   property int refreshEvery: plasmoid.readConfig("refreshevery") //TODO: Remove, not needed
+  property int refreshEvery
   property string currentTabName: mainTabGroup.currentTab.tabName
-  property bool dataExists: (latestDistrosScreen.dataCount && latestDistrosScreen.dataCount > 0) ? true : false //TODO: Recover, temporarily disabled
-  //property bool dataExists: true //TODO: Remove after testing
-  //property string distroCount: "7" //TODO: Remove, debug only
+  property bool dataExists: (latestDistrosScreen.dataCount && latestDistrosScreen.dataCount > 0) ? true : false
 
   function reloadModels() { //added for triggering reload after user has requested so
     //console.log("Test"); //TODO: Remove, debug only

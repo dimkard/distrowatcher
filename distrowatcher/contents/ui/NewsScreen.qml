@@ -31,8 +31,8 @@ KQuickControlsAddons.MouseEventListener {
   
   property alias refreshEvery: newsView.refreshEvery
   property int dataCount: newsView.model.count // controls visibility
-//   property bool isVertical: plasmoid.readConfig("isvertical") // If selected, buttons will be displayed on top //TODO: Port to Plasma5
-  property bool isVertical: true //TODO: Remove after porting to Plasma5
+//   property bool isVertical: plasmoid.readConfig("isvertical") // TODO: Remove
+  property bool isVertical: plasmoid.configuration.isvertical 
   hoverEnabled: true
   function reloadModel() { //addded for triggering reload after user has requested so
     latestNewsListModel.reloadModel();
