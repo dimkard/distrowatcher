@@ -71,8 +71,8 @@ Item {
 // 	} //TODO: Remove
         
         if (plasmoid.configuration.enablenotifications == true && plasmoid.configuration[distroshort + root.isFavoritePostfix] == true && plasmoid.configuration[distroshort + root.latestPostfix] != lastMatchInList) {
-	  plasmoid.configuration[distroshort + root.latestPostfix] = lastMatchInList; 
-          Logic.sendNotification(i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort)); 
+	  plasmoid.configuration[distroshort + root.latestPostfix] = lastMatchInList;
+          Logic.sendNotification(i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort)); //TODO: Recover
 	} 
       }
     }
@@ -94,8 +94,8 @@ Item {
   Timer {
     id: distroTimer
 
-    // TODO: Recover interval: root.interval*60000
-    interval: 60000
+    interval: root.interval*60000
+    //interval: 60000 //// TODO: Remove
     running: true
     repeat: true
     
