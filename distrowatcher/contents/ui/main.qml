@@ -86,7 +86,7 @@ Rectangle {
       fill: parent
     }
     onReloadClicked: {
-      // tabButAndGroup.reloadModels(); //TODO: Recover
+        tabButAndGroup.reloadModels();
         if (tabButAndGroup.status == Loader.Null) //TODO: Remove
             main.logging = "Null";
         if (tabButAndGroup.status == Loader.Ready)  //TODO: Remove
@@ -116,8 +116,8 @@ Rectangle {
       horizontalAlignment: Text.AlignHCenter
       font.pointSize: theme.smallestFont.pointSize
       color: theme.textColor
-      text: i18n("Data from distrowatch.com") //TODO: Recover
-      //text: main.refreshEvery //TODO: Remove, debug only
+      text: i18n("Data from distrowatch.com")
+      //text: main.logging //TODO: Remove, debug only
     }
   }
   

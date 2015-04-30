@@ -33,7 +33,6 @@ Item {
   property int numOfItems: latest.count // count distro items
   property string isFavoritePostfix: Params.isFavoritePostfix
   property string latestPostfix: Params.latestPostfix
-  property string enableNotifications: Params.enableNotifications  
   
   function reloadModel() {
     latest.reload()
@@ -66,14 +65,15 @@ Item {
 	var distroshort = latest.get(i).distroShortName;
 	var latestdistro = latest.get(i).distro;
 	var lastMatchInList = getLastInList(distroshort); //get the full distro name, in case that > 1 exist in the list
-	//console.log(lastMatchInList); //debug only: show the last in list of latest distros
-	//console.log("distroshort: "  + distroshort) ; //debug only: show distro name
-// 	if (plasmoid.readConfig(root.enableNotifications) == true && plasmoid.readConfig(distroshort + root.isFavoritePostfix) == true && (plasmoid.readConfig(distroshort + root.latestPostfix) != lastMatchInList)) { 
-// 	  //console.log(i18n("A new version of %1 is available!",distroshort)) ; //here goes notification
-// 	  Logic.sendNotification(i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort))
-// 	  plasmoid.writeConfig(distroshort + root.latestPostfix, lastMatchInList);
-// 	  //console.log(plasmoid.readConfig(distroshort + root.latestPostfix, latestdistro)); //debug only: show that config has been changed
-// 	} //TODO: Recover as last part of porting to Plasma5
+// 	if (plasmoid.readConfig(root.enableNotifications) == true && plasmoid.readConfig(distroshort + root.isFavoritePostfix) == true && (plasmoid.readConfig(distroshort + root.latestPostfix) != lastMatchInList)) { //TODO: Remove
+// 	  Logic.sendNotification(i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort)) //TODO: Remove
+// 	  plasmoid.writeConfig(distroshort + root.latestPostfix, lastMatchInList); //TODO: Remove
+// 	} //TODO: Remove
+        
+        if (plasmoid.configuration.enablenotifications == true && plasmoid.configuration[distroshort + root.isFavoritePostfix] == true && plasmoid.configuration[distroshort + root.latestPostfix] != lastMatchInList) {
+	  plasmoid.configuration[distroshort + root.latestPostfix] = lastMatchInList; 
+          Logic.sendNotification(i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort)); 
+	} 
       }
     }
     
@@ -94,14 +94,15 @@ Item {
   Timer {
     id: distroTimer
 
-    interval: root.interval*60000
+    // TODO: Recover interval: root.interval*60000
+    interval: 60000
     running: true
     repeat: true
     
     onTriggered: {
       latest.reload();
       latest.checkForNewDistros();
-      console.log("DW: latest.count" + latest.count);
+      //console.log("DW: latest.count" + latest.count); //TODO: Remove
     }
   }
 }
