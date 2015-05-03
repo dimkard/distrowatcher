@@ -18,8 +18,9 @@
 */
 
 import QtQuick 2.0
-import "../code/logic.js" as Logic
+// import "../code/logic.js" as Logic //TODO: Remove
 import "./js/globals.js" as Params
+import org.kde.plasma.core 2.0 as PlasmaCore
 import QtQuick.XmlListModel 2.0
 Item {
 
@@ -72,7 +73,8 @@ Item {
         
         if (plasmoid.configuration.enablenotifications == true && plasmoid.configuration[distroshort + root.isFavoritePostfix] == true && plasmoid.configuration[distroshort + root.latestPostfix] != lastMatchInList) {
 	  plasmoid.configuration[distroshort + root.latestPostfix] = lastMatchInList;
-          Logic.sendNotification(i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort)); //TODO: Recover
+//           Logic.sendNotification(i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort)); //TODO: Remove
+           notificationsSource.sendNotification("Distro Watcher", i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort));
 	} 
       }
     }
@@ -95,7 +97,6 @@ Item {
     id: distroTimer
 
     interval: root.interval*60000
-    //interval: 60000 //// TODO: Remove
     running: true
     repeat: true
     
@@ -103,6 +104,24 @@ Item {
       latest.reload();
       latest.checkForNewDistros();
       //console.log("DW: latest.count" + latest.count); //TODO: Remove
+    }
+  }
+  
+  PlasmaCore.DataSource {
+    id: notificationsSource
+
+    engine: "notifications"
+    interval: 0
+    
+    function sendNotification(appRealName, summary, body) {
+        var service = notificationsSource.serviceForSource("notification");
+        var op = service.operationDescription("createNotification");
+        op["appName"] = appRealName;
+        op["appIcon"] = "preferences-desktop-notification";
+        op["summary"] = summary;
+        op["body"] = body;
+        op["timeout"] = 6000;
+        service.startOperationCall(op);
     }
   }
 }
