@@ -111,6 +111,7 @@ Item {
     id: notificationsSource
 
     engine: "notifications"
+    connectedSources: "org.freedesktop.Notifications"
     interval: 0
     
     function sendNotification(appRealName, summary, body) {
