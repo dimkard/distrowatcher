@@ -1,0 +1,33 @@
+Open Plasmoid.
+
+Navigate to Distros and Packages view, return back.
+
+Navigate to Favorites view, return back.
+
+Click to a Distro from Distros page. The relative web page opens.
+
+Click to a Package from Packages page. The relative web page opens.
+
+Click to a Favorite Distro from Favorite Distros page. The relative web page opens.
+
+Go offline. After several minutes (the reload time), the unavailable view is properly displayed.
+
+Go online. Wait for view to reload and check that UI is rendered properly.
+
+Go online. Click reload button and check that UI is rendered properly.
+
+Set a distro as favorite (choose one that constitutes a new release). Check that plasma-desktop-appletsrc contains the relative entry. Wait till the reload time to be reached and check that the notification appears.
+
+Set a distro as favorite (choose one that constitutes a new release and is displayed multiple times in latest view). Wait till the reload time and check that a single notification appears.
+
+Seach in Favorites, check that view is updated
+
+In News, navigate between records
+
+In News, increase/decrase fonts
+
+Repeat for horizontal mode
+
+Check translation results after installing (either by make install or dpkg)
+
+Check translation results after installing by knewhotstuff

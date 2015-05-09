@@ -1,0 +1,25 @@
+- Remove any existing build
+
+- Update translations (run message.sh)
+
+- Set version # to metadata.desktop and deb.CMakeLists.txt
+
+- Update changelog (from git log)
+
+- Update README if needed
+
+- Build with cmake
+
+- Add any new language to kNewHostStuff.sh script
+
+- Create "Get new hot stuff" package (run kNewHostStuff.sh)
+
+- Rename distrowatcher.plasmoid to a version specific file (e.g. distrowatcher_0.10.1.plasmoid)
+
+- Copy deb.CMakeLists.txt to CMakeLists.txt
+
+- Build deb package
+
+- Revert gen.CMakeLists.txt to CMakeLists.txt
+
+- Tag the new version
