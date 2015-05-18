@@ -29,7 +29,7 @@ var borderWidthAsPercent = 0.0015
 var borderRadius = 8
 
 // proportions
-var tabBarHeightProportion = 0.1
+var tabBarHeightProportion = 0.13
 var tabBarWidthProportion = 0.9
 var mainTabGroupProportion = 0.8
 var offlineWindowProportion = 0.8
