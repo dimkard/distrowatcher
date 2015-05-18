@@ -38,12 +38,11 @@ Column {
     source: "./images/task-attention-48.png"
   }
       
-  Text {
+  PlasmaComponents.Label  {
     id: offlineText
-    
+    width: parent.width
     anchors {
       horizontalCenter : root.horizontalCenter
-      left : root.left
     }
     color: theme.textColor 
     font.pointSize: theme.defaultFont.pointSize
