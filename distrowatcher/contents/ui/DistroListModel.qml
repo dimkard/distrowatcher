@@ -28,8 +28,8 @@ Item {
 
   property alias latestModel: latest
   property string status: latest.status
-//   property string source: "http://distrowatch.com/news/dwd.xml" //TODO: recover
-  property string source: "./dwd.xml" //TODO: remove only for debug
+  property string source: "http://distrowatch.com/news/dwd.xml" //TODO: recover
+//   property string source: "./dwd.xml" //TODO: remove only for debug
   property int interval
   property int numOfItems: latest.count // count distro items
   property string isFavoritePostfix: Params.isFavoritePostfix

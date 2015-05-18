@@ -25,8 +25,8 @@ Item {
 
   property alias latestPackageModel: packageModel
   property string status: packageModel.status
-//   property string source: "http://distrowatch.com/news/dwp.xml"//TODO: recover
-  property string source: "./dwp.xml" //TODO: remove. Only for test
+  property string source: "http://distrowatch.com/news/dwp.xml"//TODO: recover
+//   property string source: "./dwp.xml" //TODO: remove. Only for test
   property int numOfItems: packageModel.count // count package items
   property int interval
 
