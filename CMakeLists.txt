@@ -5,7 +5,10 @@ find_package(ECM 0.0.11 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 find_package(KF5Plasma)
 
-plasma_install_package(distrowatcher org.kde.distrowatcher plasma/plasmoids applet)
+plasma_install_package(distrowatcher org.kde.distrowatcher plasmoids applet)
+
+install(FILES distrowatcher/contents/ui/icons/distrowatcher.png distrowatcher/contents/ui/icons/distropackage.png 
+        DESTINATION ${ICON_INSTALL_DIR}/hicolor/48x48/apps)
 
 FIND_PROGRAM(GETTEXT_MSGFMT_EXECUTABLE msgfmt)
 
