@@ -1,18 +1,12 @@
 project(distrowatcher)
- 
-find_package(KDE4 REQUIRED)
- 
-include(KDE4Defaults)
+cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 
-install(DIRECTORY distrowatcher/
-        DESTINATION ${DATA_INSTALL_DIR}/plasma/plasmoids/org.kde.distrowatcher)
- 
-install(FILES distrowatcher/metadata.desktop
-        DESTINATION ${SERVICES_INSTALL_DIR} RENAME plasma-applet-distrowatcher.desktop)
-        
-install(FILES distrowatcher/contents/ui/icons/distrowatcher.png distrowatcher/contents/ui/icons/distropackage.png 
-        DESTINATION ${ICON_INSTALL_DIR}/hicolor/48x48/apps)
-        
+find_package(ECM 0.0.11 REQUIRED NO_MODULE)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
+find_package(KF5Plasma)
+
+plasma_install_package(distrowatcher org.kde.distrowatcher plasma/plasmoids applet)
+
 FIND_PROGRAM(GETTEXT_MSGFMT_EXECUTABLE msgfmt)
 
 IF(NOT GETTEXT_MSGFMT_EXECUTABLE)
