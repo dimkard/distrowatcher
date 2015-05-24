@@ -25,6 +25,7 @@ import "./js/style.js" as Style
 Column {  
   id: root
   
+  property string technicalError
   signal reloadClicked() //let parent know that user requested to reload
   spacing: 10
 
@@ -47,12 +48,13 @@ Column {
     color: theme.textColor 
     font.pointSize: theme.defaultFont.pointSize
     horizontalAlignment: Text.AlignHCenter
-    text: i18n("Network issue. \nPlease check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties.");
+    text: (root.technicalError === "") ? i18n("Network issue. \nPlease check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties.") : root.technicalError;
     wrapMode: Text.Wrap
   }
 
   PlasmaComponents.Button {
     id: refreshButton
+    visible: (root.technicalError === "")
     anchors {
       horizontalCenter : root.horizontalCenter
     }

@@ -60,15 +60,17 @@ Rectangle {
     }
 	  
     onStatusChanged: if (tabButAndGroup.status == Loader.Ready) { 
-        item.refreshEvery = tabButAndGroup.refreshEvery; 
+        item.refreshEvery = tabButAndGroup.refreshEvery;
+        offlineScreen.technicalError = "";
         main.logging = "Ready" //TODO: remove
         }
         else if (tabButAndGroup.status == Loader.Loading) { //TODO: remove
             main.logging = "Loading" //TODO: remove
         }//TODO: remove
-        else if (tabButAndGroup.status == Loader.Error) { //TODO: remove
+        else if (tabButAndGroup.status == Loader.Error) {
             main.logging = "Error" //TODO: remove
-            console.log("DW: Error Loading tabButAndGroup");
+            console.log("DW: Error Loading tabButAndGroup");  //TODO: remove
+            offlineScreen.technicalError = i18n("An error has occured initializing the widget. Check documentation and ensure that all the required packages have been installed.");
         }//TODO: remove
     onRefreshEveryChanged: if (tabButAndGroup.status == Loader.Ready) item.refreshEvery = tabButAndGroup.refreshEvery;
     source: (main.isVertical) ? "VerticalLayout.qml" : "HorizontalLayout.qml"
