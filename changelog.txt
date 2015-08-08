@@ -1,3 +1,7 @@
+Version 1.0
+------------
+Ported to Plasma 5
+
 Version 0.11.1
 ------------
 German and Chinese (Taiwan) translation added. Thanks to Markus Oesterle for German and Jeff Huang for Chinese (Taiwan).

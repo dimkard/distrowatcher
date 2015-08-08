@@ -1,3 +1,4 @@
+
 - Remove any existing build
 
 - Update translations (run message.sh)
@@ -6,9 +7,13 @@
 
 - Update changelog (from git log)
 
-- Update README if needed
+- Update README if needed -- TODO
 
 - Build with cmake
+
+- To manually create mo files:
+  
+  msgfmt el.po --output-file el.mo
 
 - Add any new language to kNewHostStuff.sh script
 
@@ -16,10 +21,10 @@
 
 - Rename distrowatcher.plasmoid to a version specific file (e.g. distrowatcher_0.10.1.plasmoid)
 
-- Copy deb.CMakeLists.txt to CMakeLists.txt
+- Copy deb.CMakeLists.txt to CMakeLists.txt --TODO: REMOVE
 
-- Build deb package
+- Build deb package --TODO: REMOVE
 
-- Revert gen.CMakeLists.txt to CMakeLists.txt
+- Revert gen.CMakeLists.txt to CMakeLists.txt --TODO: REMOVE
 
-- Tag the new version
+- Tag the new version --TODO
