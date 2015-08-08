@@ -70,7 +70,7 @@ Rectangle {
         else if (tabButAndGroup.status == Loader.Error) {
             main.logging = "Error" //TODO: remove
             console.log("DW: Error Loading tabButAndGroup");  //TODO: remove
-            offlineScreen.technicalError = i18n("An error has occured initializing the widget. Check documentation and ensure that all the required packages have been installed.");
+            offlineScreen.technicalError = i18n("An error has occurred initializing the widget. Check documentation and ensure that all the required packages have been installed.");
         }//TODO: remove
     onRefreshEveryChanged: if (tabButAndGroup.status == Loader.Ready) item.refreshEvery = tabButAndGroup.refreshEvery;
     source: (main.isVertical) ? "VerticalLayout.qml" : "HorizontalLayout.qml"

@@ -8,7 +8,7 @@
     <entry name="refreshevery" type="Int">
       <whatsthis>Refresh data every X minutes</whatsthis>
       <tooltip>Refresh data every X minutes</tooltip>
-      <default>1</default>
+      <default>15</default>
       <min>1</min>
       <max>180</max>
     </entry>
