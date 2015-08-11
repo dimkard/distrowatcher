@@ -42,12 +42,17 @@ Dependencies (version 0.*)
 - libdbusmenu-qt-dev
 
 Dependencies (version 1.*)
+
 --------------------------
+- Plasma 5.0 or later
+
 * In Kubuntu 15.04 the following packages were installed for a proper build to take place:
 
+- cmake
 - plasma-framework-dev
+- extra-cmake-modules
 - build-essential
-- qtdeclarative5-dev
+- libqt5xmlpatterns5
 - qml-module-qtquick-xmllistmodel
 
 
@@ -74,10 +79,6 @@ Installation (version 1.*)
 - $ make
 - $ (sudo) make install
 - "Distro Watcher" widget is now available to add to desktop/panel.
-
-or
-
-- plasmapkg2 -i distrowatcher.plasmoid 
 
 
 License
