@@ -1,6 +1,6 @@
 #!/bin/sh
 BASEDIR="../"			# root of translatable sources
-BUGADDR="http://kde-look.org/content/show.php/Distro+Watcher+?content=157314"	# MSGID-Bugs
+BUGADDR="https://github.com/dimkard/distrowatcher/"	# MSGID-Bugs
 PROJECT="distrowatcher"		# project name
 WDIR=`pwd`			# working dir
  

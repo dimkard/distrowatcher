@@ -7,9 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: distrowatcher\n"
-"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
-"content=157314\n"
-"POT-Creation-Date: 2015-03-20 20:32+0200\n"
+"Report-Msgid-Bugs-To: https://github.com/dimkard/distrowatcher/\n"
+"POT-Creation-Date: 2015-08-12 12:05+0300\n"
 "PO-Revision-Date: 2014-04-15 13:19+0000\n"
 "Last-Translator: sorrymak <dearalcher@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/distrowatcher/"
@@ -21,39 +20,68 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: distrowatcher/contents/ui/DistroListModel.qml:73
+#: distrowatcher/contents/config/config.qml:27
+msgid "General"
+msgstr "Главное"
+
+#: distrowatcher/contents/config/config.qml:32
+msgid "Appearance"
+msgstr ""
+
+#: distrowatcher/contents/ui/configAppearance.qml:39
+msgid "Use vertical layout"
+msgstr ""
+
+#: distrowatcher/contents/ui/configGeneral.qml:41
+#, fuzzy
+msgid "Refresh every (minutes)"
+msgstr "Обновлять через (минуты):"
+
+#: distrowatcher/contents/ui/configGeneral.qml:52
+#, fuzzy
+msgid "Enable notifications"
+msgstr "Включить уведомления:"
+
+#. i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort)); //TODO: Remove
+#: distrowatcher/contents/ui/DistroListModel.qml:77
 msgid "Distribution release"
 msgstr "Релиз дистрибутива"
 
-#: distrowatcher/contents/ui/DistroListModel.qml:73
+#: distrowatcher/contents/ui/DistroListModel.qml:77
 msgid "A new version of %1 is available!"
 msgstr "Доступна новая версия %1!"
 
 #: distrowatcher/contents/ui/HorizontalLayout.qml:61
-#: distrowatcher/contents/ui/VerticalLayout.qml:53
+#: distrowatcher/contents/ui/VerticalLayout.qml:55
 msgid "Distributions"
 msgstr "Дистрибутивы"
 
 #: distrowatcher/contents/ui/HorizontalLayout.qml:67
-#: distrowatcher/contents/ui/VerticalLayout.qml:59
+#: distrowatcher/contents/ui/VerticalLayout.qml:62
 msgid "Packages"
 msgstr "Пакеты"
 
 #: distrowatcher/contents/ui/HorizontalLayout.qml:73
-#: distrowatcher/contents/ui/VerticalLayout.qml:65
+#: distrowatcher/contents/ui/VerticalLayout.qml:69
 msgid "Favorites"
 msgstr ""
 
 #: distrowatcher/contents/ui/HorizontalLayout.qml:79
-#: distrowatcher/contents/ui/VerticalLayout.qml:71
+#: distrowatcher/contents/ui/VerticalLayout.qml:76
 msgid "News"
 msgstr ""
 
-#: distrowatcher/contents/ui/main.qml:103
+#: distrowatcher/contents/ui/main.qml:73
+msgid ""
+"An error has occurred initializing the widget. Check documentation and "
+"ensure that all the required packages have been installed."
+msgstr ""
+
+#: distrowatcher/contents/ui/main.qml:121
 msgid "Data from distrowatch.com"
 msgstr "Информация с distrowatch.com"
 
-#: distrowatcher/contents/ui/News.qml:150
+#: distrowatcher/contents/ui/News.qml:149
 msgid "More..."
 msgstr ""
 
@@ -65,7 +93,7 @@ msgstr ""
 msgid "Enter distribution name..."
 msgstr "Введите название дистрибутива..."
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:54
+#: distrowatcher/contents/ui/UnavailableScreen.qml:51
 msgid ""
 "Network issue. \n"
 "Please check your network connection. If you do not face any network "
@@ -75,78 +103,37 @@ msgstr ""
 "Пожалуйста, проверьте соединение с сетью. Если в этом плане проблем нет, "
 "distrowatch.com просто может быть недоступным или испытывать трудности."
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:64
+#: distrowatcher/contents/ui/UnavailableScreen.qml:62
 msgid "Reload"
 msgstr "Перезагрузить"
 
-#. i18n: file: distrowatcher/contents/ui/config.ui:14
-#. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
-#: po/rc.cpp:3 rc.cpp:3
-msgid "Dialog"
-msgstr "Диалог"
-
-#. i18n: file: distrowatcher/contents/ui/config.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupGeneral)
-#: po/rc.cpp:6 rc.cpp:6
-msgid "General"
-msgstr "Главное"
-
-#. i18n: file: distrowatcher/contents/ui/config.ui:34
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_refreshevery)
-#: po/rc.cpp:9 rc.cpp:9
-msgid "Refresh data every X minutes"
-msgstr "Обновлять информацию каждые X минут(-ы)"
-
-#. i18n: file: distrowatcher/contents/ui/config.ui:47
-#. i18n: ectx: property (text), widget (QLabel, lblRefreshevery)
-#: po/rc.cpp:12 rc.cpp:12
-msgid "Refresh every (minutes):"
-msgstr "Обновлять через (минуты):"
-
-#. i18n: file: distrowatcher/contents/ui/config.ui:54
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
-#: po/rc.cpp:15 rc.cpp:15
-msgid ""
-"Display a notification in case of new release of a favorite distribution"
-msgstr "Выводить уведомление, если вышла новая версия любимого дистрибутива"
-
-#. i18n: file: distrowatcher/contents/ui/config.ui:70
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: po/rc.cpp:18 rc.cpp:18
-msgid "Enable notifications:"
-msgstr "Включить уведомления:"
-
-#. i18n: file: distrowatcher/contents/ui/config.ui:77
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_isvertical)
-#: po/rc.cpp:21 rc.cpp:21
-msgid ""
-"If selected, buttons will be displayed on the top of the plasmoid. "
-"Otherwise, on the left."
-msgstr ""
-
-#. i18n: file: distrowatcher/contents/ui/config.ui:93
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: po/rc.cpp:24 rc.cpp:24
-msgid "Use vertical layout:"
-msgstr ""
-
-#: po/rc.cpp:25 rc.cpp:25
+#: po/rc.cpp:1 rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Ваше имя"
 
-#: po/rc.cpp:26 rc.cpp:26
+#: po/rc.cpp:2 rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Ваш email"
 
-#: po/rc.cpp:27 rc.cpp:27
+#: po/rc.cpp:3 rc.cpp:3
 msgid "Distro Watcher"
 msgstr "Distro Watcher"
 
-#: po/rc.cpp:28 rc.cpp:28
+#: po/rc.cpp:4 rc.cpp:4
 msgid "Shows the latest releases of Linux distributions and packages"
 msgstr "Показывает последние релизы дистрибутивов GNU/Linux и пакетов"
+
+#~ msgid "Dialog"
+#~ msgstr "Диалог"
+
+#~ msgid "Refresh data every X minutes"
+#~ msgstr "Обновлять информацию каждые X минут(-ы)"
+
+#~ msgid ""
+#~ "Display a notification in case of new release of a favorite distribution"
+#~ msgstr "Выводить уведомление, если вышла новая версия любимого дистрибутива"
 
 #~ msgid "Return to latest distributions"
 #~ msgstr "Возвратиться к последнему дистрибутиву"

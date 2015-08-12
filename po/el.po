@@ -1,58 +1,86 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Dimitris Kardarakos <dimkard@gmail.com>, 2013-2015
+# Dimitris Kardarakos <dimkard@gmail.com>, 2013-2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: distrowatcher\n"
-"Report-Msgid-Bugs-To: http://kde-look.org/content/show.php/Distro+Watcher+?"
-"content=157314\n"
-"POT-Creation-Date: 2015-03-20 20:32+0200\n"
-"PO-Revision-Date: 2015-02-27 16:57+0000\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek (http://www.transifex.com/projects/p/distrowatcher/"
-"language/el/)\n"
+"Report-Msgid-Bugs-To: https://github.com/dimkard/distrowatcher/\n"
+"POT-Creation-Date: 2015-08-12 12:05+0300\n"
+"PO-Revision-Date: 2015-08-11 14:43+0300\n"
+"Last-Translator: \n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"language/el/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
 
-#: distrowatcher/contents/ui/DistroListModel.qml:73
+#: distrowatcher/contents/config/config.qml:27
+msgid "General"
+msgstr "Γενικά"
+
+#: distrowatcher/contents/config/config.qml:32
+msgid "Appearance"
+msgstr "Εμφάνιση"
+
+#: distrowatcher/contents/ui/configAppearance.qml:39
+msgid "Use vertical layout"
+msgstr "Χρήση κάθετης διάταξης"
+
+#: distrowatcher/contents/ui/configGeneral.qml:41
+msgid "Refresh every (minutes)"
+msgstr "Ανανέωση κάθε (σε λεπτά)"
+
+#: distrowatcher/contents/ui/configGeneral.qml:52
+msgid "Enable notifications"
+msgstr "Ενεργοποίηση ειδοποιήσεων"
+
+#. i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort)); //TODO: Remove
+#: distrowatcher/contents/ui/DistroListModel.qml:77
 msgid "Distribution release"
 msgstr "Κυκλοφορία διανομής"
 
-#: distrowatcher/contents/ui/DistroListModel.qml:73
+#: distrowatcher/contents/ui/DistroListModel.qml:77
 msgid "A new version of %1 is available!"
 msgstr "Μια νέα έκδοση του %1 είναι διαθέσιμη!"
 
 #: distrowatcher/contents/ui/HorizontalLayout.qml:61
-#: distrowatcher/contents/ui/VerticalLayout.qml:53
+#: distrowatcher/contents/ui/VerticalLayout.qml:55
 msgid "Distributions"
 msgstr "Διανομές"
 
 #: distrowatcher/contents/ui/HorizontalLayout.qml:67
-#: distrowatcher/contents/ui/VerticalLayout.qml:59
+#: distrowatcher/contents/ui/VerticalLayout.qml:62
 msgid "Packages"
 msgstr "Πακέτα"
 
 #: distrowatcher/contents/ui/HorizontalLayout.qml:73
-#: distrowatcher/contents/ui/VerticalLayout.qml:65
+#: distrowatcher/contents/ui/VerticalLayout.qml:69
 msgid "Favorites"
 msgstr "Αγαπημένες"
 
 #: distrowatcher/contents/ui/HorizontalLayout.qml:79
-#: distrowatcher/contents/ui/VerticalLayout.qml:71
+#: distrowatcher/contents/ui/VerticalLayout.qml:76
 msgid "News"
 msgstr "Ειδήσεις"
 
-#: distrowatcher/contents/ui/main.qml:103
+#: distrowatcher/contents/ui/main.qml:73
+msgid ""
+"An error has occurred initializing the widget. Check documentation and "
+"ensure that all the required packages have been installed."
+msgstr ""
+"Παρουσιάστηκε σφάλμα κατά την αρχικοποίηση του γραφικού συστατικού. Ελέγξτε "
+"την τεκμηρίωση και σιγουρευτείτε ότι τα αναγκαία πακέτα έχουν εγκατασταθεί."
+
+#: distrowatcher/contents/ui/main.qml:121
 msgid "Data from distrowatch.com"
 msgstr "Δεδομένα από το distrowatch.com"
 
-#: distrowatcher/contents/ui/News.qml:150
+#: distrowatcher/contents/ui/News.qml:149
 msgid "More..."
 msgstr "Περισσότερα..."
 
@@ -64,7 +92,7 @@ msgstr "Φιλτράρισμα:"
 msgid "Enter distribution name..."
 msgstr "Καταχωρήστε όνομα διανομής..."
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:54
+#: distrowatcher/contents/ui/UnavailableScreen.qml:51
 msgid ""
 "Network issue. \n"
 "Please check your network connection. If you do not face any network "
@@ -75,79 +103,43 @@ msgstr ""
 "δικτυακό πρόβλημα, ενδέχεται το distrowatch.com να μην είναι διαθέσιμο ή να "
 "αντιμετωπίζει δυσκολίες."
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:64
+#: distrowatcher/contents/ui/UnavailableScreen.qml:62
 msgid "Reload"
 msgstr "Επαναφόρτωση"
 
-#. i18n: file: distrowatcher/contents/ui/config.ui:14
-#. i18n: ectx: property (windowTitle), widget (QDialog, Dialog)
-#: po/rc.cpp:3 rc.cpp:3
-msgid "Dialog"
-msgstr "Διάλογος"
-
-#. i18n: file: distrowatcher/contents/ui/config.ui:20
-#. i18n: ectx: property (title), widget (QGroupBox, groupGeneral)
-#: po/rc.cpp:6 rc.cpp:6
-msgid "General"
-msgstr "Γενικά"
-
-#. i18n: file: distrowatcher/contents/ui/config.ui:34
-#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_refreshevery)
-#: po/rc.cpp:9 rc.cpp:9
-msgid "Refresh data every X minutes"
-msgstr "Ανανέωση κάθε Χ λεπτά"
-
-#. i18n: file: distrowatcher/contents/ui/config.ui:47
-#. i18n: ectx: property (text), widget (QLabel, lblRefreshevery)
-#: po/rc.cpp:12 rc.cpp:12
-msgid "Refresh every (minutes):"
-msgstr "Ανανέωση κάθε (σε λεπτά):"
-
-#. i18n: file: distrowatcher/contents/ui/config.ui:54
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_enablenotifications)
-#: po/rc.cpp:15 rc.cpp:15
-msgid ""
-"Display a notification in case of new release of a favorite distribution"
-msgstr ""
-"Εμφάνιση ειδοποίησης σε περίπτωση νέας κυκλοφορίας για μια από τις "
-"αγαπημένες διανομές"
-
-#. i18n: file: distrowatcher/contents/ui/config.ui:70
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: po/rc.cpp:18 rc.cpp:18
-msgid "Enable notifications:"
-msgstr "Ενεργοποίηση ειδοποιήσεων:"
-
-#. i18n: file: distrowatcher/contents/ui/config.ui:77
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_isvertical)
-#: po/rc.cpp:21 rc.cpp:21
-msgid ""
-"If selected, buttons will be displayed on the top of the plasmoid. "
-"Otherwise, on the left."
-msgstr ""
-"Εφόσον επιλεγεί, τα κουμπιά θα εμφανίζονται στην κορυφή του πλασμοειδούς. "
-"Διαφορετικά, στα αριστερά."
-
-#. i18n: file: distrowatcher/contents/ui/config.ui:93
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: po/rc.cpp:24 rc.cpp:24
-msgid "Use vertical layout:"
-msgstr "Χρήση κάθετης διάταξης:"
-
-#: po/rc.cpp:25 rc.cpp:25
+#: po/rc.cpp:1 rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Dimitris Kardarakos"
 
-#: po/rc.cpp:26 rc.cpp:26
+#: po/rc.cpp:2 rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dimkard@gmail.com"
 
-#: po/rc.cpp:27 rc.cpp:27
+#: po/rc.cpp:3 rc.cpp:3
 msgid "Distro Watcher"
 msgstr "Distro Watcher"
 
-#: po/rc.cpp:28 rc.cpp:28
+#: po/rc.cpp:4 rc.cpp:4
 msgid "Shows the latest releases of Linux distributions and packages"
 msgstr "Εμφανίζει τις τελευταίες κυκλοφορίες διανομών και πακέτων του Linux"
+
+#~ msgid "Dialog"
+#~ msgstr "Διάλογος"
+
+#~ msgid "Refresh data every X minutes"
+#~ msgstr "Ανανέωση κάθε Χ λεπτά"
+
+#~ msgid ""
+#~ "Display a notification in case of new release of a favorite distribution"
+#~ msgstr ""
+#~ "Εμφάνιση ειδοποίησης σε περίπτωση νέας κυκλοφορίας για μια από τις "
+#~ "αγαπημένες διανομές"
+
+#~ msgid ""
+#~ "If selected, buttons will be displayed on the top of the plasmoid. "
+#~ "Otherwise, on the left."
+#~ msgstr ""
+#~ "Εφόσον επιλεγεί, τα κουμπιά θα εμφανίζονται στην κορυφή του πλασμοειδούς. "
+#~ "Διαφορετικά, στα αριστερά."
