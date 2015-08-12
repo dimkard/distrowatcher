@@ -27,11 +27,12 @@ http://www.iconarchive.com/show/nuoveXT-icons-by-saki/Apps-tux-icon.html
 http://www.iconarchive.com/show/nuoveXT-icons-by-saki/Apps-package-icon.html
 Credits go to the artist.
 
+Version 0.*
+-----------
+
 Dependencies (version 0.*)
 --------------------------
-
 - KDE SC 4.10 or later
-- QT 4.8.x
 
 * In Kubuntu 13.04/13.10 the following packages were installed for a proper build to take place:
 
@@ -40,21 +41,6 @@ Dependencies (version 0.*)
 - kdelibs5-dev
 - kdebase-workspace-dev
 - libdbusmenu-qt-dev
-
-Dependencies (version 1.*)
-
---------------------------
-- Plasma 5.0 or later
-
-* In Kubuntu 15.04 the following packages were installed for a proper build to take place:
-
-- cmake
-- plasma-framework-dev
-- extra-cmake-modules
-- build-essential
-- libqt5xmlpatterns5
-- qml-module-qtquick-xmllistmodel
-
 
 Installation (version 0.*)
 ---------------------------
@@ -69,6 +55,24 @@ Installation (version 0.*)
 or
 
 - plasmapkg -i distrowatcher.plasmoid 
+
+
+Version 1.*
+-----------
+
+Dependencies (version 1.*)
+--------------------------
+- Plasma 5.0 or later
+
+* In Kubuntu 15.04 the following packages have been installed for a proper build to take place:
+
+- cmake
+- plasma-framework-dev
+- extra-cmake-modules
+- build-essential
+- libqt5xmlpatterns5
+- qml-module-qtquick-xmllistmodel
+
 
 Installation (version 1.*)
 ---------------------------

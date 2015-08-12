@@ -1,9 +1,11 @@
+STEPS
+-----
 
 - Remove any existing build
 
 - Update translations (run message.sh)
 
-- Set version # to metadata.desktop and deb.CMakeLists.txt
+- Set version # to metadata.desktop.template and metadata.desktop 
 
 - Update changelog (from git log)
 
@@ -11,20 +13,27 @@
 
 - Build with cmake
 
-- To manually create mo files:
-  
-  msgfmt el.po --output-file el.mo
+- (OPTIONAL) To manually create mo files: msgfmt el.po --output-file el.mo
+
+
+kNewHostStuff packaging (not in plasma 5 due to translations issue)
+-----------------------
 
 - Add any new language to kNewHostStuff.sh script
 
-- Create "Get new hot stuff" package (run kNewHostStuff.sh)
+- Create "Get new hot stuff" package (run kNewHostStuff.sh) 
 
 - Rename distrowatcher.plasmoid to a version specific file (e.g. distrowatcher_0.10.1.plasmoid)
 
-- Copy deb.CMakeLists.txt to CMakeLists.txt --TODO: REMOVE
+Debian packaging (OPTIONAL) 
+----------------
 
-- Build deb package --TODO: REMOVE
+- Set version to deb.CMakeLists.txt
 
-- Revert gen.CMakeLists.txt to CMakeLists.txt --TODO: REMOVE
+- Copy deb.CMakeLists.txt to CMakeLists.txt 
+
+- Build deb package
+
+- Revert gen.CMakeLists.txt to CMakeLists.txt
 
 - Tag the new version --TODO
