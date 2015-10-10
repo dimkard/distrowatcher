@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Moo, 2014-2015
 msgid ""
@@ -9,16 +9,14 @@ msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: https://github.com/dimkard/distrowatcher/\n"
 "POT-Creation-Date: 2015-08-12 12:05+0300\n"
-"PO-Revision-Date: 2015-02-27 19:02+0000\n"
+"PO-Revision-Date: 2015-08-12 20:15+0000\n"
 "Last-Translator: Moo\n"
-"Language-Team: Lithuanian (http://www.transifex.com/projects/p/distrowatcher/"
-"language/lt/)\n"
-"Language: lt\n"
+"Language-Team: Lithuanian (http://www.transifex.com/dimkard/distrowatcher/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: distrowatcher/contents/config/config.qml:27
 msgid "General"
@@ -26,24 +24,22 @@ msgstr "Bendra"
 
 #: distrowatcher/contents/config/config.qml:32
 msgid "Appearance"
-msgstr ""
+msgstr "Išvaizda"
 
 #: distrowatcher/contents/ui/configAppearance.qml:39
-#, fuzzy
 msgid "Use vertical layout"
 msgstr "Naudoti vertikalųjį išdėstymą"
 
 #: distrowatcher/contents/ui/configGeneral.qml:41
-#, fuzzy
 msgid "Refresh every (minutes)"
-msgstr "Atnaujinti kas (minutės):"
+msgstr "Atnaujinti kas (minutės)"
 
 #: distrowatcher/contents/ui/configGeneral.qml:52
-#, fuzzy
 msgid "Enable notifications"
-msgstr "Įjungti pranešimus:"
+msgstr "Įjungti pranešimus"
 
-#. i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort)); //TODO: Remove
+#. i18n("Distribution release"), i18n("A new version of %1 is
+#. available!",distroshort)); //TODO: Remove
 #: distrowatcher/contents/ui/DistroListModel.qml:77
 msgid "Distribution release"
 msgstr "Distribucijos leidimas"
@@ -76,7 +72,7 @@ msgstr "Naujienos"
 msgid ""
 "An error has occurred initializing the widget. Check documentation and "
 "ensure that all the required packages have been installed."
-msgstr ""
+msgstr "Inicijuojant valdiklį, įvyko klaida. Patikrinkite dokumentaciją ir įsitikinkite, kad visi reikiami paketai buvo įdiegti."
 
 #: distrowatcher/contents/ui/main.qml:121
 msgid "Data from distrowatch.com"
@@ -97,13 +93,8 @@ msgstr "Įveskite distribucijos pavadinimą..."
 #: distrowatcher/contents/ui/UnavailableScreen.qml:51
 msgid ""
 "Network issue. \n"
-"Please check your network connection. If you do not face any network "
-"problem, distrowatch.com may be unavailable or facing difficulties."
-msgstr ""
-"Tinklo problemos.\n"
-"Prašome patikrinti savo interneto ryšį. Jei su jūsų interneto ryšiu viskas "
-"gerai, gali būti, kad distrowatch.com yra neprieinamas arba susidūrė su "
-"kitomis problemomis."
+"Please check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties."
+msgstr "Tinklo problemos.\nPrašome patikrinti savo interneto ryšį. Jei su jūsų interneto ryšiu viskas gerai, gali būti, kad distrowatch.com yra neprieinamas arba susidūrė su kitomis problemomis."
 
 #: distrowatcher/contents/ui/UnavailableScreen.qml:62
 msgid "Reload"
@@ -126,20 +117,3 @@ msgstr "Distro Watcher"
 #: po/rc.cpp:4 rc.cpp:4
 msgid "Shows the latest releases of Linux distributions and packages"
 msgstr "Rodyti paskiausius Linux distribucijų ir paketų leidimus."
-
-#~ msgid "Dialog"
-#~ msgstr "Dialogas"
-
-#~ msgid "Refresh data every X minutes"
-#~ msgstr "Atnaujinti duomenis kas X minučių"
-
-#~ msgid ""
-#~ "Display a notification in case of new release of a favorite distribution"
-#~ msgstr "Rodyti pranešimą, naujo mėgstamos distribucijos leidimo atveju"
-
-#~ msgid ""
-#~ "If selected, buttons will be displayed on the top of the plasmoid. "
-#~ "Otherwise, on the left."
-#~ msgstr ""
-#~ "Jei pasirinkta, mygtukai bus rodomi valdiklio viršuje. Kitu atveju, "
-#~ "kairėje."
