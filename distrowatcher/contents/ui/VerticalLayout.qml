@@ -21,7 +21,7 @@ import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 //import org.kde.qtextracomponents 2.0 as Extras
-import "plasmapackage:/ui/js/style.js" as Style
+import "./js/style.js" as Style
 
 Column {
   id: tabButAndGroup
