@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
-//import org.kde.qtextracomponents 2.0 as Extras
 import "./js/style.js" as Style
 
 Rectangle {
@@ -30,23 +29,11 @@ Rectangle {
   property int minimumWidth: Style.width // enables set of minimums and dock to panel
   property int minimumHeight: Style.height // enables set of minimums and dock to panel
   property bool isVertical: plasmoid.configuration.isvertical
-  property string logging
-
-//   function configChanged() { //TODO: Remove
-//     main.refreshEvery = plasmoid.readConfig("refreshevery");  //TODO: Remove
-//     main.isVertical =  plasmoid.readConfig("isvertical"); //TODO: Remove
-//   } //TODO: Remove, not needeed in Plasma5
 
   smooth: true
   width: Style.width
   height: Style.height
-  color: "transparent"
-
-//   Component.onCompleted: { // read configuration, in case of change in configuration //TODO: Remove
-//     plasmoid.addEventListener('ConfigChanged', configChanged);  //TODO: Remove
-//   } ////TODO: Remove Not needeed in Plasma5
-
-  
+  color: "transparent"  
 
   Loader {
     id: tabButAndGroup
@@ -62,21 +49,16 @@ Rectangle {
     onStatusChanged: if (tabButAndGroup.status == Loader.Ready) { 
         item.refreshEvery = tabButAndGroup.refreshEvery;
         offlineScreen.technicalError = "";
-        main.logging = "Ready" //TODO: remove
         }
-        else if (tabButAndGroup.status == Loader.Loading) { //TODO: remove
-            main.logging = "Loading" //TODO: remove
-        }//TODO: remove
         else if (tabButAndGroup.status == Loader.Error) {
-            main.logging = "Error" //TODO: remove
-            console.log("DW: Error Loading tabButAndGroup");  //TODO: remove
+            console.log("DW: Error Loading tabButAndGroup");
             offlineScreen.technicalError = i18n("An error has occurred initializing the widget. Check documentation and ensure that all the required packages have been installed.");
-        }//TODO: remove
+        }
     onRefreshEveryChanged: if (tabButAndGroup.status == Loader.Ready) item.refreshEvery = tabButAndGroup.refreshEvery;
     source: (main.isVertical) ? "VerticalLayout.qml" : "HorizontalLayout.qml"
     anchors.left: main.left
     width: parent.width
-    height: parent.height - (theme.smallestFont.pointSize + ( main.isVertical ? 30 : 15 ) )  // parent - bottom text - spacing (30 for vertival, 14 for horizontal //TODO: recover
+    height: parent.height - (theme.smallestFont.pointSize + ( main.isVertical ? 30 : 15 ) )
   }
   
   UnavailableScreen {
@@ -89,14 +71,6 @@ Rectangle {
     }
     onReloadClicked: {
         tabButAndGroup.reloadModels();
-        if (tabButAndGroup.status == Loader.Null) //TODO: Remove
-            main.logging = "Null";
-        if (tabButAndGroup.status == Loader.Ready)  //TODO: Remove
-            main.logging = "Ready"; 
-        if (tabButAndGroup.status == Loader.Loading) //TODO: Remove
-            main.logging = "Loading";        
-        if (tabButAndGroup.status == Loader.Error)  //TODO: Remove
-            main.logging = "Error" ;
     }
   }
     
@@ -119,7 +93,6 @@ Rectangle {
       font.pointSize: theme.smallestFont.pointSize
       color: theme.textColor
       text: i18n("Data from distrowatch.com")
-      //text: main.logging //TODO: Remove, debug only
     }
   }
   
@@ -140,7 +113,6 @@ Rectangle {
 	target: aboutText
 	opacity: 1
       }
-      //StateChangeScript { script: console.log("state = nonFavAvailable") } //DEBUG ONLY
     },
     State {
       name: "nonFavUnavailable"
@@ -157,8 +129,7 @@ Rectangle {
       PropertyChanges {
 	target: aboutText
 	opacity: 0
-      }      
-    //StateChangeScript { script: console.log("state = nonFavUnavailable") } //DEBUG ONLY
+      }
     }    
   ]
   

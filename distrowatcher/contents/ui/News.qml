@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
-//import org.kde.qtextracomponents 2.0 as QtExtras
 import "./js/style.js" as Style
 import "../code/logic.js" as Logic
 
@@ -33,8 +32,6 @@ Item {
   property string newsText
   property int itemIndex 
   property int fontIncreaseFactor
-  property int fontSize: ( theme.defaultFont.pointSize + fontIncreaseFactor <= 1 ? 1 : theme.defaultFont.pointSize + fontIncreaseFactor)
-  
   
   signal entered()
   signal exited()
@@ -67,7 +64,7 @@ Item {
     }
     font {
       bold: true
-      pointSize: root.fontSize + 2
+      pointSize: theme.defaultFont.pointSize + root.fontIncreaseFactor + 2
     }
     style: Text.Raised
     color: theme.textColor
@@ -92,7 +89,7 @@ Item {
     style: Text.Raised
     font {
       bold: true
-      pointSize: root.fontSize
+      pointSize: theme.defaultFont.pointSize + root.fontIncreaseFactor
     }
     color: theme.textColor
   }
@@ -130,7 +127,7 @@ Item {
 	  width: description.width
 	  font {
 	    bold: false
-	    pointSize: root.fontSize
+	    pointSize: theme.defaultFont.pointSize + root.fontIncreaseFactor
 	  }
 	  horizontalAlignment: Text.AlignJustify
 	  wrapMode: Text.WordWrap

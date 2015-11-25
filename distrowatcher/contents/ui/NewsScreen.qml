@@ -31,7 +31,6 @@ KQuickControlsAddons.MouseEventListener {
   
   property alias refreshEvery: newsView.refreshEvery
   property int dataCount: newsView.model.count // controls visibility
-//   property bool isVertical: plasmoid.readConfig("isvertical") // TODO: Remove
   property bool isVertical: plasmoid.configuration.isvertical 
   hoverEnabled: true
   function reloadModel() { //addded for triggering reload after user has requested so
@@ -42,7 +41,7 @@ KQuickControlsAddons.MouseEventListener {
     id:newsView
     
     property int refreshEvery
-    property int fontIncreaseFactor
+    property int fontIncreaseFactor:0
     property bool mouseInsideNews: false
     property bool hoverOnButtons: false
     

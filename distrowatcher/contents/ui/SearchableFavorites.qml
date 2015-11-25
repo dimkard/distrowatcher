@@ -58,7 +58,7 @@ Item {
  
       height: parent.height
       verticalAlignment: Text.AlignVCenter
-//      font.pointSize: theme.defaultFont.pointSize
+      font.pointSize: theme.smallestFont.pointSize
       color: theme.textColor
       text: i18n("Filter:")
     } 

@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
-//import org.kde.qtextracomponents 2.0 as Extras
 import "./js/style.js" as Style
 
 Row {
@@ -29,7 +28,7 @@ Row {
   property int refreshEvery
   property string currentTabName: mainTabGroup.currentTab.tabName
   property bool dataExists: (latestDistrosScreen.dataCount && latestDistrosScreen.dataCount > 0) ? true : false
-  property string distroCount: latestDistrosScreen.dataCount //TODO: Remove, debug only
+  
   function reloadModels() { //addded for triggering reload after user has requested so
     latestDistrosScreen.reloadModel();
     latestPackagesScreen.reloadModel();

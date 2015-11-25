@@ -20,19 +20,16 @@
 import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
-//import org.kde.qtextracomponents 2.0 as Extras
 import "./js/style.js" as Style
 
 Column {
   id: tabButAndGroup
   
-//   property int refreshEvery: plasmoid.readConfig("refreshevery") //TODO: Remove, not needed
   property int refreshEvery
   property string currentTabName: mainTabGroup.currentTab.tabName
   property bool dataExists: (latestDistrosScreen.dataCount && latestDistrosScreen.dataCount > 0) ? true : false
 
   function reloadModels() { //added for triggering reload after user has requested so
-    //console.log("Test"); //TODO: Remove, debug only
     latestDistrosScreen.reloadModel();
     latestPackagesScreen.reloadModel();
     newsScreen.reloadModel();

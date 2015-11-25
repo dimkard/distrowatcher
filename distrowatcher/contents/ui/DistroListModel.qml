@@ -18,7 +18,6 @@
 */
 
 import QtQuick 2.0
-// import "../code/logic.js" as Logic //TODO: Remove
 import "./js/globals.js" as Params
 import org.kde.plasma.core 2.0 as PlasmaCore
 import QtQuick.XmlListModel 2.0
@@ -28,8 +27,8 @@ Item {
 
   property alias latestModel: latest
   property string status: latest.status
-  property string source: "http://distrowatch.com/news/dwd.xml" //TODO: recover
-//   property string source: "./dwd.xml" //TODO: remove only for debug
+//   property string source: "http://distrowatch.com/news/dwd.xml" //TODO: recover
+  property string source: "./dwd.xml" //TODO: remove only for debug
   property int interval
   property int numOfItems: latest.count // count distro items
   property string isFavoritePostfix: Params.isFavoritePostfix
@@ -65,16 +64,10 @@ Item {
       for (var i=0; i< latest.count;i++) {
 	var distroshort = latest.get(i).distroShortName;
 	var latestdistro = latest.get(i).distro;
-	var lastMatchInList = getLastInList(distroshort); //get the full distro name, in case that > 1 exist in the list
-// 	if (plasmoid.readConfig(root.enableNotifications) == true && plasmoid.readConfig(distroshort + root.isFavoritePostfix) == true && (plasmoid.readConfig(distroshort + root.latestPostfix) != lastMatchInList)) { //TODO: Remove
-// 	  Logic.sendNotification(i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort)) //TODO: Remove
-// 	  plasmoid.writeConfig(distroshort + root.latestPostfix, lastMatchInList); //TODO: Remove
-// 	} //TODO: Remove
-        
+	var lastMatchInList = getLastInList(distroshort); //get the full distro name, in case that > 1 exist in the list        
         if (plasmoid.configuration.enablenotifications == true && plasmoid.configuration[distroshort + root.isFavoritePostfix] == true && plasmoid.configuration[distroshort + root.latestPostfix] != lastMatchInList) {
 	  plasmoid.configuration[distroshort + root.latestPostfix] = lastMatchInList;
-//           Logic.sendNotification(i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort)); //TODO: Remove
-           notificationsSource.sendNotification("Distro Watcher", i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort));
+          notificationsSource.sendNotification("Distro Watcher", i18n("Distribution release"), i18n("A new version of %1 is available!",distroshort));
 	} 
       }
     }
@@ -103,7 +96,6 @@ Item {
     onTriggered: {
       latest.reload();
       latest.checkForNewDistros();
-      //console.log("DW: latest.count" + latest.count); //TODO: Remove
     }
   }
   
