@@ -20,7 +20,6 @@
 import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
-//import org.kde.qtextracomponents 2.0 as Extras //TODO: remove, seems broken
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import "./js/style.js" as Style
 import "./js/globals.js" as Params
@@ -98,8 +97,8 @@ Item {
     font.pointSize: theme.defaultFont.pointSize
     horizontalAlignment: Text.AlignLeft
     wrapMode: "WordWrap" 
-    color: theme.textColor    
-}  
+    color: theme.textColor
+  }
 
   KQuickControlsAddons.MouseEventListener { 
     id: favoritesIcon	
@@ -111,7 +110,7 @@ Item {
     state: "hidebutton" //by default show image and hide button
     anchors {
 	verticalCenter : parent.verticalCenter 
-	rightMargin : root.width*Style.rightMarginPercent // icon distance from right
+	rightMargin: root.width*Style.rightMarginPercent // icon distance from right
 	topMargin : root.height*Style.marginPercent // icon distance from top
 	right: parent.right
       }
@@ -160,24 +159,17 @@ Item {
       }
     ]	
 
-    PlasmaComponents.Button {
+    PlasmaComponents.ToolButton {
       id: starButton
       
-      anchors.fill: parent
+      anchors.centerIn: parent
       opacity: 0 // by default no button is displayed
       checkable: false
       iconSource: "bookmarks"
       visible: true
-      width: units.iconSizes.small
-      height: units.iconSizes.small
-      minimumWidth: units.iconSizes.small
-      minimumHeight: units.iconSizes.small
+      width: units.iconSizes.medium
+      height: units.iconSizes.medium
       
-//       onClicked: { //TODO: Remove
-// 	var newFavStatus = (plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix) == true) ? false : true; //TODO: Remove
-// 	star.source = (newFavStatus == true) ? "./icons/favorite.png" : "./icons/non-favorite.png" //TODO: Remove	   
-// 	plasmoid.writeConfig(root.distroShortText + root.isFavoritePostfix, newFavStatus); //TODO: Remove
-//       } //TODO: Remove
       onClicked: {
 	var newFavStatus = (plasmoid.configuration[root.distroShortText + root.isFavoritePostfix] == true) ? false : true;
 	star.source = (newFavStatus == true) ? "./icons/favorite.png" : "./icons/non-favorite.png";  
@@ -194,7 +186,6 @@ Item {
       height: units.iconSizes.smallMedium
       fillMode: Image.PreserveAspectFit
       smooth: true
-//       source: (plasmoid.readConfig(root.distroShortText + root.isFavoritePostfix) == true) ? "./icons/favorite.png" : "./icons/non-favorite.png" ; //TODO:Remove       
       source: (plasmoid.configuration[root.distroShortText + root.isFavoritePostfix] == true) ? "./icons/favorite.png" : "./icons/non-favorite.png" ;
       onStatusChanged: if (status == Image.Error) { // we set the icon to an empty image if we failed to find one
           source = "";
