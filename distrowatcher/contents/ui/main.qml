@@ -45,7 +45,12 @@ Rectangle {
 	item.reloadModels();
       }
     }
-	  
+
+    source: (main.isVertical) ? "VerticalLayout.qml" : "HorizontalLayout.qml"
+    anchors.left: main.left
+    width: parent.width
+    height: parent.height - (theme.smallestFont.pointSize + ( main.isVertical ? 30 : 15 ) )
+    
     onStatusChanged: if (tabButAndGroup.status == Loader.Ready) { 
         item.refreshEvery = tabButAndGroup.refreshEvery;
         offlineScreen.technicalError = "";
@@ -54,11 +59,9 @@ Rectangle {
             console.log("DW: Error Loading tabButAndGroup");
             offlineScreen.technicalError = i18n("An error has occurred initializing the widget. Check documentation and ensure that all the required packages have been installed.");
         }
-    onRefreshEveryChanged: if (tabButAndGroup.status == Loader.Ready) item.refreshEvery = tabButAndGroup.refreshEvery;
-    source: (main.isVertical) ? "VerticalLayout.qml" : "HorizontalLayout.qml"
-    anchors.left: main.left
-    width: parent.width
-    height: parent.height - (theme.smallestFont.pointSize + ( main.isVertical ? 30 : 15 ) )
+    onRefreshEveryChanged: if (tabButAndGroup.status == Loader.Ready) { 
+        item.refreshEvery = tabButAndGroup.refreshEvery;
+    }
   }
   
   UnavailableScreen {
@@ -69,6 +72,7 @@ Rectangle {
       horizontalCenter: parent.horizontalCenter
       fill: parent
     }
+    
     onReloadClicked: {
         tabButAndGroup.reloadModels();
     }
@@ -84,6 +88,7 @@ Rectangle {
       bottom: main.bottom
       horizontalCenter: main.horizontalCenter
     }
+    
     Text {
       id: aboutTextLabel
      
@@ -96,11 +101,11 @@ Rectangle {
     }
   }
   
- states: [ // control show/hide of favorites screen
+ states: [ // control show/hide of main layout
     State {
-      name: "nonFavAvailable"
+      name: "dataAvailable"
       when: tabButAndGroup.item.dataExists
-      //20150221 Since tab group and buttons container exists
+
       PropertyChanges {
 	target: tabButAndGroup
 	opacity: 1
@@ -115,9 +120,9 @@ Rectangle {
       }
     },
     State {
-      name: "nonFavUnavailable"
+      name: "dataNotAvailable"
       when: (!tabButAndGroup.item.dataExists)
-      //20150221 Since tab group and buttons container exists
+
       PropertyChanges {
 	target: tabButAndGroup
 	opacity: 0
@@ -133,7 +138,7 @@ Rectangle {
     }    
   ]
   
-  transitions: [ // transition between states
+  transitions: [
     Transition {
       NumberAnimation {
 	properties: "opacity"

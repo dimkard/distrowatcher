@@ -48,8 +48,10 @@ Row {
       id: tabBarVertical
       
       rotation: 90
-      anchors.verticalCenter: parent.verticalCenter
-      anchors.horizontalCenter: parent.horizontalCenter
+      anchors {
+        verticalCenter: parent.verticalCenter
+        horizontalCenter: parent.horizontalCenter
+      }
       width: parent.height
       height: parent.width
       
@@ -59,18 +61,21 @@ Row {
 	tab: latestDistrosScreen
 	text:i18n("Distributions")
       }
+      
       PlasmaComponents.TabButton {
 	id: packagesTabButton
 	
 	tab: latestPackagesScreen
 	text:i18n("Packages")
       }
+      
       PlasmaComponents.TabButton {
 	id: favoritesTabButton
 	
 	tab: favoriteDistrosScreen
 	text:i18n("Favorites")
       }
+      
       PlasmaComponents.TabButton {
 	id: newsTabButton
       
@@ -82,6 +87,7 @@ Row {
 
   PlasmaComponents.TabGroup {   // contains the distros/packages screens
     id: mainTabGroup
+    
     anchors.verticalCenter: tabButAndGroup.verticalCenter
     width: tabButAndGroup.width - Style.tabBarHeightProportion*tabButAndGroup.width - tabButAndGroup.spacing
     height:tabButAndGroup.height
@@ -90,6 +96,7 @@ Row {
       id: latestDistrosScreen
       
       property string tabName: "Distributions"
+    
       anchors.fill: parent
       anchors.topMargin: 5
       refreshEvery: tabButAndGroup.refreshEvery
@@ -99,6 +106,7 @@ Row {
       id: latestPackagesScreen
       
       property string tabName: "Packages"
+      
       anchors.fill: parent
       anchors.topMargin: 5
       refreshEvery: tabButAndGroup.refreshEvery

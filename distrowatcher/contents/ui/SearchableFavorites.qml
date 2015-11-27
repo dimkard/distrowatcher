@@ -1,6 +1,6 @@
 /*
 
-    Copyright (C) 2013 Dimitris Kardarakos <dimkard@gmail.com>
+    Copyright (C) 2015 Dimitris Kardarakos <dimkard@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -37,7 +37,6 @@ Item {
       bottom: searchRow.top
       top: searchableFavorites.top
       left: searchableFavorites.left      
-      
     }
     width: parent.width
   }
@@ -70,6 +69,7 @@ Item {
       clearButtonShown: true
       height:parent.height
       width: (parent.width-filterText.width)-Style.scrollWidth
+
       onTextChanged: {
 	favoritesScreenItems.filterDistros(text); // when user changes text, filter favorites distro list
       }

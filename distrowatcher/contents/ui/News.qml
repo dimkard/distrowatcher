@@ -43,9 +43,7 @@ Item {
     anchors.fill: parent
     fillMode: Image.Stretch
   }
-  
-
- 
+   
   Text {
     id: title
     
@@ -96,6 +94,7 @@ Item {
 
   Item {
     id:description
+    
     anchors {
       top: date.bottom
       bottom: root.bottom
@@ -121,18 +120,15 @@ Item {
 	
 	spacing: 5
 	  Text {
-	  id: newsDesc
-      
-	  text: root.newsText
-	  width: description.width
-	  font {
-	    bold: false
-	    pointSize: theme.defaultFont.pointSize + root.fontIncreaseFactor
-	  }
-	  horizontalAlignment: Text.AlignJustify
-	  wrapMode: Text.WordWrap
-	  color: theme.textColor
-	}
+            id: newsDesc
+        
+            text: root.newsText
+            width: description.width
+            font.pointSize: theme.defaultFont.pointSize + root.fontIncreaseFactor
+            horizontalAlignment: Text.AlignJustify
+            wrapMode: Text.WordWrap
+            color: theme.textColor
+          }
 	
 	PlasmaComponents.Button {
 	  id: completeStoryButton
@@ -147,6 +143,7 @@ Item {
 	  }
 	  width: moreTextButton.paintedWidth + 10 
 	  height: moreTextButton.paintedHeight + 10 
+	  
 	  onClicked: { Qt.openUrlExternally(root.linkText); }
 	}
       }

@@ -91,7 +91,8 @@ Column {
     LatestPackagesScreen {
       id: latestPackagesScreen
       
-      property string tabName: "Packages" 
+      property string tabName: "Packages"
+      
       anchors.fill: parent
       refreshEvery: tabButAndGroup.refreshEvery
     }
@@ -100,6 +101,7 @@ Column {
       id: favoriteDistrosScreen
     
       property string tabName: "Favorites"
+      
       anchors.fill: parent
       visible: true
     }
@@ -108,8 +110,11 @@ Column {
       id: newsScreen
       
       property string tabName: "News" 
-      anchors.fill: parent
-      anchors.topMargin: 5
+      
+      anchors {
+        fill: parent
+        topMargin: 5
+      }
       refreshEvery: tabButAndGroup.refreshEvery
     }    
   }

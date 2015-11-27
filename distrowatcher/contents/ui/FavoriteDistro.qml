@@ -1,6 +1,6 @@
 /*
 
-    Copyright (C) 2013 Dimitris Kardarakos <dimkard@gmail.com>
+    Copyright (C) 2015 Dimitris Kardarakos <dimkard@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -40,13 +40,12 @@ Item {
   signal positionChanged() //inform parent regarding interaction
 
   Image {
-      id: backgroundImage
+    id: backgroundImage
 
-      source: "./images/distroDelegateBg.png" // change transparency level in case of packages, since dates fall into the white surface
-      anchors.fill: parent
-      fillMode: Image.Stretch
-    }
-    
+    source: "./images/distroDelegateBg.png"
+    anchors.fill: parent
+    fillMode: Image.Stretch
+  }
   
   MouseArea {
     id: distroRecordMouseArea
@@ -77,10 +76,7 @@ Item {
     smooth: true
     source: "./icons/distros/" +  distroShortText + ".png"
     
-    onStatusChanged: if (status == Image.Error) {
-			  // we set the icon to an empty image if we failed to find one
-			  source = ""
-    }
+    onStatusChanged: if (status == Image.Error) { source = "" }
   }
 
   Text {
@@ -101,8 +97,8 @@ Item {
   }
 
   KQuickControlsAddons.MouseEventListener { 
-    id: favoritesIcon	
-   
+    id: favoritesIcon
+    
     visible: true
     width: units.iconSizes.smallMedium
     height: units.iconSizes.smallMedium
@@ -115,7 +111,7 @@ Item {
 	right: parent.right
       }
     
-    onPositionChanged: root.positionChanged();	
+    onPositionChanged: root.positionChanged();
     onContainsMouseChanged: {
       if(!isFlicking)
 	if (containsMouse)
@@ -187,10 +183,8 @@ Item {
       fillMode: Image.PreserveAspectFit
       smooth: true
       source: (plasmoid.configuration[root.distroShortText + root.isFavoritePostfix] == true) ? "./icons/favorite.png" : "./icons/non-favorite.png" ;
-      onStatusChanged: if (status == Image.Error) { // we set the icon to an empty image if we failed to find one
-          source = "";
-      }
+
+      onStatusChanged: if (status == Image.Error) { source = ""; }
     }
-    
   }
 }

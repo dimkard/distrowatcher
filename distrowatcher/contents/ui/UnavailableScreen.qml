@@ -1,6 +1,6 @@
 /*
 
-    Copyright (C) 2013 Dimitris Kardarakos <dimkard@gmail.com>
+    Copyright (C) 2015 Dimitris Kardarakos <dimkard@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -26,7 +26,9 @@ Column {
   id: root
   
   property string technicalError
+  
   signal reloadClicked() //let parent know that user requested to reload
+  
   spacing: 10
 
   Image {
@@ -41,6 +43,7 @@ Column {
       
   PlasmaComponents.Label  {
     id: offlineText
+
     width: parent.width
     anchors {
       horizontalCenter : root.horizontalCenter
@@ -54,12 +57,14 @@ Column {
 
   PlasmaComponents.Button {
     id: refreshButton
-    visible: (root.technicalError === "")
+    
+    visible: (root.technicalError === "") // Not to be displayed in case of package/development issue. It makes sense only on network issues.
     anchors {
       horizontalCenter : root.horizontalCenter
     }
     checkable: false
     text: i18n("Reload")
+    
     onClicked: root.reloadClicked()
   }
 }
