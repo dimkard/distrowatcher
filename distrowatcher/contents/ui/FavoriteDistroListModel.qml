@@ -28,8 +28,7 @@ Item {
 
   property alias distroModel: distrolist
   property string status: distrolist.status
-  //property string source: "http://distrowatch.com/news/dwd.xml"
-  property string source: "./distrolist.xml" //only for debug
+  property string source: "./distrolist.xml"
   property int interval
   property int numOfItems: distrolist.count // count distro items
 

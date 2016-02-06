@@ -1,3 +1,9 @@
+Version 1.0.3
+-------------
+- Code review and cleaning
+- Fix favorites icon position issue
+- Update translations: thanks to Jeff and Giuseppe
+
 Version 1.0.2
 -------------
 - Fix "Script plasmapackage:/ui/js/style.js unavailable" error (in Plasma 5.4)
