@@ -13,9 +13,9 @@ xargs --arg-file=${WDIR}/rcfiles.list extractrc > ${WDIR}/rc.cpp
 # additional string for KAboutData
 echo 'i18nc("NAME OF TRANSLATORS","Your names");' >> ${WDIR}/rc.cpp
 echo 'i18nc("EMAIL OF TRANSLATORS","Your emails");' >> ${WDIR}/rc.cpp
-intltool-extract --quiet --type=gettext/ini distrowatcher/metadata.desktop.template
-cat distrowatcher/metadata.desktop.template.h >> ${WDIR}/rc.cpp
-rm distrowatcher/metadata.desktop.template.h
+intltool-extract --quiet --type=gettext/ini ../distrowatcher/metadata.desktop.template
+cat ../distrowatcher/metadata.desktop.template.h >> ${WDIR}/rc.cpp
+rm ../distrowatcher/metadata.desktop.template.h
 cd ${WDIR} 
 echo "Done preparing rc files"
 
@@ -41,7 +41,7 @@ for cat in $catalogs; do
   mv $cat.new $cat
 done
 cd ${BASEDIR}
-intltool-merge --quiet --desktop-style ${WDIR} distrowatcher/metadata.desktop.template distrowatcher/metadata.desktop
+intltool-merge --quiet --desktop-style ${WDIR} ../distrowatcher/metadata.desktop.template distrowatcher/metadata.desktop
 cd ${WDIR}	
 echo "Done merging translations"
  
