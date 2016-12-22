@@ -130,7 +130,7 @@ Item {
             color: theme.textColor
           }
 	
-	PlasmaComponents.Button {
+	PlasmaComponents.ToolButton {
 	  id: completeStoryButton
 
 	  text: moreTextButton.text

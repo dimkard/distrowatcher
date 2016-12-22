@@ -111,18 +111,19 @@ KQuickControlsAddons.MouseEventListener {
       
       visible: container.containsMouse
       anchors {
-	right: parent.right
-	bottom: parent.bottom
-	rightMargin: 10
+        right: parent.right
+        bottom: parent.bottom
+        rightMargin: 10
       }
       spacing: 5
             
       PlasmaComponents.ToolButton {
 	id: incFont
 
-	iconSource: "image-zoom-in"
-	width: 30
-	height: 30
+//    iconSource: "zoom-in"
+    text: "+"
+    width: 30
+//	height: 30
 	font.bold: true
 	onClicked: { newsView.fontIncreaseFactor++ ; }	
       }
@@ -130,9 +131,10 @@ KQuickControlsAddons.MouseEventListener {
       PlasmaComponents.ToolButton {
 	id: decFont
 
-	iconSource: "image-zoom-out"
-	width: 30
-	height: 30
+//    iconSource: "zoom-out"
+    text: "-"
+    width: 30
+//	height: 30
 	font.bold: true
 	onClicked: { newsView.fontIncreaseFactor--; }
       }

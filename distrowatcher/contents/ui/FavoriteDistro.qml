@@ -161,7 +161,7 @@ Item {
       anchors.centerIn: parent
       opacity: 0 // by default no button is displayed
       checkable: false
-      iconSource: "bookmarks"
+      iconSource: "emblem-favorite-symbolic"
       visible: true
       width: units.iconSizes.medium
       height: units.iconSizes.medium
