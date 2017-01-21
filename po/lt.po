@@ -1,24 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Moo, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: https://github.com/dimkard/distrowatcher/\n"
-"POT-Creation-Date: 2016-02-06 11:19+0200\n"
-"PO-Revision-Date: 2015-08-12 20:15+0000\n"
+"POT-Creation-Date: 2015-11-11 14:30+0200\n"
+"PO-Revision-Date: 2017-01-21 09:40+0000\n"
 "Last-Translator: Moo\n"
-"Language-Team: Lithuanian (http://www.transifex.com/dimkard/distrowatcher/"
-"language/lt/)\n"
-"Language: lt\n"
+"Language-Team: Lithuanian (http://www.transifex.com/dimkard/distrowatcher/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: distrowatcher/contents/config/config.qml:27
 msgid "General"
@@ -40,70 +38,65 @@ msgstr "Atnaujinti kas (minutės)"
 msgid "Enable notifications"
 msgstr "Įjungti pranešimus"
 
-#: distrowatcher/contents/ui/DistroListModel.qml:70
+#. i18n("Distribution release"), i18n("A new version of %1 is
+#. available!",distroshort)); //TODO: Remove
+#: distrowatcher/contents/ui/DistroListModel.qml:77
 msgid "Distribution release"
 msgstr "Distribucijos leidimas"
 
-#: distrowatcher/contents/ui/DistroListModel.qml:70
+#: distrowatcher/contents/ui/DistroListModel.qml:77
 msgid "A new version of %1 is available!"
 msgstr "Nauja %1 versija yra prieinama!"
 
-#: distrowatcher/contents/ui/HorizontalLayout.qml:62
-#: distrowatcher/contents/ui/VerticalLayout.qml:52
+#: distrowatcher/contents/ui/HorizontalLayout.qml:61
+#: distrowatcher/contents/ui/VerticalLayout.qml:55
 msgid "Distributions"
 msgstr "Distribucijos"
 
-#: distrowatcher/contents/ui/HorizontalLayout.qml:69
-#: distrowatcher/contents/ui/VerticalLayout.qml:59
+#: distrowatcher/contents/ui/HorizontalLayout.qml:67
+#: distrowatcher/contents/ui/VerticalLayout.qml:62
 msgid "Packages"
 msgstr "Paketai"
 
-#: distrowatcher/contents/ui/HorizontalLayout.qml:76
-#: distrowatcher/contents/ui/VerticalLayout.qml:66
+#: distrowatcher/contents/ui/HorizontalLayout.qml:73
+#: distrowatcher/contents/ui/VerticalLayout.qml:69
 msgid "Favorites"
 msgstr "Parankinės"
 
-#: distrowatcher/contents/ui/HorizontalLayout.qml:83
-#: distrowatcher/contents/ui/VerticalLayout.qml:73
+#: distrowatcher/contents/ui/HorizontalLayout.qml:79
+#: distrowatcher/contents/ui/VerticalLayout.qml:76
 msgid "News"
 msgstr "Naujienos"
 
-#: distrowatcher/contents/ui/main.qml:60
+#: distrowatcher/contents/ui/main.qml:73
 msgid ""
 "An error has occurred initializing the widget. Check documentation and "
 "ensure that all the required packages have been installed."
-msgstr ""
-"Inicijuojant valdiklį, įvyko klaida. Patikrinkite dokumentaciją ir "
-"įsitikinkite, kad visi reikiami paketai buvo įdiegti."
+msgstr "Inicijuojant valdiklį, įvyko klaida. Patikrinkite dokumentaciją ir įsitikinkite, kad visi reikiami paketai buvo įdiegti."
 
-#: distrowatcher/contents/ui/main.qml:100
+#: distrowatcher/contents/ui/main.qml:121
 msgid "Data from distrowatch.com"
 msgstr "Duomenys iš distrowatch.com"
 
-#: distrowatcher/contents/ui/News.qml:142
+#: distrowatcher/contents/ui/News.qml:149
 msgid "More..."
 msgstr "Daugiau..."
 
-#: distrowatcher/contents/ui/SearchableFavorites.qml:62
+#: distrowatcher/contents/ui/SearchableFavorites.qml:63
 msgid "Filter:"
 msgstr "Filtras:"
 
-#: distrowatcher/contents/ui/SearchableFavorites.qml:68
+#: distrowatcher/contents/ui/SearchableFavorites.qml:69
 msgid "Enter distribution name..."
 msgstr "Įveskite distribucijos pavadinimą..."
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:54
+#: distrowatcher/contents/ui/UnavailableScreen.qml:51
 msgid ""
 "Network issue. \n"
-"Please check your network connection. If you do not face any network "
-"problem, distrowatch.com may be unavailable or facing difficulties."
-msgstr ""
-"Tinklo problemos.\n"
-"Prašome patikrinti savo interneto ryšį. Jei su jūsų interneto ryšiu viskas "
-"gerai, gali būti, kad distrowatch.com yra neprieinamas arba susidūrė su "
-"kitomis problemomis."
+"Please check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties."
+msgstr "Tinklo problemos.\nPrašome patikrinti savo interneto ryšį. Jei su jūsų interneto ryšiu viskas gerai, gali būti, kad distrowatch.com yra neprieinamas arba susidūrė su kitomis problemomis."
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:66
+#: distrowatcher/contents/ui/UnavailableScreen.qml:62
 msgid "Reload"
 msgstr "Įkelti iš naujo"
 

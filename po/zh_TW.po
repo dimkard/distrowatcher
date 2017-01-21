@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Jeff Huang <s8321414@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: https://github.com/dimkard/distrowatcher/\n"
-"POT-Creation-Date: 2016-02-06 11:19+0200\n"
-"PO-Revision-Date: 2015-11-12 00:35+0000\n"
+"POT-Creation-Date: 2015-11-11 14:30+0200\n"
+"PO-Revision-Date: 2017-01-21 09:40+0000\n"
 "Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/dimkard/"
-"distrowatcher/language/zh_TW/)\n"
-"Language: zh_TW\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/dimkard/distrowatcher/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: distrowatcher/contents/config/config.qml:27
@@ -39,67 +38,65 @@ msgstr "每（幾分鐘）重新整理"
 msgid "Enable notifications"
 msgstr "啟用通知"
 
-#: distrowatcher/contents/ui/DistroListModel.qml:70
+#. i18n("Distribution release"), i18n("A new version of %1 is
+#. available!",distroshort)); //TODO: Remove
+#: distrowatcher/contents/ui/DistroListModel.qml:77
 msgid "Distribution release"
 msgstr "散佈版釋出"
 
-#: distrowatcher/contents/ui/DistroListModel.qml:70
+#: distrowatcher/contents/ui/DistroListModel.qml:77
 msgid "A new version of %1 is available!"
 msgstr "%1 的新版本已提供！"
 
-#: distrowatcher/contents/ui/HorizontalLayout.qml:62
-#: distrowatcher/contents/ui/VerticalLayout.qml:52
+#: distrowatcher/contents/ui/HorizontalLayout.qml:61
+#: distrowatcher/contents/ui/VerticalLayout.qml:55
 msgid "Distributions"
 msgstr "散佈版"
 
-#: distrowatcher/contents/ui/HorizontalLayout.qml:69
-#: distrowatcher/contents/ui/VerticalLayout.qml:59
+#: distrowatcher/contents/ui/HorizontalLayout.qml:67
+#: distrowatcher/contents/ui/VerticalLayout.qml:62
 msgid "Packages"
 msgstr "軟體包"
 
-#: distrowatcher/contents/ui/HorizontalLayout.qml:76
-#: distrowatcher/contents/ui/VerticalLayout.qml:66
+#: distrowatcher/contents/ui/HorizontalLayout.qml:73
+#: distrowatcher/contents/ui/VerticalLayout.qml:69
 msgid "Favorites"
 msgstr "我的最愛"
 
-#: distrowatcher/contents/ui/HorizontalLayout.qml:83
-#: distrowatcher/contents/ui/VerticalLayout.qml:73
+#: distrowatcher/contents/ui/HorizontalLayout.qml:79
+#: distrowatcher/contents/ui/VerticalLayout.qml:76
 msgid "News"
 msgstr "新聞"
 
-#: distrowatcher/contents/ui/main.qml:60
+#: distrowatcher/contents/ui/main.qml:73
 msgid ""
 "An error has occurred initializing the widget. Check documentation and "
 "ensure that all the required packages have been installed."
 msgstr "初始化小工具時發生錯誤。請檢查文件並確保所有必須的軟體包都已安裝。"
 
-#: distrowatcher/contents/ui/main.qml:100
+#: distrowatcher/contents/ui/main.qml:121
 msgid "Data from distrowatch.com"
 msgstr "資料取自 distrowatch.com"
 
-#: distrowatcher/contents/ui/News.qml:142
+#: distrowatcher/contents/ui/News.qml:149
 msgid "More..."
 msgstr "更多..."
 
-#: distrowatcher/contents/ui/SearchableFavorites.qml:62
+#: distrowatcher/contents/ui/SearchableFavorites.qml:63
 msgid "Filter:"
 msgstr "過濾器："
 
-#: distrowatcher/contents/ui/SearchableFavorites.qml:68
+#: distrowatcher/contents/ui/SearchableFavorites.qml:69
 msgid "Enter distribution name..."
 msgstr "輸入散佈版名稱..."
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:54
+#: distrowatcher/contents/ui/UnavailableScreen.qml:51
 msgid ""
 "Network issue. \n"
-"Please check your network connection. If you do not face any network "
-"problem, distrowatch.com may be unavailable or facing difficulties."
-msgstr ""
-"網路問題。 \n"
-"請檢查您的網路連線。如果您並未遇到任何網路問題，distrowatch.com 可能暫時不可"
-"用或是有其他麻煩了。"
+"Please check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties."
+msgstr "網路問題。 \n請檢查您的網路連線。如果您並未遇到任何網路問題，distrowatch.com 可能暫時不可用或是有其他麻煩了。"
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:66
+#: distrowatcher/contents/ui/UnavailableScreen.qml:62
 msgid "Reload"
 msgstr "重新載入"
 

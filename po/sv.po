@@ -3,119 +3,117 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Dimitris Kardarakos <dimkard@gmail.com>, 2013-2014
-# Dimitris Kardarakos <dimkard@gmail.com>, 2015
-# pinelopi pps <pin3lopi@gmail.com>, 2013
+# Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: https://github.com/dimkard/distrowatcher/\n"
 "POT-Creation-Date: 2015-11-11 14:30+0200\n"
 "PO-Revision-Date: 2017-01-21 09:40+0000\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/dimkard/distrowatcher/language/es/)\n"
+"Last-Translator: Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>\n"
+"Language-Team: Swedish (Sweden) (http://www.transifex.com/dimkard/distrowatcher/language/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
+"Language: sv_SE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: distrowatcher/contents/config/config.qml:27
 msgid "General"
-msgstr "General"
+msgstr "Generell"
 
 #: distrowatcher/contents/config/config.qml:32
 msgid "Appearance"
-msgstr "Αpariencia"
+msgstr "Utseende"
 
 #: distrowatcher/contents/ui/configAppearance.qml:39
 msgid "Use vertical layout"
-msgstr "Disposición vertical"
+msgstr "Använd vertikal layout"
 
 #: distrowatcher/contents/ui/configGeneral.qml:41
 msgid "Refresh every (minutes)"
-msgstr "Actualización cada (minutos)"
+msgstr "Uppdatera varje (minuter)"
 
 #: distrowatcher/contents/ui/configGeneral.qml:52
 msgid "Enable notifications"
-msgstr "Activar notificaciones"
+msgstr "Aktivera aviseringar"
 
 #. i18n("Distribution release"), i18n("A new version of %1 is
 #. available!",distroshort)); //TODO: Remove
 #: distrowatcher/contents/ui/DistroListModel.qml:77
 msgid "Distribution release"
-msgstr "Lanzamiento de distribución"
+msgstr ""
 
 #: distrowatcher/contents/ui/DistroListModel.qml:77
 msgid "A new version of %1 is available!"
-msgstr "Una nueva versión de % 1 está disponible!"
+msgstr "En ny utgåva av %1 är tillgänglig!"
 
 #: distrowatcher/contents/ui/HorizontalLayout.qml:61
 #: distrowatcher/contents/ui/VerticalLayout.qml:55
 msgid "Distributions"
-msgstr "Distribuciones"
+msgstr "Distributioner"
 
 #: distrowatcher/contents/ui/HorizontalLayout.qml:67
 #: distrowatcher/contents/ui/VerticalLayout.qml:62
 msgid "Packages"
-msgstr "Paquetes"
+msgstr "Paket"
 
 #: distrowatcher/contents/ui/HorizontalLayout.qml:73
 #: distrowatcher/contents/ui/VerticalLayout.qml:69
 msgid "Favorites"
-msgstr "Favoritas"
+msgstr "Favoriter"
 
 #: distrowatcher/contents/ui/HorizontalLayout.qml:79
 #: distrowatcher/contents/ui/VerticalLayout.qml:76
 msgid "News"
-msgstr "Noticias"
+msgstr "Nyheter"
 
 #: distrowatcher/contents/ui/main.qml:73
 msgid ""
 "An error has occurred initializing the widget. Check documentation and "
 "ensure that all the required packages have been installed."
-msgstr "Ha ocurrido un error durante la inicialización del elemento gráfico. Consulte la documentación y asegúrese de que los paquetes necesarios están instalados."
+msgstr ""
 
 #: distrowatcher/contents/ui/main.qml:121
 msgid "Data from distrowatch.com"
-msgstr "Datos desde distrowatch.com"
+msgstr "Data från distrowatch.com"
 
 #: distrowatcher/contents/ui/News.qml:149
 msgid "More..."
-msgstr "Más..."
+msgstr "Mer..."
 
 #: distrowatcher/contents/ui/SearchableFavorites.qml:63
 msgid "Filter:"
-msgstr "Filtro:"
+msgstr ""
 
 #: distrowatcher/contents/ui/SearchableFavorites.qml:69
 msgid "Enter distribution name..."
-msgstr "Introduzca el nombre de la distribución..."
+msgstr "Ange distributionens namn..."
 
 #: distrowatcher/contents/ui/UnavailableScreen.qml:51
 msgid ""
 "Network issue. \n"
 "Please check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties."
-msgstr "Problema de red.\nVerifique su conexión a Internet por favor. Si no hay ningún problema de red, es posible que distrowatch.com no sea accesible o encuentre difficultades."
+msgstr ""
 
 #: distrowatcher/contents/ui/UnavailableScreen.qml:62
 msgid "Reload"
-msgstr "Recargar"
+msgstr "Ladda om"
 
 #: po/rc.cpp:1 rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Dimitris Kardarakos"
+msgstr "Dina namn"
 
 #: po/rc.cpp:2 rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "dimkard@gmail.com"
+msgstr "Dina e-postadresser"
 
 #: po/rc.cpp:3 rc.cpp:3
 msgid "Distro Watcher"
-msgstr "Distro Watcher"
+msgstr "Distributionsbevakaren"
 
 #: po/rc.cpp:4 rc.cpp:4
 msgid "Shows the latest releases of Linux distributions and packages"
-msgstr "Muestra las distribuciones y los paquetes de Linux más recientes"
+msgstr ""
