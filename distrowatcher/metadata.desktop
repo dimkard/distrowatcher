@@ -16,7 +16,7 @@ Comment[it]=Mostra gli ultimi rilasci di distro Linux e pacchetti
 Comment[lt]=Rodyti paskiausius Linux distribucijų ir paketų leidimus.
 Comment[ru]=Показывает последние релизы дистрибутивов GNU/Linux и пакетов
 Comment[zh_TW]=顯示 Linux 散佈版及軟體包的最新版本
-Icon=distrowatcher.png
+Icon=distrowatcher-flat
 Type=Service
 X-KDE-ServiceTypes=Plasma/Applet,Plasma/PopupApplet
 
@@ -29,7 +29,7 @@ X-KDE-PluginInfo-Email=dimkard@gmail.com
 X-KDE-PluginInfo-Name=org.kde.distrowatcher
 X-Plasma-Requires-FileDialog=Unused
 X-Plasma-Requires-LaunchApp=org.kde.distrowatcher
-X-KDE-PluginInfo-Version=1.0.3
+X-KDE-PluginInfo-Version=1.0.4
 X-KDE-PluginInfo-Website=
 X-KDE-PluginInfo-Category=Utilities
 X-KDE-PluginInfo-Depends=
