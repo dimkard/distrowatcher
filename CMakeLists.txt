@@ -8,7 +8,7 @@ find_package(KF5Plasma)
 
 plasma_install_package(distrowatcher org.kde.distrowatcher plasmoids applet)
 
-install(FILES distrowatcher/contents/ui/icons/distrowatcher-.svg
+install(FILES distrowatcher/contents/ui/icons/distrowatcher-flat.svg
         DESTINATION ${ICON_INSTALL_DIR}/hicolor/scalable/apps)
 
 FIND_PROGRAM(GETTEXT_MSGFMT_EXECUTABLE msgfmt)
