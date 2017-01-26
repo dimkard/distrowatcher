@@ -1,21 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Dimitris Kardarakos <dimkard@gmail.com>, 2013-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: https://github.com/dimkard/distrowatcher/\n"
-"POT-Creation-Date: 2015-11-11 14:30+0200\n"
+"POT-Creation-Date: 2017-01-26 12:42+0200\n"
 "PO-Revision-Date: 2017-01-21 09:40+0000\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek (http://www.transifex.com/dimkard/distrowatcher/language/el/)\n"
+"Language-Team: Greek (http://www.transifex.com/dimkard/distrowatcher/"
+"language/el/)\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: distrowatcher/contents/config/config.qml:27
@@ -38,65 +39,70 @@ msgstr "Ανανέωση κάθε (σε λεπτά)"
 msgid "Enable notifications"
 msgstr "Ενεργοποίηση ειδοποιήσεων"
 
-#. i18n("Distribution release"), i18n("A new version of %1 is
-#. available!",distroshort)); //TODO: Remove
-#: distrowatcher/contents/ui/DistroListModel.qml:77
+#: distrowatcher/contents/ui/DistroListModel.qml:70
 msgid "Distribution release"
 msgstr "Κυκλοφορία διανομής"
 
-#: distrowatcher/contents/ui/DistroListModel.qml:77
+#: distrowatcher/contents/ui/DistroListModel.qml:70
 msgid "A new version of %1 is available!"
 msgstr "Μια νέα έκδοση του %1 είναι διαθέσιμη!"
 
-#: distrowatcher/contents/ui/HorizontalLayout.qml:61
-#: distrowatcher/contents/ui/VerticalLayout.qml:55
+#: distrowatcher/contents/ui/HorizontalLayout.qml:62
+#: distrowatcher/contents/ui/VerticalLayout.qml:52
 msgid "Distributions"
 msgstr "Διανομές"
 
-#: distrowatcher/contents/ui/HorizontalLayout.qml:67
-#: distrowatcher/contents/ui/VerticalLayout.qml:62
+#: distrowatcher/contents/ui/HorizontalLayout.qml:69
+#: distrowatcher/contents/ui/VerticalLayout.qml:59
 msgid "Packages"
 msgstr "Πακέτα"
 
-#: distrowatcher/contents/ui/HorizontalLayout.qml:73
-#: distrowatcher/contents/ui/VerticalLayout.qml:69
+#: distrowatcher/contents/ui/HorizontalLayout.qml:76
+#: distrowatcher/contents/ui/VerticalLayout.qml:66
 msgid "Favorites"
 msgstr "Αγαπημένες"
 
-#: distrowatcher/contents/ui/HorizontalLayout.qml:79
-#: distrowatcher/contents/ui/VerticalLayout.qml:76
+#: distrowatcher/contents/ui/HorizontalLayout.qml:83
+#: distrowatcher/contents/ui/VerticalLayout.qml:73
 msgid "News"
 msgstr "Ειδήσεις"
 
-#: distrowatcher/contents/ui/main.qml:73
+#: distrowatcher/contents/ui/main.qml:60
 msgid ""
 "An error has occurred initializing the widget. Check documentation and "
 "ensure that all the required packages have been installed."
-msgstr "Παρουσιάστηκε σφάλμα κατά την αρχικοποίηση του γραφικού συστατικού. Ελέγξτε την τεκμηρίωση και σιγουρευτείτε ότι τα αναγκαία πακέτα έχουν εγκατασταθεί."
+msgstr ""
+"Παρουσιάστηκε σφάλμα κατά την αρχικοποίηση του γραφικού συστατικού. Ελέγξτε "
+"την τεκμηρίωση και σιγουρευτείτε ότι τα αναγκαία πακέτα έχουν εγκατασταθεί."
 
-#: distrowatcher/contents/ui/main.qml:121
+#: distrowatcher/contents/ui/main.qml:100
 msgid "Data from distrowatch.com"
 msgstr "Δεδομένα από το distrowatch.com"
 
-#: distrowatcher/contents/ui/News.qml:149
+#: distrowatcher/contents/ui/News.qml:142
 msgid "More..."
 msgstr "Περισσότερα..."
 
-#: distrowatcher/contents/ui/SearchableFavorites.qml:63
+#: distrowatcher/contents/ui/SearchableFavorites.qml:62
 msgid "Filter:"
 msgstr "Φιλτράρισμα:"
 
-#: distrowatcher/contents/ui/SearchableFavorites.qml:69
+#: distrowatcher/contents/ui/SearchableFavorites.qml:68
 msgid "Enter distribution name..."
 msgstr "Καταχωρήστε όνομα διανομής..."
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:51
+#: distrowatcher/contents/ui/UnavailableScreen.qml:54
 msgid ""
 "Network issue. \n"
-"Please check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties."
-msgstr "Πρόβλημα δικτύου. \nΕλέγξτε παρακαλώ τη σύνδεση δικτύου σας. Αν δεν αντιμετωπίζετε κάποιο δικτυακό πρόβλημα, ενδέχεται το distrowatch.com να μην είναι διαθέσιμο ή να αντιμετωπίζει δυσκολίες."
+"Please check your network connection. If you do not face any network "
+"problem, distrowatch.com may be unavailable or facing difficulties."
+msgstr ""
+"Πρόβλημα δικτύου. \n"
+"Ελέγξτε παρακαλώ τη σύνδεση δικτύου σας. Αν δεν αντιμετωπίζετε κάποιο "
+"δικτυακό πρόβλημα, ενδέχεται το distrowatch.com να μην είναι διαθέσιμο ή να "
+"αντιμετωπίζει δυσκολίες."
 
-#: distrowatcher/contents/ui/UnavailableScreen.qml:62
+#: distrowatcher/contents/ui/UnavailableScreen.qml:66
 msgid "Reload"
 msgstr "Επαναφόρτωση"
 
