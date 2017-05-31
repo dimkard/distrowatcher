@@ -27,7 +27,8 @@ Item {
     height: childrenRect.height
     
     property alias cfg_isvertical: isvertical.checked
-    
+    property alias cfg_popularity: popularity.checked
+
     QtControls.GroupBox {
         QtLayouts.Layout.fillWidth: true
         //title: i18n("Layout")
@@ -36,8 +37,15 @@ Item {
         QtLayouts.ColumnLayout {
             QtControls.CheckBox {
                 id: isvertical
+
                 text: i18n("Use vertical layout")
             }
+            QtControls.CheckBox {
+                id: popularity
+
+                text: i18n("Show popularity of favorite distributions")
+            }
+
         }
     }
 }

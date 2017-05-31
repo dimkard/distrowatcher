@@ -1,23 +1,22 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Dimitris Kardarakos <dimkard@gmail.com>, 2013-2015
+# Dimitris Kardarakos <dimkard@gmail.com>, 2013-2015, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: https://github.com/dimkard/distrowatcher/\n"
-"POT-Creation-Date: 2017-01-26 12:42+0200\n"
-"PO-Revision-Date: 2017-01-21 09:40+0000\n"
+"POT-Creation-Date: 2017-05-31 14:08+0300\n"
+"PO-Revision-Date: 2017-05-31 14:09+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek (http://www.transifex.com/dimkard/distrowatcher/"
-"language/el/)\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 2.0\n"
 
 #: distrowatcher/contents/config/config.qml:27
 msgid "General"
@@ -27,15 +26,19 @@ msgstr "Γενικά"
 msgid "Appearance"
 msgstr "Εμφάνιση"
 
-#: distrowatcher/contents/ui/configAppearance.qml:39
+#: distrowatcher/contents/ui/configAppearance.qml:41
 msgid "Use vertical layout"
 msgstr "Χρήση κάθετης διάταξης"
 
-#: distrowatcher/contents/ui/configGeneral.qml:41
+#: distrowatcher/contents/ui/configAppearance.qml:46
+msgid "Show popularity of favorite distributions"
+msgstr "Εμφάνιση δημοτικότητας των αγαπημένων διανομών."
+
+#: distrowatcher/contents/ui/configGeneral.qml:42
 msgid "Refresh every (minutes)"
 msgstr "Ανανέωση κάθε (σε λεπτά)"
 
-#: distrowatcher/contents/ui/configGeneral.qml:52
+#: distrowatcher/contents/ui/configGeneral.qml:53
 msgid "Enable notifications"
 msgstr "Ενεργοποίηση ειδοποιήσεων"
 
@@ -123,3 +126,4 @@ msgstr "Distro Watcher"
 #: po/rc.cpp:4 rc.cpp:4
 msgid "Shows the latest releases of Linux distributions and packages"
 msgstr "Εμφανίζει τις τελευταίες κυκλοφορίες διανομών και πακέτων του Linux"
+

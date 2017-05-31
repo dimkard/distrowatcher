@@ -34,10 +34,44 @@ Item {
   property bool isFlicking 
   property int itemIndex
   property string isFavoritePostfix: Params.isFavoritePostfix
+  property string distroRank
+  property bool showRanks: plasmoid.configuration.popularity
 
   signal entered() //inform parent regarding interaction
   signal exited() //inform parent regarding interaction
   signal positionChanged() //inform parent regarding interaction
+
+  Component.onCompleted: getRank(distroShortText);
+
+  function getRank(distroShortName) {
+      if (root.showRanks && plasmoid.configuration[distroShortText + isFavoritePostfix] == true) {
+          var doc = new XMLHttpRequest();
+          doc.onreadystatechange = function() {
+              if (doc.readyState == XMLHttpRequest.DONE) {
+                  var rsp = doc.responseText;
+                  var reg1263 = /popularity.+12 [^:]+:.+, 6 [^:]+:(.+), 3/;
+                  var found1263 = rsp.match(reg1263);
+                  if(found1263 && found1263.length > 1) {
+                      var distroRankAndHits= found1263[1].trim();
+                      var regForRankOnly = />(.+)</;
+                      var rankMatch = distroRankAndHits.match(regForRankOnly);
+                      if (rankMatch && rankMatch.length >1) {
+                          var onlyDigitsReg = /[\d]+/;
+                          if (onlyDigitsReg.test(rankMatch[1].trim())) {
+                              root.distroRank = rankMatch[1];
+                          }
+                      }
+                  }
+              }
+          }
+
+        doc.open("GET", "http://distrowatch.com/table.php?distribution=" + distroShortName);
+        doc.send();
+      }
+      else {
+          root.distroRank = "";
+      }
+  }
 
   Image {
     id: backgroundImage
@@ -55,11 +89,8 @@ Item {
 
     onEntered: root.entered();
     onExited: root.exited();
-    onClicked: {
-      Qt.openUrlExternally(root.linkText);
-    }
+    onClicked: Qt.openUrlExternally(root.linkText);
     onPositionChanged: root.positionChanged();
-    
   }
   
   Image {
@@ -95,6 +126,25 @@ Item {
     wrapMode: "WordWrap" 
     color: theme.textColor
   }
+
+
+  Text {
+    id: distroRanker
+
+    anchors {
+      top: icon.top
+      right: favoritesIcon.left
+      rightMargin: parent.width*Style.marginInsideRowPercent
+      verticalCenter : parent.verticalCenter
+    }
+    verticalAlignment : Text.AlignVCenter
+    text: root.distroRank
+    font.pointSize: theme.defaultFont.pointSize
+    horizontalAlignment: Text.AlignLeft
+    wrapMode: "WordWrap"
+    color: theme.textColor
+  }
+
 
   KQuickControlsAddons.MouseEventListener { 
     id: favoritesIcon
@@ -167,9 +217,10 @@ Item {
       height: units.iconSizes.medium
       
       onClicked: {
-	var newFavStatus = (plasmoid.configuration[root.distroShortText + root.isFavoritePostfix] == true) ? false : true;
-	star.source = (newFavStatus == true) ? "./icons/favorite.png" : "./icons/non-favorite.png";  
-	plasmoid.configuration[root.distroShortText + root.isFavoritePostfix] = newFavStatus;
+        var newFavStatus = (plasmoid.configuration[root.distroShortText + root.isFavoritePostfix] == true) ? false : true;
+        star.source = (newFavStatus == true) ? "./icons/favorite.png" : "./icons/non-favorite.png";
+        plasmoid.configuration[root.distroShortText + root.isFavoritePostfix] = newFavStatus;
+        getRank(root.distroShortText);
       } 
     }
 

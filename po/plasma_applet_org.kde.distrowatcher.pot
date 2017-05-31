@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/dimkard/distrowatcher/\n"
-"POT-Creation-Date: 2017-01-26 12:42+0200\n"
+"POT-Creation-Date: 2017-05-31 14:08+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,15 +25,19 @@ msgstr ""
 msgid "Appearance"
 msgstr ""
 
-#: distrowatcher/contents/ui/configAppearance.qml:39
+#: distrowatcher/contents/ui/configAppearance.qml:41
 msgid "Use vertical layout"
 msgstr ""
 
-#: distrowatcher/contents/ui/configGeneral.qml:41
+#: distrowatcher/contents/ui/configAppearance.qml:46
+msgid "Show popularity of favorite distributions"
+msgstr ""
+
+#: distrowatcher/contents/ui/configGeneral.qml:42
 msgid "Refresh every (minutes)"
 msgstr ""
 
-#: distrowatcher/contents/ui/configGeneral.qml:52
+#: distrowatcher/contents/ui/configGeneral.qml:53
 msgid "Enable notifications"
 msgstr ""
 

@@ -27,11 +27,13 @@ PlasmaExtras.ScrollArea {
   id: distroScrollArea
 
   property int dataCount: distroView.model.count //controls visibility
-    
+  property bool showRanks: plasmoid.configuration.popularity
+
   function filterDistros (distroFilter) {  //call function to filter distros
     distroListModel.queryModel(distroFilter);
   }
   
+  onShowRanksChanged: distroListModel.reloadModel();
   ListView {
     id:distroView
     

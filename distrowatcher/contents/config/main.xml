@@ -22,6 +22,10 @@
       <label>Use vertical layout</label>
       <default>true</default>
     </entry>
+    <entry name="popularity" type="Bool">
+      <label>Show popularity of favorite distributions</label>
+      <default>true</default>
+    </entry>
   </group>
   <group name="Favorites">
     <entry name="3cx_isfavorite" type="bool"><label>whether 3CX is favorite</label><default>false</default></entry>

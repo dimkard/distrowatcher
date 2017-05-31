@@ -20,6 +20,7 @@ Comment[zh_TW]=顯示 Linux 散佈版及軟體包的最新版本
 Icon=distrowatcher-flat
 Type=Service
 X-KDE-ServiceTypes=Plasma/Applet
+
 X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/main.qml
 X-Plasma-DefaultSize=390,370

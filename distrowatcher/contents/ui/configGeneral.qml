@@ -28,7 +28,7 @@ Item {
 
     property alias cfg_refreshevery: refreshevery.value
     property alias cfg_enablenotifications: enablenotifications.checked
-    
+
     QtControls.GroupBox {
         QtLayouts.Layout.fillWidth: true
         //title: i18n("Notifications")
