@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>, 2016
 msgid ""
@@ -9,15 +9,13 @@ msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: https://github.com/dimkard/distrowatcher/\n"
 "POT-Creation-Date: 2017-05-31 14:08+0300\n"
-"PO-Revision-Date: 2017-01-21 09:40+0000\n"
-"Last-Translator: Kristoffer Grundström <kristoffer.grundstrom1983@gmail."
-"com>\n"
-"Language-Team: Swedish (Sweden) (http://www.transifex.com/dimkard/"
-"distrowatcher/language/sv_SE/)\n"
-"Language: sv_SE\n"
+"PO-Revision-Date: 2017-07-25 06:36+0000\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Swedish (Sweden) (http://www.transifex.com/dimkard/distrowatcher/language/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: sv_SE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: distrowatcher/contents/config/config.qml:27
@@ -97,8 +95,7 @@ msgstr "Ange distributionens namn..."
 #: distrowatcher/contents/ui/UnavailableScreen.qml:54
 msgid ""
 "Network issue. \n"
-"Please check your network connection. If you do not face any network "
-"problem, distrowatch.com may be unavailable or facing difficulties."
+"Please check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties."
 msgstr ""
 
 #: distrowatcher/contents/ui/UnavailableScreen.qml:66

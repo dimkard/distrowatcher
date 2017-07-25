@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Markus Oesterle <markusoesterle@gmx.de>, 2015-2016
 msgid ""
@@ -9,14 +9,13 @@ msgstr ""
 "Project-Id-Version: distrowatcher\n"
 "Report-Msgid-Bugs-To: https://github.com/dimkard/distrowatcher/\n"
 "POT-Creation-Date: 2017-05-31 14:08+0300\n"
-"PO-Revision-Date: 2017-01-21 09:40+0000\n"
-"Last-Translator: Markus Oesterle <markusoesterle@gmx.de>\n"
-"Language-Team: German (Germany) (http://www.transifex.com/dimkard/"
-"distrowatcher/language/de_DE/)\n"
-"Language: de_DE\n"
+"PO-Revision-Date: 2017-07-25 06:36+0000\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: German (Germany) (http://www.transifex.com/dimkard/distrowatcher/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: distrowatcher/contents/config/config.qml:27
@@ -75,10 +74,7 @@ msgstr "Neuigkeiten"
 msgid ""
 "An error has occurred initializing the widget. Check documentation and "
 "ensure that all the required packages have been installed."
-msgstr ""
-"Ein Fehler ist während der Initialisierung des Widgets aufgetreten. Bitte "
-"lesen Sie in der Dokumentation nach und stellen Sie sicher, dass alle "
-"benötigten Pakete installiert sind."
+msgstr "Ein Fehler ist während der Initialisierung des Widgets aufgetreten. Bitte lesen Sie in der Dokumentation nach und stellen Sie sicher, dass alle benötigten Pakete installiert sind."
 
 #: distrowatcher/contents/ui/main.qml:100
 msgid "Data from distrowatch.com"
@@ -99,13 +95,8 @@ msgstr "Geben Sie den Namen der Distribution ein..."
 #: distrowatcher/contents/ui/UnavailableScreen.qml:54
 msgid ""
 "Network issue. \n"
-"Please check your network connection. If you do not face any network "
-"problem, distrowatch.com may be unavailable or facing difficulties."
-msgstr ""
-"Netzwerkprobleme.\n"
-"Bitte überprüfen Sie ihre Netzwerkverbindung. Wenn Sie keine "
-"Netzwerkprobleme haben könnte es sein dass distrowatch.com nicht verfügbar "
-"ist oder Probleme hat."
+"Please check your network connection. If you do not face any network problem, distrowatch.com may be unavailable or facing difficulties."
+msgstr "Netzwerkprobleme.\nBitte überprüfen Sie ihre Netzwerkverbindung. Wenn Sie keine Netzwerkprobleme haben könnte es sein dass distrowatch.com nicht verfügbar ist oder Probleme hat."
 
 #: distrowatcher/contents/ui/UnavailableScreen.qml:66
 msgid "Reload"

@@ -13,6 +13,8 @@ The plasmoid consists of four distinct views:
 
 Switching between views can be accomplished using a tab bar. By clicking to a distribution record, default browser opens distribution's homepage at distrowatch.com. By clicking to a package record, default browser opens package's homepage. Favorites can be selected by just clicking to the relative button. Clicking to a distribution record, users are navigated to the relative distrowatch page. After choosing favorites distributions, as soon as a new release of a favorite distribution is available, a notification pop-up is displayed. Notifications can be disabled using the relative configuration option. In News tab, the latest news and updates, as published in distrowatch.com, are displayed. Navigation between news is accomplished via the relative buttons. Zoom in/out option exists as well. Horizontal and vertical layout options are provided.
 
+In favorites distributions view, you may be informed regarding popularity of favorites distributions. Configuration option added as well.
+
 If you would like to contribute to translations, visit the relative transifex project at https://www.transifex.com/projects/p/distrowatcher/
 
 Notes

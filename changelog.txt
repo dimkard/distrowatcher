@@ -1,3 +1,7 @@
+Version 1.2
+-----------
+-   In favorites distributions view, show popularity of favorites. Configuration option added as well.
+
 Version 1.1
 -----------
 - New application icon, based on an icon created by Máirín Duffy (mairin), which can be found here: http://all-free-download.com/free-vector/download/tux-the-penguin_54375.html
